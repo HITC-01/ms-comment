@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS comments;
+
 CREATE DATABASE comments;
 USE comments;
 
