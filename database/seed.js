@@ -89,7 +89,7 @@ gen.then((seeded) => {
   }
   return item;
 }).then((seeded) => {
-  for (let i = 0; i < seeded.length; i += 1)  {
+  for (let i = 0; i < seeded.length; i += 1) {
     const current = seeded[i];
     const queryStringReply = 'INSERT INTO reply (text, createdAt, comment_Id, artist_Id, song_Id) values (?, ?, ?, ?, ?)';
 
