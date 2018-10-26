@@ -6,7 +6,7 @@ const db = require('./index.js');
 const generator = () => {
   const result = [];
 
-  for (let i = 0; i < 100; i += 1) {
+  for (let i = 0; i < 1000; i += 1) {
     const details = {
       plays: faker.random.number(),
       likes: faker.random.number(),
@@ -15,10 +15,11 @@ const generator = () => {
       imageURL: faker.image.people(),
       text: faker.lorem.sentence(),
       createdAt: faker.date.recent(),
+      songlength: faker.random.number({ min: 180, max: 300 }),
       songtime: faker.random.number({ min: 0, max: 300 }),
-      commentId: faker.random.number({ min: 1, max: 10 }),
-      artistId: faker.random.number({ min: 1, max: 20 }),
-      songId: faker.random.number({ min: 1, max: 20 }),
+      commentId: faker.random.number({ min: 1, max: 30 }),
+      artistId: faker.random.number({ min: 1, max: 50 }),
+      songId: faker.random.number({ min: 1, max: 50 }),
     };
     result.push(details);
   }
@@ -28,17 +29,15 @@ const generator = () => {
 const gen = Promise.resolve(generator());
 gen.then((seeded) => {
   const item = seeded;
-
   for (let i = 0; i < seeded.length; i += 1) {
     const current = seeded[i];
-    const queryStringSongs = 'INSERT INTO songs (plays, likes, reposts) values (?, ?, ?)';
+    const queryStringArtists = 'INSERT INTO artists (name, imageURL) values (?, ?)';
 
-    const postSongs = [
-      current.plays,
-      current.likes,
-      current.reposts,
+    const postArtists = [
+      current.name,
+      current.imageURL,
     ];
-    db.query(queryStringSongs, postSongs, (error) => {
+    db.query(queryStringArtists, postArtists, (error) => {
       if (error) {
         console.log(error.message);
       } else {
@@ -51,13 +50,16 @@ gen.then((seeded) => {
   const item = seeded;
   for (let i = 0; i < seeded.length; i += 1) {
     const current = seeded[i];
-    const queryStringArtists = 'INSERT INTO artists (name, imageURL) values (?, ?)';
+    const queryStringSongs = 'INSERT INTO songs (plays, likes, reposts, songlength, artist_Id) values (?, ?, ?, ?, ?)';
 
-    const postArtists = [
-      current.name,
-      current.imageURL,
+    const postSongs = [
+      current.plays,
+      current.likes,
+      current.reposts,
+      current.songlength,
+      current.artistId,
     ];
-    db.query(queryStringArtists, postArtists, (error) => {
+    db.query(queryStringSongs, postSongs, (error) => {
       if (error) {
         console.log(error.message);
       } else {
@@ -91,14 +93,13 @@ gen.then((seeded) => {
 }).then((seeded) => {
   for (let i = 0; i < seeded.length; i += 1) {
     const current = seeded[i];
-    const queryStringReply = 'INSERT INTO reply (text, createdAt, comment_Id, artist_Id, song_Id) values (?, ?, ?, ?, ?)';
+    const queryStringReply = 'INSERT INTO reply (text, createdAt, comment_Id, artist_Id) values (?, ?, ?, ?)';
 
     const postReply = [
       current.text,
       current.createdAt,
       current.commentId,
       current.artistId,
-      current.songId,
     ];
 
     db.query(queryStringReply, postReply, (error) => {
