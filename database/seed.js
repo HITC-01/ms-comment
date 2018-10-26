@@ -13,15 +13,16 @@ const generator = () => {
             reposts: faker.random.number(),
             name: faker.name.findName(),
             imageURL: faker.image.people(),
-            text: faker.lorem.paragraph(),
+            text: faker.lorem.sentence(),
             createdAt: faker.date.recent(),
             songtime: faker.random.number({min: 0, max: 300}),
             comment_Id: faker.random.number({min: 0, max: 100}),
-            artist_Id: faker.random.number({min: 0, max: 100}),
-            song_Id: faker.random.number({min: 0, max: 100}) 
+            artist_Id: faker.random.number({min: 0, max: 10}),
+            song_Id: faker.random.number({min: 0, max: 10}) 
         }
         result.push(details);
     }
+    console.log(result);
     return result;
 }
 
@@ -99,6 +100,7 @@ gen.then( (seeded) => {
             current.text,
             current.createdAt,
             current.songtime,
+            current.comment_Id,
             current.artist_Id,
             current.song_Id
         ]
