@@ -12,7 +12,7 @@ CREATE TABLE songs (
 
 CREATE TABLE artists (
     id integer not null PRIMARY KEY auto_increment,
-    name varchar(20),
+    name varchar(40),
     imageURL TEXT
 );
 
