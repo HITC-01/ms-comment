@@ -6,7 +6,7 @@ var connection = mysql.createConnection({
     database: 'comments'
 });
 
-connection.createQuery(err => {
+connection.connect(err => {
     if (err) {
         throw err;
     }
