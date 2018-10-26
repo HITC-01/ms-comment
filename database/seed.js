@@ -16,7 +16,7 @@ const generator = () => {
       text: faker.lorem.sentence(),
       createdAt: faker.date.recent(),
       songtime: faker.random.number({ min: 0, max: 300 }),
-      commentId: faker.random.number({ min: 1, max: 50 }),
+      commentId: faker.random.number({ min: 1, max: 10 }),
       artistId: faker.random.number({ min: 1, max: 20 }),
       songId: faker.random.number({ min: 1, max: 20 }),
     };
