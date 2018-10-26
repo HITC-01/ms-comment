@@ -4,35 +4,31 @@ CREATE DATABASE comments;
 USE comments;
 
 CREATE TABLE songs (
-    id integer not null,
-    PRIMARY KEY (`id`),
+    id integer not null PRIMARY KEY auto_increment,
     plays integer,
     likes integer,
     reposts integer
 );
 
 CREATE TABLE artists (
-    id integer not null,
-    PRIMARY KEY (`id`),
+    id integer not null PRIMARY KEY auto_increment,
     name varchar(20),
     imageURL TEXT
 );
 
 CREATE TABLE comment (
-    id integer not null auto_increment,
+    id integer not null PRIMARY KEY auto_increment,
     text varchar(1000) not null,
     createdAt timestamp not null,
     songtime integer not null,
-    PRIMARY KEY (`id`),
     artist_Id integer,
     song_Id integer
 );
 
 CREATE TABLE reply (
-    id integer not null auto_increment,
+    id integer not null PRIMARY KEY auto_increment,
     text varchar(1000) not null,
     createdAt timestamp not null,
-    PRIMARY KEY (`id`),
     comment_Id integer,
     artist_Id integer,
     song_Id integer
