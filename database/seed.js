@@ -31,7 +31,7 @@ gen.then( (seeded) => {
 
     for ( let i in seeded ) {
         
-        let current seeded[i];
+        let current = seeded[i];
 
         var queryStringSongs = 'INSERT INTO songs (plays, likes, reposts) values (?, ?, ?)';
 
