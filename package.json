@@ -9,8 +9,8 @@
   },
   "scripts": {
     "start": "nodemon server/index.js",
-    "dev:react" "webpack -d --watch",
-    "db:setup": ""
+    "dev:react": "webpack -d --watch",
+    "db:setup": "node database/seed.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
