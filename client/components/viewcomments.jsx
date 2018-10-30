@@ -23,15 +23,11 @@ export default class ViewComments extends React.Component {
             }
         })
     }
-    convertTime(seconds) {
-        let minutes = Math.floor(seconds / 60);
-        let remainder;
-        if (Math.floor(seconds % 60) === 0) {
-          remainder = '00';
-        } else {
-          remainder = Math.floor(seconds % 60);
-        }
-        let commentTime = String(minutes) +':'+ String(remainder); 
+    convertTime(totalSeconds) {
+        let minutes = Math.floor(totalSeconds / 60);
+        let seconds = totalSeconds - minutes * 60;
+        let commentTime = `${String(minutes)}:${String(seconds)}`;
+
         return commentTime;
     }
 
