@@ -6,7 +6,7 @@ USE comments;
 DROP TABLE IF EXISTS artists;
 
 CREATE TABLE artists (
-    id integer not null PRIMARY KEY auto_increment,
+    artistId integer not null PRIMARY KEY auto_increment,
     name varchar(50),
     imageURL text
 );
@@ -14,7 +14,7 @@ CREATE TABLE artists (
 DROP TABLE IF EXISTS songs;
 
 CREATE TABLE songs (
-    id integer not null PRIMARY KEY auto_increment,
+    songId integer not null PRIMARY KEY auto_increment,
     plays integer,
     likes integer,
     reposts integer, 
@@ -22,10 +22,10 @@ CREATE TABLE songs (
     artist_Id integer
 );
 
-DROP TABLE IF EXISTS comment;
+DROP TABLE IF EXISTS comments;
 
-CREATE TABLE comment (
-    id integer not null PRIMARY KEY auto_increment,
+CREATE TABLE comments (
+    commentId integer not null PRIMARY KEY auto_increment,
     text varchar(1000) not null,
     createdAt timestamp not null,
     songtime integer not null,
@@ -36,16 +36,16 @@ CREATE TABLE comment (
 DROP TABLE IF EXISTS reply;
 
 CREATE TABLE reply (
-    id integer not null PRIMARY KEY auto_increment,
+    replyId integer not null PRIMARY KEY auto_increment,
     text varchar(1000) not null,
     createdAt timestamp not null,
     comment_Id integer,
     artist_Id integer
 );
 
-ALTER TABLE `songs` ADD FOREIGN KEY (artist_Id) REFERENCES `artists` (`id`);
-ALTER TABLE `comment` ADD FOREIGN KEY (artist_Id) REFERENCES `artists` (`id`);
-ALTER TABLE `comment` ADD FOREIGN KEY (song_Id) REFERENCES `songs` (`id`);
-ALTER TABLE `reply` ADD FOREIGN KEY (comment_Id) REFERENCES `comment` (`id`);
-ALTER TABLE `reply` ADD FOREIGN KEY (artist_Id) REFERENCES `artists` (`id`);
+ALTER TABLE `songs` ADD FOREIGN KEY (artist_Id) REFERENCES `artists` (`artistId`);
+ALTER TABLE `comments` ADD FOREIGN KEY (artist_Id) REFERENCES `artists` (`artistId`);
+ALTER TABLE `comments` ADD FOREIGN KEY (song_Id) REFERENCES `songs` (`songId`);
+ALTER TABLE `reply` ADD FOREIGN KEY (comment_Id) REFERENCES `comments` (`commentId`);
+ALTER TABLE `reply` ADD FOREIGN KEY (artist_Id) REFERENCES `artists` (`artistId`);
 

@@ -12,8 +12,8 @@ const generator = () => {
       likes: faker.random.number(),
       reposts: faker.random.number(),
       name: faker.name.findName(),
-      imageURL: faker.image.people(),
-      text: faker.lorem.sentence(),
+      imageURL: faker.image.avatar(),
+      text: faker.lorem.sentences(),
       createdAt: faker.date.recent(),
       songlength: faker.random.number({ min: 180, max: 300 }),
       songtime: faker.random.number({ min: 0, max: 300 }),
@@ -72,7 +72,7 @@ gen.then((seeded) => {
   const item = seeded;
   for (let i = 0; i < seeded.length; i += 1) {
     const current = seeded[i];
-    const queryStringComment = 'INSERT INTO comment (text, createdAt, songtime, artist_Id, song_Id) values (?, ?, ?, ?, ?)';
+    const queryStringComment = 'INSERT INTO comments (text, createdAt, songtime, artist_Id, song_Id) values (?, ?, ?, ?, ?)';
 
     const postComment = [
       current.text,
@@ -81,6 +81,7 @@ gen.then((seeded) => {
       current.artistId,
       current.songId,
     ];
+    
     db.query(queryStringComment, postComment, (error) => {
       if (error) {
         console.log(error.message);
