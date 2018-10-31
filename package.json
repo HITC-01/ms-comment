@@ -11,7 +11,7 @@
     "start": "nodemon server/index.js",
     "dev:react": "webpack -d --watch",
     "db:setup": " mysql -u root < schema.sql && node database/seed.js",
-    "test": "jest"
+    "test": "./node_modules/jest-cli/bin/jest.js commentComponent.test.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -44,6 +44,7 @@
     "file-loader": "^2.0.0",
     "image-webpack-loader": "^4.4.0",
     "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2"
   }
