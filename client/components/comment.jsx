@@ -93,7 +93,7 @@ export default class Comment extends React.Component {
                         
                         {this.state.songInfo.map(songProfile => 
                             <ul key="songProfile.id" className="soundStats">
-                                <li className="miniStats"><span><i className="fas fa-play"></i>{Numeral(songProfile.plays).format('0.0a')}</span></li>
+                                <li className="miniStats-Static"><span><i className="fas fa-play"></i>{Numeral(songProfile.plays).format('0.0a')}</span></li>
                                 <li className="miniStats"><span><i className="fas fa-heart"></i>{Numeral(songProfile.likes).format('0.0a')}</span></li>
                                 <li className="miniStats"><span><i className="fas fa-share-square"></i>{Numeral(songProfile.reposts).format('0.0a')}</span></li>
                             </ul>
