@@ -17,7 +17,6 @@ export default class ViewComments extends React.Component {
         this.fetchComments(random);
     }
     fetchComments(songId) {
-        
         $.ajax(`/api/sc/songs/${songId}/`, {
             success: (data) => {
                 this.setState({commentList: data});
@@ -26,11 +25,12 @@ export default class ViewComments extends React.Component {
     }
     
     convertTime(totalSeconds) {
-        let minutes = Math.floor(totalSeconds / 60);
-        let seconds = totalSeconds - minutes * 60;
-        let commentTime = `${String(minutes)}:${String(seconds)}`;
-
-        return commentTime;
+        const minutes = `${Math.floor(totalSeconds / 60)}`;
+        let seconds = `${totalSeconds - minutes * 60}`;
+        if (seconds.length === 1) {
+            seconds = `0${seconds}`;
+        }
+        return `${minutes}:${seconds}`;
     }
 
     render() {
@@ -45,10 +45,14 @@ export default class ViewComments extends React.Component {
                   {this.state.commentList.map(comment => 
                   <div key={comment.commentId} className="commentContainer"> 
                     <li className="eachComment" key={comment.commentId}>
-                        
-                        <span className="artistName"> <span><img className="artistPic" src={comment.imageURL} width="50" height="50"></img></span>{comment.name} at {this.convertTime(comment.songtime)}:</span>
-                        <span className="timeAgo">{ Moment(comment.createdAt).fromNow()}</span><br />
-                        <div><span className="commentText">{ comment.text }</span></div><br />
+                        <div className="timeAgo">{Moment(comment.createdAt).fromNow()}</div>
+
+                         <div className="profilePic"><img className="artistPic" src= {comment.imageURL}></img></div>
+                         <div className="innerWrap">
+                            <div className="artistName">{comment.name} at {this.convertTime(comment.songtime)}:</div>
+
+                            <div className="commentText">{ comment.text }</div>
+                        </div>
                     </li>
                   </div>
                   )}
