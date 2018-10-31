@@ -8,40 +8,39 @@
 
 .commentInput {
     display: inline-block;
+    width: 100%;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column: 3/4;
     color: #999;
     background-color: #fff;
-    font-size: 14px;
-    width: 100%;
-}
-
-input[type="text"] {
-    width: 75%;
-    height: 20px;
-    cursor: pointer;
-    border: 1px solid #e5e5e5;
-    outline: none;
-    font-size: 14px;
-}
-
-input[type="text"]:hover {
-    border-color: #e5e5e5;
 }
 
 .createButtons {
+    display: inline-block;
+    width: 100%;
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 3;
     grid-column-end: 4;
-    padding-top: 5px;
     padding-left: 10px;
-    width: 80%;
-    border-bottom: 2px solid whitesmoke;
     margin-bottom: 5px;
-    padding-bottom: 15px;
 }
+
+input[type="text"] {
+    width: 85%;
+    height: 20px;
+    cursor: pointer;
+    border: 7px solid #f2f2f2;
+    outline: none;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+input[type="text"]:active {
+    border-color: #e5e5e5;
+}
+
 .profilePic {
     display: block;
     width: 40px;
@@ -49,9 +48,26 @@ input[type="text"]:hover {
     float: left;
 } 
 
-.createButtons .form-buttons {
-    min-width: 100px;
+#profilePic {
+    border-radius: 10px;
+}
+
+.textbox {
+    display: block;
+    padding: 2px;
+}
+
+button {
+    cursor: pointer;
     text-align: center;
+    border-radius: 5px;
+    padding-right: 5px;
+    margin-right: 5px;
+    min-width: 50px;
+}
+
+button:hover {
+    border-color: #f50;
 }
 
 ul {
@@ -72,28 +88,19 @@ i {
     padding: 5px;
 }
 
-#profilePic {
-    border-radius: 10px;
-}
-
-button {
-    cursor: pointer;
-}
-button:hover {
-    border-color: #f50;
-    background-color: #f50
-}
-
 #buyIn {
     margin-left: 20px;
     text-decoration: none;
     color: black;
 }
 
-.artistPic {
-    width: 100%;
+.border {
+    display: inline-block;
+    border-bottom: 2px solid whitesmoke;
+    width: 90%;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    
 }
-.textbox {
-    display: block;
-    padding: 8px;
-}
+
+
