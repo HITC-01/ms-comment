@@ -1,4 +1,5 @@
 module.exports = {
+    testRegex: '/specs/.*?(test)\\.js$',
     verbose: true,
     transform: { '.*': 'babel-jest' },
     collectCoverage: true,
@@ -8,8 +9,7 @@ module.exports = {
         'text',
       ],
     collectCoverageFrom: [
-      '**/spec/*/*.{js,jsx}',
+      'specs/**/*.{js,jsx}',
       '!**/node_modules/**',
     ],
   };
-
