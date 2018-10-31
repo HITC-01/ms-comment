@@ -13,8 +13,8 @@ connection.connect((err) => {
   console.log('Connected to mysql');
 });
 
-const getAllComments = (callback) => {
-  connection.query('SELECT * FROM comments, artists WHERE song_Id = 2 && comments.artist_Id = artists.artistId ORDER BY createdAt DESC', (error, results) => {
+const getAllComments = (songId, callback) => {
+  connection.query(`SELECT * FROM comments, artists WHERE song_Id = ${songId} && comments.artist_Id = artists.artistId ORDER BY createdAt DESC`, (error, results) => {
     if (error) {
       callback(error, null);
     } else {

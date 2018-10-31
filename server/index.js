@@ -12,8 +12,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../public')));
 
-app.get('/api/comments', (req, res) => {
-  db.getAllComments((error, results) => {
+app.get('/api/sc/songs/:songId/', (req, res) => {
+  db.getAllComments(req.params.songId, (error, results) => {
     if (error) {
       res.status(500).send(error);
     } else {

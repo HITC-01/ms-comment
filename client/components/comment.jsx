@@ -3,6 +3,9 @@ import $ from 'jquery';
 import ViewComments from './viewcomments.jsx';
 import ArtistInfo from './artistInfo.jsx';
 import Moment from 'moment';
+import Numeral from 'numeral';
+
+
 
 export default class Comment extends React.Component {
     constructor(props) {
@@ -26,7 +29,6 @@ export default class Comment extends React.Component {
 
     handleChange(event) {
         this.setState({text: event.target.value});
-        console.log(this.state.text);
     }
 
     grabArtistInfo() {
@@ -73,7 +75,7 @@ export default class Comment extends React.Component {
     render() {
         return (
             <div>
-                <form className="wrapper" onSubmit={this.handleSubmit}>
+                <form className="wrapper" autoComplete="off" onSubmit={this.handleSubmit}>
                     <div className="commentInput">
                         {this.state.artistInfo.map(profile => 
                             <span className="profilePic" key="profile.artistId">
@@ -84,18 +86,19 @@ export default class Comment extends React.Component {
                     </div>
                     <div className="createButtons">
                         <button className="form-buttons"><i className="fas fa-heart"></i>Like</button>
-                        <button className="form-buttons"><i className="fas fa-retweet"></i></button>
-                        <button className="form-buttons"><i className="fas fa-share-square"></i></button>
-                        <button className="form-buttons"><i className="fas fa-ellipsis-h"></i></button>
+                        <button className="form-buttons"><i className="fas fa-retweet"></i>Repost</button>
+                        <button className="form-buttons"><i className="fas fa-share-square"></i>Share</button>
+                        <button className="form-buttons"><i className="fas fa-ellipsis-h"></i>More</button>
                         <a id="buyIn" href="#"> Stream/Download </a>
                         
                         {this.state.songInfo.map(songProfile => 
                             <ul key="songProfile.id" className="soundStats">
-                                <li className="miniStats"><span><i className="fas fa-play"></i>{songProfile.plays}</span></li>
-                                <li className="miniStats"><span><i className="fas fa-heart"></i>{songProfile.likes}</span></li>
-                                <li className="miniStats"><span><i className="fas fa-share-square"></i>{songProfile.reposts}</span></li>
+                                <li className="miniStats"><span><i className="fas fa-play"></i>{Numeral(songProfile.plays).format('0.0a')}</span></li>
+                                <li className="miniStats"><span><i className="fas fa-heart"></i>{Numeral(songProfile.likes).format('0.0a')}</span></li>
+                                <li className="miniStats"><span><i className="fas fa-share-square"></i>{Numeral(songProfile.reposts).format('0.0a')}</span></li>
                             </ul>
-                        )}  
+                        )}
+                        <div className="border"></div>  
                     </div>  
                 </form>
                 <ArtistInfo />

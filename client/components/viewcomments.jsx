@@ -13,10 +13,12 @@ export default class ViewComments extends React.Component {
         this.convertTime = this.convertTime.bind(this);
     }
     componentDidMount() {
-        this.fetchComments();
+        let random = Math.floor(Math.random() * 10) + 1;
+        this.fetchComments(random);
     }
-    fetchComments() {
-        $.ajax('/api/comments', {
+    fetchComments(songId) {
+        
+        $.ajax(`/api/sc/songs/${songId}/`, {
             success: (data) => {
                 this.setState({commentList: data});
             }
