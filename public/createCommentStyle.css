@@ -42,8 +42,11 @@ input[type="text"]:hover {
     margin-bottom: 5px;
     padding-bottom: 15px;
 }
-.profilePic .textbox {
-    display: inline-block;
+.profilePic {
+    display: block;
+    width: 40px;
+    height: 40px;
+    float: left;
 } 
 
 .createButtons .form-buttons {
@@ -64,9 +67,11 @@ li {
     line-height: 16px;
     padding: 5px;
 }
+
 i {
     padding: 5px;
 }
+
 #profilePic {
     border-radius: 10px;
 }
@@ -83,4 +88,12 @@ button:hover {
     margin-left: 20px;
     text-decoration: none;
     color: black;
+}
+
+.artistPic {
+    width: 100%;
+}
+.textbox {
+    display: block;
+    padding: 8px;
 }

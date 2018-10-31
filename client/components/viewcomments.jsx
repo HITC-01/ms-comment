@@ -16,13 +16,13 @@ export default class ViewComments extends React.Component {
         this.fetchComments();
     }
     fetchComments() {
-        
         $.ajax('/api/comments', {
             success: (data) => {
                 this.setState({commentList: data});
             }
         })
     }
+    
     convertTime(totalSeconds) {
         let minutes = Math.floor(totalSeconds / 60);
         let seconds = totalSeconds - minutes * 60;

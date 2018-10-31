@@ -39,7 +39,7 @@ export default class Comment extends React.Component {
     }
 
     grabSongInfo() {
-        fetch('api/song', {method: 'GET'})
+        fetch(`api/song`, {method: 'GET'})
           .then(stream => stream.json())
           .then((res) => {
               const songProfile = res;
