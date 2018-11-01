@@ -93,6 +93,7 @@ export default class Comment extends React.Component {
                                 <input id="text" type="text" placeholder="Write a comment" value={this.state.text} onChange={this.handleChange} />
                             </span>
                     </div>
+                </form>    
                     <div className="com-createButtons">
                         <button className="form-buttons" title={`Like`}>
                             <i className="fas fa-heart"></i>Like</button>
@@ -130,7 +131,6 @@ export default class Comment extends React.Component {
                         )}
                         <div className="com-border"></div>  
                     </div>  
-                </form>
             </div>
         );
     }
