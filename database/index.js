@@ -23,8 +23,8 @@ const getAllComments = (songId, callback) => {
   });
 };
 
-const getArtist = (callback) => {
-  connection.query('SELECT * FROM artists WHERE artistId = 2', (error, results) => {
+const getArtist = (artistId, callback) => {
+  connection.query(`SELECT * FROM artists WHERE artistId = ${artistId}`, (error, results) => {
     if (error) {
       callback(error, null);
     } else {
@@ -33,8 +33,8 @@ const getArtist = (callback) => {
   });
 };
 
-const getSong = (callback) => {
-  connection.query('SELECT * FROM songs WHERE songId = 2', (error, results) => {
+const getSong = (songId, callback) => {
+  connection.query(`SELECT * FROM songs WHERE songId = ${songId}`, (error, results) => {
     if (error) {
       callback(error, null);
     } else {

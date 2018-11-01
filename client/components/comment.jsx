@@ -5,7 +5,12 @@ import ArtistInfo from './artistInfo.jsx';
 import Moment from 'moment';
 import Numeral from 'numeral';
 
+let parse = (pathname) => {
+	var splitString = pathname.split('/');
+	return splitString[2];
+};
 
+let songId = parse(window.location.pathname);
 
 export default class Comment extends React.Component {
     constructor(props) {
@@ -13,7 +18,9 @@ export default class Comment extends React.Component {
         this.state = {
             text: '',
             artistInfo: [],
-            songInfo: [],
+            songInfo: [
+                {songId: ''},
+            ],
         }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,16 +30,18 @@ export default class Comment extends React.Component {
     }
 
     componentDidMount() {
-        this.grabArtistInfo();
-        this.grabSongInfo();
+        let random = Math.floor(Math.random() * 100) + 1;
+        console.log(random);
+        this.grabArtistInfo(random);
+        this.grabSongInfo(songId);
     }
 
     handleChange(event) {
         this.setState({text: event.target.value});
     }
 
-    grabArtistInfo() {
-        fetch(`/api/artist`, { method: 'GET' })
+    grabArtistInfo(artistId) {
+        fetch(`/api/artist/${artistId}/`, { method: 'GET' })
             .then(stream => stream.json())
             .then((res) => {
                 const artistProfile = res;
@@ -40,8 +49,8 @@ export default class Comment extends React.Component {
             });
     }
 
-    grabSongInfo() {
-        fetch(`api/song`, {method: 'GET'})
+    grabSongInfo(songId) {
+        fetch(`/api/song/${songId}`, { method: 'GET' })
           .then(stream => stream.json())
           .then((res) => {
               const songProfile = res;
@@ -56,7 +65,7 @@ export default class Comment extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         var now = new Date();
-        $.ajax('http://127.0.0.1:3003/api/sc/', {
+        $.ajax('/api/sc/', {
             method: 'POST', 
             contentType: 'application/json', 
             data: JSON.stringify({
@@ -95,14 +104,12 @@ export default class Comment extends React.Component {
                             <ul key="songProfile.id" className="soundStats">
                                 <li className="miniStats-Static"><span><i className="fas fa-play"></i>{Numeral(songProfile.plays).format('0.0a')}</span></li>
                                 <li className="miniStats"><span><i className="fas fa-heart"></i>{Numeral(songProfile.likes).format('0.0a')}</span></li>
-                                <li className="miniStats"><span><i className="fas fa-share-square"></i>{Numeral(songProfile.reposts).format('0.0a')}</span></li>
+                                <li className="miniStats"><span><i className="fas fa-share-square"></i>{Numeral(songProfile.reposts).format('0.00a')}</span></li>
                             </ul>
                         )}
                         <div className="border"></div>  
                     </div>  
                 </form>
-                <ArtistInfo />
-               <ViewComments />
             </div>
         );
     }

@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3003;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, '../public')));
+app.use('/song/:id', express.static(path.join(__dirname, '../public')));
 
 app.get('/api/sc/songs/:songId/', (req, res) => {
   db.getAllComments(req.params.songId, (error, results) => {
@@ -22,8 +22,8 @@ app.get('/api/sc/songs/:songId/', (req, res) => {
   });
 });
 
-app.get('/api/artist', (req, res) => {
-  db.getArtist((error, results) => {
+app.get('/api/artist/:artistId', (req, res) => {
+  db.getArtist(req.params.artistId, (error, results) => {
     if (error) {
       res.status(500).send(error);
     } else {
@@ -32,8 +32,8 @@ app.get('/api/artist', (req, res) => {
   });
 });
 
-app.get('/api/song', (req, res) => {
-  db.getSong((error, results) => {
+app.get('/api/song/:songId', (req, res) => {
+  db.getSong(req.params.songId, (error, results) => {
     if (error) {
       res.status(500).send(error);
     } else {

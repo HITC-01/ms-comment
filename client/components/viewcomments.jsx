@@ -3,6 +3,13 @@ import $ from 'jquery';
 import Moment from 'moment';
 
 
+let parse = (pathname) => {
+	var splitString = pathname.split('/');
+	return splitString[2];
+};
+
+let songId = parse(window.location.pathname);
+
 export default class ViewComments extends React.Component {
     constructor(props) {
         super(props);
@@ -12,10 +19,13 @@ export default class ViewComments extends React.Component {
         this.fetchComments = this.fetchComments.bind(this);
         this.convertTime = this.convertTime.bind(this);
     }
+    
     componentDidMount() {
-        let random = Math.floor(Math.random() * 10) + 1;
-        this.fetchComments(random);
+        this.fetchComments(songId);
+
+        this.interval = setInterval(() => this.fetchComments(songId), 1000);
     }
+
     fetchComments(songId) {
         $.ajax(`/api/sc/songs/${songId}/`, {
             success: (data) => {
