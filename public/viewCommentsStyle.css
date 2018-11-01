@@ -1,6 +1,7 @@
 body {
     font-family: 'Overpass', sans-serif;
 }
+
 .container {
     display: grid;
     width: 920px;
@@ -8,7 +9,8 @@ body {
     grid-template-rows: 25px auto;
     grid-row-gap: 10px;
 }
-.totalCommentsCount {
+
+.com-totalCommentsCount {
     color: #999;
     font-size: 14px;
     grid-row-start: 1;
@@ -21,20 +23,27 @@ body {
     padding-bottom: 5px;
 }
 
-.allComments {
+.com-commentContainer {
+    display: inline-grid;
+    border-radius: 10px;
+    min-width: 90%;
+    max-width: 90%;
+}
+
+.com-allComments {
     grid-row-start: 2;
     grid-column-start: 2;
     grid-column-end: 4;
 }
 
-.eachComment {
+.com-eachComment {
     position: relative;
     background-color: whitesmoke;
     font-size: 12px;
     margin: 5px;
 }
 
-.commentsIcon {
+.com-commentsIcon {
     height: 21px;
     width: 21px;
     vertical-align: bottom;
@@ -43,36 +52,16 @@ body {
     padding-right: 5px;
 }
 
-.placeHolder {
-    border: 2px solid;
-    margin: 10px;
-    font-size: 36px;
-    width: 80%;
-    text-align: center;
-}
-
-li {
-    list-style-type: none;
-    border-radius: 10px;
-}
-
-.commentContainer {
-    display: inline-grid;
-    border-radius: 10px;
-    min-width: 90%;
-    max-width: 90%;
-}
-.innerWrap {
+.com-innerWrap {
     padding-left: 50px;
     padding-right: 75px;
 }
-
-.artistPic {
+.com-artistPic {
     border-radius: 50px;
     width: 100%;
 }
 
-.artistName {
+.com-artistName {
     display: block;
     color:#999;
     font-size: 11px;
@@ -81,7 +70,7 @@ li {
     font-size: 12px;
 }
 
-.timeAgo {
+.com-timeAgo {
     position: absolute;
     right: 15px;
     top: 10px;
@@ -89,8 +78,22 @@ li {
     font-size: 11px;
 }
 
-.commentText {
+.com-commentText {
     display: inline-block;
     color: black;
+}
+
+li {
+    list-style-type: none;
+    border-radius: 10px;
+}
+/* Will go away upon implementing Proxy */
+
+.placeHolder {
+    border: 2px solid;
+    margin: 10px;
+    font-size: 36px;
+    width: 80%;
+    text-align: center;
 }
 

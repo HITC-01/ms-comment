@@ -6,7 +6,7 @@
     grid-row-gap: 10px;
 }
 
-.commentInput {
+.com-commentInput {
     display: inline-block;
     width: 100%;
     grid-row-start: 1;
@@ -16,7 +16,7 @@
     background-color: #fff;
 }
 
-.createButtons {
+.com-createButtons {
     display: inline-block;
     width: 100%;
     grid-row-start: 2;
@@ -25,6 +25,31 @@
     grid-column-end: 4;
     padding-left: 10px;
     margin-bottom: 5px;
+}
+
+.com-profilePic {
+    display: block;
+    width: 40px;
+    height: 40px;
+    float: left;
+} 
+
+.com-textbox {
+    display: block;
+    padding: 2px;
+}
+
+.com-border {
+    display: inline-block;
+    border-bottom: 2px solid whitesmoke;
+    width: 90%;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.com-miniStats:hover {
+    color: black;
+    cursor: pointer;
 }
 
 input[type="text"] {
@@ -39,22 +64,6 @@ input[type="text"] {
 
 input[type="text"]:focus {
     border-color: #e5e5e5;
-}
-
-.profilePic {
-    display: block;
-    width: 40px;
-    height: 40px;
-    float: left;
-} 
-
-#profilePic {
-    border-radius: 10px;
-}
-
-.textbox {
-    display: block;
-    padding: 2px;
 }
 
 button {
@@ -84,11 +93,6 @@ li {
     padding: 5px;
 }
 
-.miniStats:hover {
-    color: black;
-    cursor: pointer;
-}
-
 i {
     padding: 5px;
 }
@@ -99,12 +103,7 @@ i {
     color: black;
 }
 
-.border {
-    display: inline-block;
-    border-bottom: 2px solid whitesmoke;
-    width: 90%;
-    padding-bottom: 5px;
-    padding-left: 5px;
+#profilePic {
+    border-radius: 10px;
 }
-
 

@@ -1,7 +1,5 @@
 import React from 'react';
 import $ from 'jquery';
-import ViewComments from './viewcomments.jsx';
-import ArtistInfo from './artistInfo.jsx';
 import Moment from 'moment';
 import Numeral from 'numeral';
 
@@ -31,7 +29,6 @@ export default class Comment extends React.Component {
 
     componentDidMount() {
         let random = Math.floor(Math.random() * 100) + 1;
-        console.log(random);
         this.grabArtistInfo(random);
         this.grabSongInfo(songId);
     }
@@ -85,29 +82,53 @@ export default class Comment extends React.Component {
         return (
             <div>
                 <form className="wrapper" autoComplete="off" onSubmit={this.handleSubmit}>
-                    <div className="commentInput">
+                    <div className="com-commentInput">
                         {this.state.artistInfo.map(profile => 
-                            <span className="profilePic" key="profile.artistId">
-                            <img id="profilePic" src={profile.imageURL} width="40" height="40"></img>
+                            <span className="com-profilePic" key="profile.artistId" title={`${profile.name}`}>
+                                <img id="profilePic" src={profile.imageURL} width="40" height="40">
+                                </img>
                             </span>
                         )}
-                        <span className="textbox"><input id="text" type="text" placeholder="Write a comment" value={this.state.text} onChange={this.handleChange} /></span>
+                            <span className="com-textbox" title={`Write a comment`}>
+                                <input id="text" type="text" placeholder="Write a comment" value={this.state.text} onChange={this.handleChange} />
+                            </span>
                     </div>
-                    <div className="createButtons">
-                        <button className="form-buttons"><i className="fas fa-heart"></i>Like</button>
-                        <button className="form-buttons"><i className="fas fa-retweet"></i>Repost</button>
-                        <button className="form-buttons"><i className="fas fa-share-square"></i>Share</button>
-                        <button className="form-buttons"><i className="fas fa-ellipsis-h"></i>More</button>
-                        <a id="buyIn" href="#"> Stream/Download </a>
+                    <div className="com-createButtons">
+                        <button className="form-buttons" title={`Like`}>
+                            <i className="fas fa-heart"></i>Like</button>
+                        <button className="form-buttons" title={`Repost`}>
+                            <i className="fas fa-retweet"></i>Repost</button>
+                        <button className="form-buttons" title={`Share`}>
+                            <i className="fas fa-share-square"></i>Share</button>
+                        <button className="form-buttons" title={`More Options`}>
+                            <i className="fas fa-ellipsis-h"></i>More</button>
+                        <a id="buyIn" href="#" title={`Click to buy or stream`}> 
+                        Stream/Download 
+                        </a>
                         
                         {this.state.songInfo.map(songProfile => 
                             <ul key="songProfile.id" className="soundStats">
-                                <li className="miniStats-Static"><span><i className="fas fa-play"></i>{Numeral(songProfile.plays).format('0.0a')}</span></li>
-                                <li className="miniStats"><span><i className="fas fa-heart"></i>{Numeral(songProfile.likes).format('0.0a')}</span></li>
-                                <li className="miniStats"><span><i className="fas fa-share-square"></i>{Numeral(songProfile.reposts).format('0.00a')}</span></li>
+                                <li className="miniStats-Static" title={`${songProfile.plays} plays`}>
+                                    <span>
+                                        <i className="fas fa-play"></i>
+                                        {Numeral(songProfile.plays).format('0.0a')}
+                                    </span>
+                                </li>
+                                <li className="com-miniStats" title={`${songProfile.likes} likes`}>
+                                    <span>
+                                        <i className="fas fa-heart"></i>
+                                        {Numeral(songProfile.likes).format('0.0a')}
+                                    </span>
+                                </li>
+                                <li className="com-miniStats" title={`${songProfile.reposts} reposts`}>
+                                <span>
+                                    <i className="fas fa-share-square"></i>
+                                    {Numeral(songProfile.reposts).format('0.00a')}
+                                    </span>
+                                </li>
                             </ul>
                         )}
-                        <div className="border"></div>  
+                        <div className="com-border"></div>  
                     </div>  
                 </form>
             </div>
