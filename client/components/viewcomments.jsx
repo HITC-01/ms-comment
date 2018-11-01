@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import Moment from 'moment';
-
+import propTypes from 'prop-types';
 
 let parse = (pathname) => {
 	var splitString = pathname.split('/');
@@ -81,3 +81,12 @@ export default class ViewComments extends React.Component {
         );
     }
 }
+
+ViewComments.propTypes = {
+    songId: propTypes.number,
+    commentList: propTypes.array,
+};
+
+ViewComments.defaultProps = {
+    commentList: [],
+};

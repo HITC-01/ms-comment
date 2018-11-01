@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import Moment from 'moment';
 import Numeral from 'numeral';
+import propTypes from 'prop-types';
 
 let parse = (pathname) => {
 	var splitString = pathname.split('/');
@@ -135,3 +136,16 @@ export default class Comment extends React.Component {
         );
     }
 }
+
+Comment.propTypes = {
+    text: propTypes.string,
+    songId: propTypes.number,
+    artistInfo: propTypes.array,
+    songInfo: propTypes.array,
+};
+
+Comment.defaultProps = {
+    text: '',
+    artistInfo: [],
+    songInfo: [],
+};
