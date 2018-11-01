@@ -46,22 +46,32 @@ export default class ViewComments extends React.Component {
     render() {
         return(
             <div className="container">
-                <div className="totalCommentsCount">
-                    <span className="commentsIcon"><i className="fas fa-comment"></i> {''}</span>
-                    <span>{this.state.commentList.length} {''}
-                    {(this.state.commentList.length !== 1 ? 'Comments' : 'Comment')} </span>
+                <div className="com-totalCommentsCount">
+                    <span className="com-commentsIcon">
+                        <i className="fas fa-comment"></i> 
+                    </span>
+                    <span>
+                        {this.state.commentList.length} {''}
+                        {(this.state.commentList.length !== 1 ? 'Comments' : 'Comment')} 
+                    </span>
                 </div>
-                <div className="allComments">
+                <div className="com-allComments">
                   {this.state.commentList.map(comment => 
-                  <div key={comment.commentId} className="commentContainer"> 
-                    <li className="eachComment" key={comment.commentId}>
-                        <div className="timeAgo">{Moment(comment.createdAt).fromNow()}</div>
-
-                         <div className="profilePic"><img className="artistPic" src= {comment.imageURL}></img></div>
-                         <div className="innerWrap">
-                            <div className="artistName">{comment.name} at {this.convertTime(comment.songtime)}:</div>
-
-                            <div className="commentText">{ comment.text }</div>
+                    <div key={comment.commentId} className="com-commentContainer"> 
+                    <li className="com-eachComment" key={comment.commentId}>
+                        <div className="com-timeAgo" title={`Posted On ${Moment(comment.createdAt).format('MMMM do YYYY')}`}>
+                        {Moment(comment.createdAt).fromNow()}
+                        </div>
+                         <div className="com-profilePic">
+                           <img className="com-artistPic" src= {comment.imageURL}>
+                           </img>
+                        </div>
+                        <div className="com-innerWrap">
+                            <div className="com-artistName">
+                              {comment.name} <span style={{color:'#ccc'}}>at</span> {this.convertTime(comment.songtime)}:
+                            </div>
+                            <div className="com-commentText">{comment.text}
+                            </div>
                         </div>
                     </li>
                   </div>
