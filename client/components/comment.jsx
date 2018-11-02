@@ -3,12 +3,12 @@ import $ from 'jquery';
 import Moment from 'moment';
 import Numeral from 'numeral';
 import propTypes from 'prop-types';
+import MoreModal from './moreModal.jsx';
 
 let parse = (pathname) => {
 	var splitString = pathname.split('/');
 	return splitString[2];
 };
-
 let songId = parse(window.location.pathname);
 
 export default class Comment extends React.Component {
@@ -20,16 +20,44 @@ export default class Comment extends React.Component {
             songInfo: [
                 {songId: ''},
             ],
+            show: false,
+            like: false,
+            repost: false,
+            share: false,
         }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.grabArtistInfo = this.grabArtistInfo.bind(this);
     this.grabSongInfo = this.grabSongInfo.bind(this);
     this.postSongTime = this.postSongTime.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
+    this.toggleLike = this.toggleLike.bind(this);
+    this.toggleRepost = this.toggleRepost.bind(this);
+    this.toggleShare = this.toggleShare.bind(this);
+    }
+
+    toggleLike() {
+        const { like } = this.state;
+        this.setState({like: !like});
+    }
+
+    toggleRepost() {
+        const { repost } = this.state;
+        this.setState({repost: !repost});
+    }
+
+    toggleShare() {
+        const { share } = this.state;
+        this.setState({share: !share});
+    }
+
+    toggleModal() {
+        const { show } = this.state;
+        this.setState({show: !show});
     }
 
     componentDidMount() {
-        let random = Math.floor(Math.random() * 100) + 1;
+        let random = Math.floor(Math.random() * 150) + 1;
         this.grabArtistInfo(random);
         this.grabSongInfo(songId);
     }
@@ -80,6 +108,11 @@ export default class Comment extends React.Component {
     }
 
     render() {
+        const likeStatus = this.state.like ? 'Liked' : 'Like';
+        const repostStatus = this.state.repost ? 'Reposted' : 'Repost';
+        const shareStatus = this.state.share ? 'Shared' : 'Share';
+        const modalStatus = this.state.show ? 'com-display' : 'com-displayNone';
+
         return (
             <div>
                 <form className="wrapper" autoComplete="off" onSubmit={this.handleSubmit}>
@@ -96,14 +129,16 @@ export default class Comment extends React.Component {
                     </div>
                 </form>    
                     <div className="com-createButtons">
-                        <button className="form-buttons" title={`Like`}>
-                            <i className="fas fa-heart"></i>Like</button>
-                        <button className="form-buttons" title={`Repost`}>
-                            <i className="fas fa-retweet"></i>Repost</button>
-                        <button className="form-buttons" title={`Share`}>
-                            <i className="fas fa-share-square"></i>Share</button>
-                        <button className="form-buttons" title={`More Options`}>
-                            <i className="fas fa-ellipsis-h"></i>More</button>
+                        <button className={`com-button com-${this.state.like}`} title={`Like`} onClick={this.toggleLike}>
+                            <i className="fas fa-heart"></i>{likeStatus}</button>
+                        <button className={`com-button com-${this.state.repost}`} title={`Repost`} onClick={this.toggleRepost}>
+                            <i className="fas fa-retweet"></i>{repostStatus}</button>
+                        <button className={`com-button com-${this.state.share}`} title={`Share`} onClick={this.toggleShare}>
+                            <i className="fas fa-share-square"></i>{shareStatus}</button>
+                        <button className={`com-button com-${this.state.show}`} title={`More Options`} onClick={this.toggleModal}>
+                            <i className="fas fa-ellipsis-h"></i>More
+                        </button>
+                        <MoreModal status={modalStatus}/>
                         <a id="buyIn" href="#" title={`Click to buy or stream`}> 
                         Stream/Download 
                         </a>
@@ -142,10 +177,18 @@ Comment.propTypes = {
     songId: propTypes.number,
     artistInfo: propTypes.array,
     songInfo: propTypes.array,
+    show: propTypes.bool,
+    like: propTypes.bool,
+    repost: propTypes.bool,
+    share: propTypes.bool,
 };
 
 Comment.defaultProps = {
     text: '',
     artistInfo: [],
     songInfo: [],
+    show: false,
+    like: false,
+    repost: false,
+    share: false,
 };

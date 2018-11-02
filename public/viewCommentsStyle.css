@@ -41,6 +41,7 @@ body {
     background-color: whitesmoke;
     font-size: 12px;
     margin: 5px;
+    min-height: 55px;
 }
 
 .com-commentsIcon {
@@ -54,7 +55,7 @@ body {
 
 .com-innerWrap {
     padding-left: 50px;
-    padding-right: 75px;
+    padding-right: 125px;
 }
 .com-artistPic {
     border-radius: 50px;
@@ -87,6 +88,7 @@ li {
     list-style-type: none;
     border-radius: 10px;
 }
+
 /* Will go away upon implementing Proxy */
 
 .placeHolder {
@@ -97,3 +99,57 @@ li {
     text-align: center;
 }
 
+.com-options {
+    position: absolute;
+    top: 29px;
+    left: 521px;
+}
+
+.com-modalReply {
+    display: inline;
+    position: relative;
+    padding-right: 3px;
+    text-decoration: none;
+}
+
+ .com-modalDelete {
+    display: inline;
+    position: relative;
+ }
+
+ .com-modal-commentButton {
+    border: 0.5px solid #e5e5e5;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 10px;
+    background-color:white;
+    border-radius: 5px;
+    color: black;
+    min-height: 22px;
+    min-width: 25px;
+    padding: 0px;
+ }
+ .replyButton {
+    min-width: 65px;
+ }
+
+ .com-modal-commentButton:hover {
+    border: 0.5px solid#999;
+ }
+
+ .com-bottom-border {
+    position: relative;
+    display: block;
+    border-top: 2px solid whitesmoke;
+    width: 89%;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    grid-row: 3/4;
+    grid-column: 2/4;
+    background: url(https://a-v2.sndcdn.com/assets/images/stopper-9d4f27a.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 14px;
+    left: 0px;
+    top: -5px;
+}
