@@ -108,7 +108,8 @@ export default class Comment extends React.Component {
     }
 
     render() {
-        const likeStatus = this.state.like ? 'Liked' : 'Like';
+        const { like,  repost, share, show } = this.state
+        const likeStatus = like ? 'Liked' : 'Like';
         const repostStatus = this.state.repost ? 'Reposted' : 'Repost';
         const shareStatus = this.state.share ? 'Shared' : 'Share';
         const modalStatus = this.state.show ? 'com-display' : 'com-displayNone';
