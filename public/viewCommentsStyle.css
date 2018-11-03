@@ -83,6 +83,7 @@ body {
 .com-commentText {
     display: inline-block;
     color: black;
+    font-size: 13px;
 }
 
 li {
