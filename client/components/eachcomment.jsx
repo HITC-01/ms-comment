@@ -29,26 +29,27 @@ export default class EachComment extends React.Component {
 
     render() {
         const { showOptions } = this.state;
+        const { info } = this.props;
         return (
                 <li 
                   className="com-eachComment" 
-                  key={comment.commentId} 
+                  key={info.commentId} 
                   onMouseEnter={this.toggleOptions} 
                   onMouseLeave={this.toggleOptions}
                 >
                     <Reply status={showOptions}/>
-                    <div className="com-timeAgo" title={`Posted On ${Moment(this.props.info.createdAt).format('MMMM do YYYY')}`}>
-                    {Moment(this.props.info.createdAt).fromNow()}
+                    <div className="com-timeAgo" title={`Posted On ${Moment(info.createdAt).format('MMMM do YYYY')}`}>
+                    {Moment(info.createdAt).fromNow()}
                     </div>
                         <div className="com-profilePic">
-                        <img className="com-artistPic" src= {this.props.info.imageURL}>
+                        <img className="com-artistPic" src= {info.imageURL}>
                         </img>
                     </div>
                     <div className="com-innerWrap">
                         <div className="com-artistName">
-                            {this.props.info.name} <span style={{color:'#ccc'}}>at</span> {this.convertTime(this.props.info.songtime)}:
+                            {info.name} <span style={{color:'#ccc'}}>at</span> {this.convertTime(info.songtime)}:
                         </div>
-                        <div className="com-commentText">{this.props.info.text}
+                        <div className="com-commentText">{info.text}
                         </div>
                     </div>
                 </li>
