@@ -1,0 +1,803 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reply Component render basic component 1`] = `
+<div
+  className="com-modal com-displayNone"
+>
+  <div
+    className="com-modalSpan"
+  >
+    <button
+      className="com-modal-button"
+      title="Add to Next up"
+      type="button"
+    >
+      <i
+        className="far fa-play-circle"
+      />
+      Add to Next up
+    </button>
+  </div>
+  <div
+    className="com-modalSpan"
+  >
+    <button
+      className="com-modal-button"
+      title="Add to Playlist"
+      type="button"
+    >
+      <i
+        className="fab fa-soundcloud"
+      />
+       
+      Add to playlist
+    </button>
+  </div>
+  <div
+    className="com-modalSpan"
+  >
+    <button
+      className="com-modal-button"
+      title="Station"
+      type="button"
+    >
+      <i
+        className="fas fa-broadcast-tower"
+      />
+      Station
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Reply Component render correctly Reply Component for each Comment Component 1`] = `
+ReactWrapper {
+  Symbol(enzyme.__unrendered__): <MoreModal
+    status="com-displayNone"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "status": "com-displayNone",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": <div
+        class="com-modal com-displayNone"
+      >
+        <div
+          class="com-modalSpan"
+        >
+          <button
+            class="com-modal-button"
+            title="Add to Next up"
+            type="button"
+          >
+            <i
+              class="far fa-play-circle"
+            />
+            Add to Next up
+          </button>
+        </div>
+        <div
+          class="com-modalSpan"
+        >
+          <button
+            class="com-modal-button"
+            title="Add to Playlist"
+            type="button"
+          >
+            <i
+              class="fab fa-soundcloud"
+            />
+             
+            Add to playlist
+          </button>
+        </div>
+        <div
+          class="com-modalSpan"
+        >
+          <button
+            class="com-modal-button"
+            title="Station"
+            type="button"
+          >
+            <i
+              class="fas fa-broadcast-tower"
+            />
+            Station
+          </button>
+        </div>
+      </div>,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="com-modalSpan"
+          >
+            <button
+              className="com-modal-button"
+              title="Add to Next up"
+              type="button"
+            >
+              <i
+                className="far fa-play-circle"
+              />
+              Add to Next up
+            </button>
+          </div>,
+          <div
+            className="com-modalSpan"
+          >
+            <button
+              className="com-modal-button"
+              title="Add to Playlist"
+              type="button"
+            >
+              <i
+                className="fab fa-soundcloud"
+              />
+               
+              Add to playlist
+            </button>
+          </div>,
+          <div
+            className="com-modalSpan"
+          >
+            <button
+              className="com-modal-button"
+              title="Station"
+              type="button"
+            >
+              <i
+                className="fas fa-broadcast-tower"
+              />
+              Station
+            </button>
+          </div>,
+        ],
+        "className": "com-modal com-displayNone",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": <div
+            class="com-modalSpan"
+          >
+            <button
+              class="com-modal-button"
+              title="Add to Next up"
+              type="button"
+            >
+              <i
+                class="far fa-play-circle"
+              />
+              Add to Next up
+            </button>
+          </div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              className="com-modal-button"
+              title="Add to Next up"
+              type="button"
+            >
+              <i
+                className="far fa-play-circle"
+              />
+              Add to Next up
+            </button>,
+            "className": "com-modalSpan",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <button
+                class="com-modal-button"
+                title="Add to Next up"
+                type="button"
+              >
+                <i
+                  class="far fa-play-circle"
+                />
+                Add to Next up
+              </button>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <i
+                    className="far fa-play-circle"
+                  />,
+                  "Add to Next up",
+                ],
+                "className": "com-modal-button",
+                "title": "Add to Next up",
+                "type": "button",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <i
+                    class="far fa-play-circle"
+                  />,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "far fa-play-circle",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    undefined,
+                  ],
+                  "type": "i",
+                },
+                "Add to Next up",
+              ],
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": <div
+            class="com-modalSpan"
+          >
+            <button
+              class="com-modal-button"
+              title="Add to Playlist"
+              type="button"
+            >
+              <i
+                class="fab fa-soundcloud"
+              />
+               
+              Add to playlist
+            </button>
+          </div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              className="com-modal-button"
+              title="Add to Playlist"
+              type="button"
+            >
+              <i
+                className="fab fa-soundcloud"
+              />
+               
+              Add to playlist
+            </button>,
+            "className": "com-modalSpan",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <button
+                class="com-modal-button"
+                title="Add to Playlist"
+                type="button"
+              >
+                <i
+                  class="fab fa-soundcloud"
+                />
+                 
+                Add to playlist
+              </button>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <i
+                    className="fab fa-soundcloud"
+                  />,
+                  " ",
+                  "Add to playlist",
+                ],
+                "className": "com-modal-button",
+                "title": "Add to Playlist",
+                "type": "button",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <i
+                    class="fab fa-soundcloud"
+                  />,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "fab fa-soundcloud",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    undefined,
+                  ],
+                  "type": "i",
+                },
+                " ",
+                "Add to playlist",
+              ],
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": <div
+            class="com-modalSpan"
+          >
+            <button
+              class="com-modal-button"
+              title="Station"
+              type="button"
+            >
+              <i
+                class="fas fa-broadcast-tower"
+              />
+              Station
+            </button>
+          </div>,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              className="com-modal-button"
+              title="Station"
+              type="button"
+            >
+              <i
+                className="fas fa-broadcast-tower"
+              />
+              Station
+            </button>,
+            "className": "com-modalSpan",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": <button
+                class="com-modal-button"
+                title="Station"
+                type="button"
+              >
+                <i
+                  class="fas fa-broadcast-tower"
+                />
+                Station
+              </button>,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <i
+                    className="fas fa-broadcast-tower"
+                  />,
+                  "Station",
+                ],
+                "className": "com-modal-button",
+                "title": "Station",
+                "type": "button",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": <i
+                    class="fas fa-broadcast-tower"
+                  />,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "fas fa-broadcast-tower",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    undefined,
+                  ],
+                  "type": "i",
+                },
+                "Station",
+              ],
+              "type": "button",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "status": "com-displayNone",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="com-modal com-displayNone"
+        >
+          <div
+            class="com-modalSpan"
+          >
+            <button
+              class="com-modal-button"
+              title="Add to Next up"
+              type="button"
+            >
+              <i
+                class="far fa-play-circle"
+              />
+              Add to Next up
+            </button>
+          </div>
+          <div
+            class="com-modalSpan"
+          >
+            <button
+              class="com-modal-button"
+              title="Add to Playlist"
+              type="button"
+            >
+              <i
+                class="fab fa-soundcloud"
+              />
+               
+              Add to playlist
+            </button>
+          </div>
+          <div
+            class="com-modalSpan"
+          >
+            <button
+              class="com-modal-button"
+              title="Station"
+              type="button"
+            >
+              <i
+                class="fas fa-broadcast-tower"
+              />
+              Station
+            </button>
+          </div>
+        </div>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="com-modalSpan"
+            >
+              <button
+                className="com-modal-button"
+                title="Add to Next up"
+                type="button"
+              >
+                <i
+                  className="far fa-play-circle"
+                />
+                Add to Next up
+              </button>
+            </div>,
+            <div
+              className="com-modalSpan"
+            >
+              <button
+                className="com-modal-button"
+                title="Add to Playlist"
+                type="button"
+              >
+                <i
+                  className="fab fa-soundcloud"
+                />
+                 
+                Add to playlist
+              </button>
+            </div>,
+            <div
+              className="com-modalSpan"
+            >
+              <button
+                className="com-modal-button"
+                title="Station"
+                type="button"
+              >
+                <i
+                  className="fas fa-broadcast-tower"
+                />
+                Station
+              </button>
+            </div>,
+          ],
+          "className": "com-modal com-displayNone",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": <div
+              class="com-modalSpan"
+            >
+              <button
+                class="com-modal-button"
+                title="Add to Next up"
+                type="button"
+              >
+                <i
+                  class="far fa-play-circle"
+                />
+                Add to Next up
+              </button>
+            </div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <button
+                className="com-modal-button"
+                title="Add to Next up"
+                type="button"
+              >
+                <i
+                  className="far fa-play-circle"
+                />
+                Add to Next up
+              </button>,
+              "className": "com-modalSpan",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <button
+                  class="com-modal-button"
+                  title="Add to Next up"
+                  type="button"
+                >
+                  <i
+                    class="far fa-play-circle"
+                  />
+                  Add to Next up
+                </button>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <i
+                      className="far fa-play-circle"
+                    />,
+                    "Add to Next up",
+                  ],
+                  "className": "com-modal-button",
+                  "title": "Add to Next up",
+                  "type": "button",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <i
+                      class="far fa-play-circle"
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "far fa-play-circle",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      undefined,
+                    ],
+                    "type": "i",
+                  },
+                  "Add to Next up",
+                ],
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": <div
+              class="com-modalSpan"
+            >
+              <button
+                class="com-modal-button"
+                title="Add to Playlist"
+                type="button"
+              >
+                <i
+                  class="fab fa-soundcloud"
+                />
+                 
+                Add to playlist
+              </button>
+            </div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <button
+                className="com-modal-button"
+                title="Add to Playlist"
+                type="button"
+              >
+                <i
+                  className="fab fa-soundcloud"
+                />
+                 
+                Add to playlist
+              </button>,
+              "className": "com-modalSpan",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <button
+                  class="com-modal-button"
+                  title="Add to Playlist"
+                  type="button"
+                >
+                  <i
+                    class="fab fa-soundcloud"
+                  />
+                   
+                  Add to playlist
+                </button>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <i
+                      className="fab fa-soundcloud"
+                    />,
+                    " ",
+                    "Add to playlist",
+                  ],
+                  "className": "com-modal-button",
+                  "title": "Add to Playlist",
+                  "type": "button",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <i
+                      class="fab fa-soundcloud"
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "fab fa-soundcloud",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      undefined,
+                    ],
+                    "type": "i",
+                  },
+                  " ",
+                  "Add to playlist",
+                ],
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": <div
+              class="com-modalSpan"
+            >
+              <button
+                class="com-modal-button"
+                title="Station"
+                type="button"
+              >
+                <i
+                  class="fas fa-broadcast-tower"
+                />
+                Station
+              </button>
+            </div>,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <button
+                className="com-modal-button"
+                title="Station"
+                type="button"
+              >
+                <i
+                  className="fas fa-broadcast-tower"
+                />
+                Station
+              </button>,
+              "className": "com-modalSpan",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": <button
+                  class="com-modal-button"
+                  title="Station"
+                  type="button"
+                >
+                  <i
+                    class="fas fa-broadcast-tower"
+                  />
+                  Station
+                </button>,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <i
+                      className="fas fa-broadcast-tower"
+                    />,
+                    "Station",
+                  ],
+                  "className": "com-modal-button",
+                  "title": "Station",
+                  "type": "button",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": <i
+                      class="fas fa-broadcast-tower"
+                    />,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "fas fa-broadcast-tower",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      undefined,
+                    ],
+                    "type": "i",
+                  },
+                  "Station",
+                ],
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
