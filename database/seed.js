@@ -8,9 +8,9 @@ const generator = () => {
 
   for (let i = 0; i < 1000; i += 1) {
     const details = {
-      plays: faker.random.number(),
-      likes: faker.random.number(),
-      reposts: faker.random.number(),
+      plays: faker.random.number({ min: 1000, max: 25000 }),
+      likes: faker.random.number({ min: 50000, max: 10000 }),
+      reposts: faker.random.number({ min: 10000, max: 100000 }),
       name: faker.name.findName(),
       imageURL: faker.image.avatar(),
       text: faker.lorem.sentences(),

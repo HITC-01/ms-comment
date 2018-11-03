@@ -1,68 +1,65 @@
 import React from 'react';
 import $ from 'jquery';
-import propTypes from 'prop-types';
 import EachComment from './eachcomment.jsx';
 
-let parse = (pathname) => {
-	var splitString = pathname.split('/');
-	return splitString[2];
+const parse = (pathname) => {
+  const splitString = pathname.split('/');
+  return splitString[2];
 };
 
-let songId = parse(window.location.pathname);
+const songId = parse(window.location.pathname);
 
 export default class ViewComments extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            commentList: [],
-            showOptions: false,
-        }
-        this.fetchComments = this.fetchComments.bind(this);
-    }
-    
-    componentDidMount() {
-        this.fetchComments(songId);
+  constructor(props) {
+    super(props);
+    this.state = {
+      commentList: [],
+    };
+    this.fetchComments = this.fetchComments.bind(this);
+  }
 
-        this.interval = setInterval(() => this.fetchComments(songId), 1000);
-    }
+  componentDidMount() {
+    this.fetchComments(songId);
+    this.interval = setInterval(() => this.fetchComments(songId), 1000);
+  }
 
-    fetchComments(songId) {
-        $.ajax(`/api/sc/songs/${songId}/`, {
-            success: (data) => {
-                this.setState({commentList: data});
-            }
-        })
-    }
-    render() {
-        return(
-            <div className="container">
-                <div className="com-totalCommentsCount">
-                    <span className="com-commentsIcon">
-                        <i className="fas fa-comment"></i> 
-                    </span>
-                    <span>
-                        {this.state.commentList.length} {''}
-                        {(this.state.commentList.length !== 1 ? 'Comments' : 'Comment')} 
-                    </span>
-                </div>
-                <div className="com-allComments">
-                  {this.state.commentList.map(comment => 
-                    <div key={comment.commentId} className="com-commentContainer">
-                    <EachComment info={comment} />
-                    </div>
-                  )}
-                </div>
-                <div className="com-bottom-border"></div>
+  fetchComments() {
+    $.ajax(`/api/sc/songs/${songId}/`, {
+      success: (data) => {
+        let { commentList } = this.state;
+        commentList = data;
+        this.setState({ commentList });
+      },
+    });
+  }
+
+  render() {
+    const { commentList } = this.state;
+    return (
+      <div className="container">
+        <div className="com-totalCommentsCount">
+          <span className="com-commentsIcon">
+            <i className="fas fa-comment" />
+          </span>
+          <span>
+            {commentList.length}
+            {''}
+            {(commentList.length !== 1 ? 'Comments' : 'Comment')}
+          </span>
+        </div>
+        <div className="com-allComments">
+          {commentList.map(comment => (
+            <div key={comment.commentId} className="com-commentContainer">
+              <EachComment info={comment} />
             </div>
-        );
-    }
+          ))}
+        </div>
+        <div className="com-bottom-border" />
+      </div>
+    );
+  }
 }
 
-ViewComments.propTypes = {
-    songId: propTypes.number,
-    commentList: propTypes.array,
-};
-
 ViewComments.defaultProps = {
-    commentList: [],
+  commentList: [],
 };
