@@ -43,7 +43,7 @@ export default class ViewComments extends React.Component {
           </span>
           <span>
             {commentList.length}
-            {''}
+            {' '}
             {(commentList.length !== 1 ? 'Comments' : 'Comment')}
           </span>
         </div>
