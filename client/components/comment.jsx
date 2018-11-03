@@ -18,7 +18,7 @@ export default class Comment extends React.Component {
             text: '',
             artistInfo: [],
             songInfo: [
-                {songId: ''},
+                { songId: '' },
             ],
             show: false,
             like: false,
