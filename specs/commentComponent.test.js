@@ -9,9 +9,7 @@ import Comment from '../client/components/comment.jsx';
 import MoreModal from '../client/components/moreModal';
 const instanceComment = new Comment(); // create a new instance of comment to access methods
 
-
 describe('Comment (Create) Component', () => {
-
   it('render correctly Comment Component', () => {
     const CommentComponent = mount(<Comment />);
     expect(CommentComponent).toMatchSnapshot();
@@ -20,9 +18,7 @@ describe('Comment (Create) Component', () => {
     const tree = renderer.create(<Comment />).toJSON();
     expect(tree).toMatchSnapshot();
   });
-  test('Grab a random song time', () => {
-    expect(typeof instanceComment.postSongTime(300) === 'number').toBe(true);
-  });
+
   test('handle toggle functions', () => {
     const instance = mount(<Comment />).instance();
     instance.toggleLike();
@@ -51,9 +47,15 @@ describe('Comment (Create) Component', () => {
     expect(wrapper.find('#text')).toHaveLength(1); // Is a textbox present?
     const textBox = wrapper.find('#text');
     textBox.simulate('change', { target: { value: 'I love this freaking song' } });
-    expect(wrapper.state().text).toEqual('I love this freaking song');
+    expect(wrapper.state().commentText).toBe('I love this freaking song');
   });
 });
+
+
+
+
+
+
 /* 
 it('render correctly text component', () => {  
     const TextInputComponent = renderer.create(<TextInput />).toJSON();

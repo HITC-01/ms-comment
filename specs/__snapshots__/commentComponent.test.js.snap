@@ -31,6 +31,7 @@ exports[`Comment (Create) Component render basic component 1`] = `
       className="com-button com-false"
       onClick={[Function]}
       title="Like"
+      type="button"
     >
       <i
         className="fas fa-heart"
@@ -41,6 +42,7 @@ exports[`Comment (Create) Component render basic component 1`] = `
       className="com-button com-false"
       onClick={[Function]}
       title="Repost"
+      type="button"
     >
       <i
         className="fas fa-retweet"
@@ -51,6 +53,7 @@ exports[`Comment (Create) Component render basic component 1`] = `
       className="com-button com-false"
       onClick={[Function]}
       title="Share"
+      type="button"
     >
       <i
         className="fas fa-share-square"
@@ -61,6 +64,7 @@ exports[`Comment (Create) Component render basic component 1`] = `
       className="com-button com-false"
       onClick={[Function]}
       title="More Options"
+      type="button"
     >
       <i
         className="fas fa-ellipsis-h"
@@ -76,6 +80,7 @@ exports[`Comment (Create) Component render basic component 1`] = `
         <button
           className="com-modal-button"
           title="Add to Next up"
+          type="button"
         >
           <i
             className="far fa-play-circle"
@@ -89,11 +94,13 @@ exports[`Comment (Create) Component render basic component 1`] = `
         <button
           className="com-modal-button"
           title="Add to Playlist"
+          type="button"
         >
           <i
             className="fab fa-soundcloud"
           />
-           Add to playlist
+           
+          Add to playlist
         </button>
       </div>
       <div
@@ -102,6 +109,7 @@ exports[`Comment (Create) Component render basic component 1`] = `
         <button
           className="com-modal-button"
           title="Station"
+          type="button"
         >
           <i
             className="fas fa-broadcast-tower"
@@ -165,12 +173,12 @@ exports[`Comment (Create) Component render correctly Comment Component 1`] = `
 ReactWrapper {
   Symbol(enzyme.__unrendered__): <Comment
     artistInfo={Array []}
+    commentText=""
     like={false}
     repost={false}
     share={false}
     show={false}
     songInfo={Array []}
-    text=""
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -209,12 +217,12 @@ ReactWrapper {
             "context": null,
             "props": Object {
               "artistInfo": Array [],
+              "commentText": "",
               "like": false,
               "repost": false,
               "share": false,
               "show": false,
               "songInfo": Array [],
-              "text": "",
             },
           },
           "memoizedState": Object {
@@ -222,12 +230,12 @@ ReactWrapper {
             "mount": true,
             "props": Object {
               "artistInfo": Array [],
+              "commentText": "",
               "like": false,
               "repost": false,
               "share": false,
               "show": false,
               "songInfo": Array [],
-              "text": "",
             },
           },
           "mode": 0,
@@ -237,12 +245,12 @@ ReactWrapper {
             "context": null,
             "props": Object {
               "artistInfo": Array [],
+              "commentText": "",
               "like": false,
               "repost": false,
               "share": false,
               "show": false,
               "songInfo": Array [],
-              "text": "",
             },
           },
           "ref": null,
@@ -309,6 +317,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="Like"
+                        type="button"
                       >
                         <i
                           class="fas fa-heart"
@@ -318,6 +327,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="Repost"
+                        type="button"
                       >
                         <i
                           class="fas fa-retweet"
@@ -327,6 +337,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="Share"
+                        type="button"
                       >
                         <i
                           class="fas fa-share-square"
@@ -336,6 +347,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="More Options"
+                        type="button"
                       >
                         <i
                           class="fas fa-ellipsis-h"
@@ -351,6 +363,7 @@ ReactWrapper {
                           <button
                             class="com-modal-button"
                             title="Add to Next up"
+                            type="button"
                           >
                             <i
                               class="far fa-play-circle"
@@ -364,11 +377,13 @@ ReactWrapper {
                           <button
                             class="com-modal-button"
                             title="Add to Playlist"
+                            type="button"
                           >
                             <i
                               class="fab fa-soundcloud"
                             />
-                             Add to playlist
+                             
+                            Add to playlist
                           </button>
                         </div>
                         <div
@@ -377,6 +392,7 @@ ReactWrapper {
                           <button
                             class="com-modal-button"
                             title="Station"
+                            type="button"
                           >
                             <i
                               class="fas fa-broadcast-tower"
@@ -477,12 +493,12 @@ ReactWrapper {
                       props={
                         Object {
                           "artistInfo": Array [],
+                          "commentText": "",
                           "like": false,
                           "repost": false,
                           "share": false,
                           "show": false,
                           "songInfo": Array [],
-                          "text": "",
                         }
                       }
                     />,
@@ -504,12 +520,12 @@ ReactWrapper {
                       props={
                         Object {
                           "artistInfo": Array [],
+                          "commentText": "",
                           "like": false,
                           "repost": false,
                           "share": false,
                           "show": false,
                           "songInfo": Array [],
-                          "text": "",
                         }
                       }
                     />,
@@ -536,12 +552,12 @@ ReactWrapper {
                 props={
                   Object {
                     "artistInfo": Array [],
+                    "commentText": "",
                     "like": false,
                     "repost": false,
                     "share": false,
                     "show": false,
                     "songInfo": Array [],
-                    "text": "",
                   }
                 }
               />,
@@ -582,6 +598,7 @@ ReactWrapper {
                     <button
                       class="com-button com-false"
                       title="Like"
+                      type="button"
                     >
                       <i
                         class="fas fa-heart"
@@ -591,6 +608,7 @@ ReactWrapper {
                     <button
                       class="com-button com-false"
                       title="Repost"
+                      type="button"
                     >
                       <i
                         class="fas fa-retweet"
@@ -600,6 +618,7 @@ ReactWrapper {
                     <button
                       class="com-button com-false"
                       title="Share"
+                      type="button"
                     >
                       <i
                         class="fas fa-share-square"
@@ -609,6 +628,7 @@ ReactWrapper {
                     <button
                       class="com-button com-false"
                       title="More Options"
+                      type="button"
                     >
                       <i
                         class="fas fa-ellipsis-h"
@@ -624,6 +644,7 @@ ReactWrapper {
                         <button
                           class="com-modal-button"
                           title="Add to Next up"
+                          type="button"
                         >
                           <i
                             class="far fa-play-circle"
@@ -637,11 +658,13 @@ ReactWrapper {
                         <button
                           class="com-modal-button"
                           title="Add to Playlist"
+                          type="button"
                         >
                           <i
                             class="fab fa-soundcloud"
                           />
-                           Add to playlist
+                           
+                          Add to playlist
                         </button>
                       </div>
                       <div
@@ -650,6 +673,7 @@ ReactWrapper {
                         <button
                           class="com-modal-button"
                           title="Station"
+                          type="button"
                         >
                           <i
                             class="fas fa-broadcast-tower"
@@ -741,12 +765,12 @@ ReactWrapper {
                   props={
                     Object {
                       "artistInfo": Array [],
+                      "commentText": "",
                       "like": false,
                       "repost": false,
                       "share": false,
                       "show": false,
                       "songInfo": Array [],
-                      "text": "",
                     }
                   }
                 />,
@@ -772,12 +796,12 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "artistInfo": Array [],
+                "commentText": "",
                 "like": false,
                 "repost": false,
                 "share": false,
                 "show": false,
                 "songInfo": Array [],
-                "text": "",
               },
             },
             "refs": Object {},
@@ -786,12 +810,12 @@ ReactWrapper {
               "mount": true,
               "props": Object {
                 "artistInfo": Array [],
+                "commentText": "",
                 "like": false,
                 "repost": false,
                 "share": false,
                 "show": false,
                 "songInfo": Array [],
-                "text": "",
               },
             },
             "updater": Object {
@@ -1213,6 +1237,7 @@ ReactWrapper {
                   "className": "com-button com-false",
                   "onClick": [Function],
                   "title": "Like",
+                  "type": "button",
                 },
                 "memoizedState": null,
                 "mode": 0,
@@ -1227,6 +1252,7 @@ ReactWrapper {
                   "className": "com-button com-false",
                   "onClick": [Function],
                   "title": "Like",
+                  "type": "button",
                 },
                 "ref": null,
                 "return": [Circular],
@@ -1329,6 +1355,7 @@ ReactWrapper {
                     "className": "com-button com-false",
                     "onClick": [Function],
                     "title": "Repost",
+                    "type": "button",
                   },
                   "memoizedState": null,
                   "mode": 0,
@@ -1343,6 +1370,7 @@ ReactWrapper {
                     "className": "com-button com-false",
                     "onClick": [Function],
                     "title": "Repost",
+                    "type": "button",
                   },
                   "ref": null,
                   "return": [Circular],
@@ -1445,6 +1473,7 @@ ReactWrapper {
                       "className": "com-button com-false",
                       "onClick": [Function],
                       "title": "Share",
+                      "type": "button",
                     },
                     "memoizedState": null,
                     "mode": 0,
@@ -1459,6 +1488,7 @@ ReactWrapper {
                       "className": "com-button com-false",
                       "onClick": [Function],
                       "title": "Share",
+                      "type": "button",
                     },
                     "ref": null,
                     "return": [Circular],
@@ -1561,6 +1591,7 @@ ReactWrapper {
                         "className": "com-button com-false",
                         "onClick": [Function],
                         "title": "More Options",
+                        "type": "button",
                       },
                       "memoizedState": null,
                       "mode": 0,
@@ -1575,6 +1606,7 @@ ReactWrapper {
                         "className": "com-button com-false",
                         "onClick": [Function],
                         "title": "More Options",
+                        "type": "button",
                       },
                       "ref": null,
                       "return": [Circular],
@@ -1700,6 +1732,7 @@ ReactWrapper {
                                 ],
                                 "className": "com-modal-button",
                                 "title": "Add to Next up",
+                                "type": "button",
                               },
                               "memoizedState": null,
                               "mode": 0,
@@ -1713,6 +1746,7 @@ ReactWrapper {
                                 ],
                                 "className": "com-modal-button",
                                 "title": "Add to Next up",
+                                "type": "button",
                               },
                               "ref": null,
                               "return": [Circular],
@@ -1721,6 +1755,7 @@ ReactWrapper {
                               "stateNode": <button
                                 class="com-modal-button"
                                 title="Add to Next up"
+                                type="button"
                               >
                                 <i
                                   class="far fa-play-circle"
@@ -1745,6 +1780,7 @@ ReactWrapper {
                               "children": <button
                                 className="com-modal-button"
                                 title="Add to Next up"
+                                type="button"
                               >
                                 <i
                                   className="far fa-play-circle"
@@ -1760,6 +1796,7 @@ ReactWrapper {
                               "children": <button
                                 className="com-modal-button"
                                 title="Add to Next up"
+                                type="button"
                               >
                                 <i
                                   className="far fa-play-circle"
@@ -1835,16 +1872,48 @@ ReactWrapper {
                                     "index": 1,
                                     "key": null,
                                     "lastEffect": null,
-                                    "memoizedProps": " Add to playlist",
+                                    "memoizedProps": " ",
                                     "memoizedState": null,
                                     "mode": 0,
                                     "nextEffect": null,
-                                    "pendingProps": " Add to playlist",
+                                    "pendingProps": " ",
                                     "ref": null,
                                     "return": [Circular],
                                     "selfBaseDuration": 0,
-                                    "sibling": null,
-                                    "stateNode":  Add to playlist,
+                                    "sibling": FiberNode {
+                                      "_debugID": 84,
+                                      "_debugIsCurrentlyTiming": false,
+                                      "_debugOwner": null,
+                                      "_debugSource": null,
+                                      "actualDuration": 0,
+                                      "actualStartTime": -1,
+                                      "alternate": null,
+                                      "child": null,
+                                      "childExpirationTime": 0,
+                                      "effectTag": 0,
+                                      "elementType": null,
+                                      "expirationTime": 0,
+                                      "firstContextDependency": null,
+                                      "firstEffect": null,
+                                      "index": 2,
+                                      "key": null,
+                                      "lastEffect": null,
+                                      "memoizedProps": "Add to playlist",
+                                      "memoizedState": null,
+                                      "mode": 0,
+                                      "nextEffect": null,
+                                      "pendingProps": "Add to playlist",
+                                      "ref": null,
+                                      "return": [Circular],
+                                      "selfBaseDuration": 0,
+                                      "sibling": null,
+                                      "stateNode": Add to playlist,
+                                      "tag": 6,
+                                      "treeBaseDuration": 0,
+                                      "type": null,
+                                      "updateQueue": null,
+                                    },
+                                    "stateNode":  ,
                                     "tag": 6,
                                     "treeBaseDuration": 0,
                                     "type": null,
@@ -1872,10 +1941,12 @@ ReactWrapper {
                                     <i
                                       className="fab fa-soundcloud"
                                     />,
-                                    " Add to playlist",
+                                    " ",
+                                    "Add to playlist",
                                   ],
                                   "className": "com-modal-button",
                                   "title": "Add to Playlist",
+                                  "type": "button",
                                 },
                                 "memoizedState": null,
                                 "mode": 0,
@@ -1885,10 +1956,12 @@ ReactWrapper {
                                     <i
                                       className="fab fa-soundcloud"
                                     />,
-                                    " Add to playlist",
+                                    " ",
+                                    "Add to playlist",
                                   ],
                                   "className": "com-modal-button",
                                   "title": "Add to Playlist",
+                                  "type": "button",
                                 },
                                 "ref": null,
                                 "return": [Circular],
@@ -1897,11 +1970,13 @@ ReactWrapper {
                                 "stateNode": <button
                                   class="com-modal-button"
                                   title="Add to Playlist"
+                                  type="button"
                                 >
                                   <i
                                     class="fab fa-soundcloud"
                                   />
-                                   Add to playlist
+                                   
+                                  Add to playlist
                                 </button>,
                                 "tag": 5,
                                 "treeBaseDuration": 0,
@@ -1921,11 +1996,13 @@ ReactWrapper {
                                 "children": <button
                                   className="com-modal-button"
                                   title="Add to Playlist"
+                                  type="button"
                                 >
                                   <i
                                     className="fab fa-soundcloud"
                                   />
-                                   Add to playlist
+                                   
+                                  Add to playlist
                                 </button>,
                                 "className": "com-modalSpan",
                               },
@@ -1936,11 +2013,13 @@ ReactWrapper {
                                 "children": <button
                                   className="com-modal-button"
                                   title="Add to Playlist"
+                                  type="button"
                                 >
                                   <i
                                     className="fab fa-soundcloud"
                                   />
-                                   Add to playlist
+                                   
+                                  Add to playlist
                                 </button>,
                                 "className": "com-modalSpan",
                               },
@@ -1956,7 +2035,7 @@ ReactWrapper {
                                 "actualStartTime": -1,
                                 "alternate": null,
                                 "child": FiberNode {
-                                  "_debugID": 84,
+                                  "_debugID": 85,
                                   "_debugIsCurrentlyTiming": false,
                                   "_debugOwner": [Circular],
                                   "_debugSource": null,
@@ -1964,7 +2043,7 @@ ReactWrapper {
                                   "actualStartTime": -1,
                                   "alternate": null,
                                   "child": FiberNode {
-                                    "_debugID": 85,
+                                    "_debugID": 86,
                                     "_debugIsCurrentlyTiming": false,
                                     "_debugOwner": [Circular],
                                     "_debugSource": null,
@@ -1994,7 +2073,7 @@ ReactWrapper {
                                     "return": [Circular],
                                     "selfBaseDuration": 0,
                                     "sibling": FiberNode {
-                                      "_debugID": 86,
+                                      "_debugID": 87,
                                       "_debugIsCurrentlyTiming": false,
                                       "_debugOwner": null,
                                       "_debugSource": null,
@@ -2052,6 +2131,7 @@ ReactWrapper {
                                     ],
                                     "className": "com-modal-button",
                                     "title": "Station",
+                                    "type": "button",
                                   },
                                   "memoizedState": null,
                                   "mode": 0,
@@ -2065,6 +2145,7 @@ ReactWrapper {
                                     ],
                                     "className": "com-modal-button",
                                     "title": "Station",
+                                    "type": "button",
                                   },
                                   "ref": null,
                                   "return": [Circular],
@@ -2073,6 +2154,7 @@ ReactWrapper {
                                   "stateNode": <button
                                     class="com-modal-button"
                                     title="Station"
+                                    type="button"
                                   >
                                     <i
                                       class="fas fa-broadcast-tower"
@@ -2097,6 +2179,7 @@ ReactWrapper {
                                   "children": <button
                                     className="com-modal-button"
                                     title="Station"
+                                    type="button"
                                   >
                                     <i
                                       className="fas fa-broadcast-tower"
@@ -2112,6 +2195,7 @@ ReactWrapper {
                                   "children": <button
                                     className="com-modal-button"
                                     title="Station"
+                                    type="button"
                                   >
                                     <i
                                       className="fas fa-broadcast-tower"
@@ -2130,6 +2214,7 @@ ReactWrapper {
                                   <button
                                     class="com-modal-button"
                                     title="Station"
+                                    type="button"
                                   >
                                     <i
                                       class="fas fa-broadcast-tower"
@@ -2148,11 +2233,13 @@ ReactWrapper {
                                 <button
                                   class="com-modal-button"
                                   title="Add to Playlist"
+                                  type="button"
                                 >
                                   <i
                                     class="fab fa-soundcloud"
                                   />
-                                   Add to playlist
+                                   
+                                  Add to playlist
                                 </button>
                               </div>,
                               "tag": 5,
@@ -2166,6 +2253,7 @@ ReactWrapper {
                               <button
                                 class="com-modal-button"
                                 title="Add to Next up"
+                                type="button"
                               >
                                 <i
                                   class="far fa-play-circle"
@@ -2195,6 +2283,7 @@ ReactWrapper {
                                 <button
                                   className="com-modal-button"
                                   title="Add to Next up"
+                                  type="button"
                                 >
                                   <i
                                     className="far fa-play-circle"
@@ -2208,11 +2297,13 @@ ReactWrapper {
                                 <button
                                   className="com-modal-button"
                                   title="Add to Playlist"
+                                  type="button"
                                 >
                                   <i
                                     className="fab fa-soundcloud"
                                   />
-                                   Add to playlist
+                                   
+                                  Add to playlist
                                 </button>
                               </div>,
                               <div
@@ -2221,6 +2312,7 @@ ReactWrapper {
                                 <button
                                   className="com-modal-button"
                                   title="Station"
+                                  type="button"
                                 >
                                   <i
                                     className="fas fa-broadcast-tower"
@@ -2242,6 +2334,7 @@ ReactWrapper {
                                 <button
                                   className="com-modal-button"
                                   title="Add to Next up"
+                                  type="button"
                                 >
                                   <i
                                     className="far fa-play-circle"
@@ -2255,11 +2348,13 @@ ReactWrapper {
                                 <button
                                   className="com-modal-button"
                                   title="Add to Playlist"
+                                  type="button"
                                 >
                                   <i
                                     className="fab fa-soundcloud"
                                   />
-                                   Add to playlist
+                                   
+                                  Add to playlist
                                 </button>
                               </div>,
                               <div
@@ -2268,6 +2363,7 @@ ReactWrapper {
                                 <button
                                   className="com-modal-button"
                                   title="Station"
+                                  type="button"
                                 >
                                   <i
                                     className="fas fa-broadcast-tower"
@@ -2291,6 +2387,7 @@ ReactWrapper {
                               <button
                                 class="com-modal-button"
                                 title="Add to Next up"
+                                type="button"
                               >
                                 <i
                                   class="far fa-play-circle"
@@ -2304,11 +2401,13 @@ ReactWrapper {
                               <button
                                 class="com-modal-button"
                                 title="Add to Playlist"
+                                type="button"
                               >
                                 <i
                                   class="fab fa-soundcloud"
                                 />
-                                 Add to playlist
+                                 
+                                Add to playlist
                               </button>
                             </div>
                             <div
@@ -2317,6 +2416,7 @@ ReactWrapper {
                               <button
                                 class="com-modal-button"
                                 title="Station"
+                                type="button"
                               >
                                 <i
                                   class="fas fa-broadcast-tower"
@@ -2396,7 +2496,7 @@ ReactWrapper {
                             "actualStartTime": -1,
                             "alternate": null,
                             "child": FiberNode {
-                              "_debugID": 87,
+                              "_debugID": 88,
                               "_debugIsCurrentlyTiming": false,
                               "_debugOwner": [Circular],
                               "_debugSource": null,
@@ -2404,7 +2504,7 @@ ReactWrapper {
                               "actualStartTime": -1,
                               "alternate": null,
                               "child": FiberNode {
-                                "_debugID": 88,
+                                "_debugID": 89,
                                 "_debugIsCurrentlyTiming": false,
                                 "_debugOwner": [Circular],
                                 "_debugSource": null,
@@ -2412,7 +2512,7 @@ ReactWrapper {
                                 "actualStartTime": -1,
                                 "alternate": null,
                                 "child": FiberNode {
-                                  "_debugID": 91,
+                                  "_debugID": 92,
                                   "_debugIsCurrentlyTiming": false,
                                   "_debugOwner": [Circular],
                                   "_debugSource": null,
@@ -2420,7 +2520,7 @@ ReactWrapper {
                                   "actualStartTime": -1,
                                   "alternate": null,
                                   "child": FiberNode {
-                                    "_debugID": 92,
+                                    "_debugID": 93,
                                     "_debugIsCurrentlyTiming": false,
                                     "_debugOwner": [Circular],
                                     "_debugSource": null,
@@ -2450,7 +2550,7 @@ ReactWrapper {
                                     "return": [Circular],
                                     "selfBaseDuration": 0,
                                     "sibling": FiberNode {
-                                      "_debugID": 93,
+                                      "_debugID": 94,
                                       "_debugIsCurrentlyTiming": false,
                                       "_debugOwner": null,
                                       "_debugSource": null,
@@ -2569,7 +2669,7 @@ ReactWrapper {
                                 "return": [Circular],
                                 "selfBaseDuration": 0,
                                 "sibling": FiberNode {
-                                  "_debugID": 89,
+                                  "_debugID": 90,
                                   "_debugIsCurrentlyTiming": false,
                                   "_debugOwner": [Circular],
                                   "_debugSource": null,
@@ -2577,7 +2677,7 @@ ReactWrapper {
                                   "actualStartTime": -1,
                                   "alternate": null,
                                   "child": FiberNode {
-                                    "_debugID": 94,
+                                    "_debugID": 95,
                                     "_debugIsCurrentlyTiming": false,
                                     "_debugOwner": [Circular],
                                     "_debugSource": null,
@@ -2585,7 +2685,7 @@ ReactWrapper {
                                     "actualStartTime": -1,
                                     "alternate": null,
                                     "child": FiberNode {
-                                      "_debugID": 95,
+                                      "_debugID": 96,
                                       "_debugIsCurrentlyTiming": false,
                                       "_debugOwner": [Circular],
                                       "_debugSource": null,
@@ -2615,7 +2715,7 @@ ReactWrapper {
                                       "return": [Circular],
                                       "selfBaseDuration": 0,
                                       "sibling": FiberNode {
-                                        "_debugID": 96,
+                                        "_debugID": 97,
                                         "_debugIsCurrentlyTiming": false,
                                         "_debugOwner": null,
                                         "_debugSource": null,
@@ -2734,7 +2834,7 @@ ReactWrapper {
                                   "return": [Circular],
                                   "selfBaseDuration": 0,
                                   "sibling": FiberNode {
-                                    "_debugID": 90,
+                                    "_debugID": 91,
                                     "_debugIsCurrentlyTiming": false,
                                     "_debugOwner": [Circular],
                                     "_debugSource": null,
@@ -2742,7 +2842,7 @@ ReactWrapper {
                                     "actualStartTime": -1,
                                     "alternate": null,
                                     "child": FiberNode {
-                                      "_debugID": 97,
+                                      "_debugID": 98,
                                       "_debugIsCurrentlyTiming": false,
                                       "_debugOwner": [Circular],
                                       "_debugSource": null,
@@ -2750,7 +2850,7 @@ ReactWrapper {
                                       "actualStartTime": -1,
                                       "alternate": null,
                                       "child": FiberNode {
-                                        "_debugID": 98,
+                                        "_debugID": 99,
                                         "_debugIsCurrentlyTiming": false,
                                         "_debugOwner": [Circular],
                                         "_debugSource": null,
@@ -2780,7 +2880,7 @@ ReactWrapper {
                                         "return": [Circular],
                                         "selfBaseDuration": 0,
                                         "sibling": FiberNode {
-                                          "_debugID": 99,
+                                          "_debugID": 100,
                                           "_debugIsCurrentlyTiming": false,
                                           "_debugOwner": null,
                                           "_debugSource": null,
@@ -3240,6 +3340,7 @@ ReactWrapper {
                       "stateNode": <button
                         class="com-button com-false"
                         title="More Options"
+                        type="button"
                       >
                         <i
                           class="fas fa-ellipsis-h"
@@ -3254,6 +3355,7 @@ ReactWrapper {
                     "stateNode": <button
                       class="com-button com-false"
                       title="Share"
+                      type="button"
                     >
                       <i
                         class="fas fa-share-square"
@@ -3268,6 +3370,7 @@ ReactWrapper {
                   "stateNode": <button
                     class="com-button com-false"
                     title="Repost"
+                    type="button"
                   >
                     <i
                       class="fas fa-retweet"
@@ -3282,6 +3385,7 @@ ReactWrapper {
                 "stateNode": <button
                   class="com-button com-false"
                   title="Like"
+                  type="button"
                 >
                   <i
                     class="fas fa-heart"
@@ -3308,6 +3412,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="Like"
+                    type="button"
                   >
                     <i
                       className="fas fa-heart"
@@ -3318,6 +3423,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="Repost"
+                    type="button"
                   >
                     <i
                       className="fas fa-retweet"
@@ -3328,6 +3434,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="Share"
+                    type="button"
                   >
                     <i
                       className="fas fa-share-square"
@@ -3338,6 +3445,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="More Options"
+                    type="button"
                   >
                     <i
                       className="fas fa-ellipsis-h"
@@ -3408,6 +3516,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="Like"
+                    type="button"
                   >
                     <i
                       className="fas fa-heart"
@@ -3418,6 +3527,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="Repost"
+                    type="button"
                   >
                     <i
                       className="fas fa-retweet"
@@ -3428,6 +3538,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="Share"
+                    type="button"
                   >
                     <i
                       className="fas fa-share-square"
@@ -3438,6 +3549,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="More Options"
+                    type="button"
                   >
                     <i
                       className="fas fa-ellipsis-h"
@@ -3509,6 +3621,7 @@ ReactWrapper {
                 <button
                   class="com-button com-false"
                   title="Like"
+                  type="button"
                 >
                   <i
                     class="fas fa-heart"
@@ -3518,6 +3631,7 @@ ReactWrapper {
                 <button
                   class="com-button com-false"
                   title="Repost"
+                  type="button"
                 >
                   <i
                     class="fas fa-retweet"
@@ -3527,6 +3641,7 @@ ReactWrapper {
                 <button
                   class="com-button com-false"
                   title="Share"
+                  type="button"
                 >
                   <i
                     class="fas fa-share-square"
@@ -3536,6 +3651,7 @@ ReactWrapper {
                 <button
                   class="com-button com-false"
                   title="More Options"
+                  type="button"
                 >
                   <i
                     class="fas fa-ellipsis-h"
@@ -3551,6 +3667,7 @@ ReactWrapper {
                     <button
                       class="com-modal-button"
                       title="Add to Next up"
+                      type="button"
                     >
                       <i
                         class="far fa-play-circle"
@@ -3564,11 +3681,13 @@ ReactWrapper {
                     <button
                       class="com-modal-button"
                       title="Add to Playlist"
+                      type="button"
                     >
                       <i
                         class="fab fa-soundcloud"
                       />
-                       Add to playlist
+                       
+                      Add to playlist
                     </button>
                   </div>
                   <div
@@ -3577,6 +3696,7 @@ ReactWrapper {
                     <button
                       class="com-modal-button"
                       title="Station"
+                      type="button"
                     >
                       <i
                         class="fas fa-broadcast-tower"
@@ -3703,6 +3823,7 @@ ReactWrapper {
                   className="com-button com-false"
                   onClick={[Function]}
                   title="Like"
+                  type="button"
                 >
                   <i
                     className="fas fa-heart"
@@ -3713,6 +3834,7 @@ ReactWrapper {
                   className="com-button com-false"
                   onClick={[Function]}
                   title="Repost"
+                  type="button"
                 >
                   <i
                     className="fas fa-retweet"
@@ -3723,6 +3845,7 @@ ReactWrapper {
                   className="com-button com-false"
                   onClick={[Function]}
                   title="Share"
+                  type="button"
                 >
                   <i
                     className="fas fa-share-square"
@@ -3733,6 +3856,7 @@ ReactWrapper {
                   className="com-button com-false"
                   onClick={[Function]}
                   title="More Options"
+                  type="button"
                 >
                   <i
                     className="fas fa-ellipsis-h"
@@ -3826,6 +3950,7 @@ ReactWrapper {
                   className="com-button com-false"
                   onClick={[Function]}
                   title="Like"
+                  type="button"
                 >
                   <i
                     className="fas fa-heart"
@@ -3836,6 +3961,7 @@ ReactWrapper {
                   className="com-button com-false"
                   onClick={[Function]}
                   title="Repost"
+                  type="button"
                 >
                   <i
                     className="fas fa-retweet"
@@ -3846,6 +3972,7 @@ ReactWrapper {
                   className="com-button com-false"
                   onClick={[Function]}
                   title="Share"
+                  type="button"
                 >
                   <i
                     className="fas fa-share-square"
@@ -3856,6 +3983,7 @@ ReactWrapper {
                   className="com-button com-false"
                   onClick={[Function]}
                   title="More Options"
+                  type="button"
                 >
                   <i
                     className="fas fa-ellipsis-h"
@@ -3946,6 +4074,7 @@ ReactWrapper {
               <button
                 class="com-button com-false"
                 title="Like"
+                type="button"
               >
                 <i
                   class="fas fa-heart"
@@ -3955,6 +4084,7 @@ ReactWrapper {
               <button
                 class="com-button com-false"
                 title="Repost"
+                type="button"
               >
                 <i
                   class="fas fa-retweet"
@@ -3964,6 +4094,7 @@ ReactWrapper {
               <button
                 class="com-button com-false"
                 title="Share"
+                type="button"
               >
                 <i
                   class="fas fa-share-square"
@@ -3973,6 +4104,7 @@ ReactWrapper {
               <button
                 class="com-button com-false"
                 title="More Options"
+                type="button"
               >
                 <i
                   class="fas fa-ellipsis-h"
@@ -3988,6 +4120,7 @@ ReactWrapper {
                   <button
                     class="com-modal-button"
                     title="Add to Next up"
+                    type="button"
                   >
                     <i
                       class="far fa-play-circle"
@@ -4001,11 +4134,13 @@ ReactWrapper {
                   <button
                     class="com-modal-button"
                     title="Add to Playlist"
+                    type="button"
                   >
                     <i
                       class="fab fa-soundcloud"
                     />
-                     Add to playlist
+                     
+                    Add to playlist
                   </button>
                 </div>
                 <div
@@ -4014,6 +4149,7 @@ ReactWrapper {
                   <button
                     class="com-modal-button"
                     title="Station"
+                    type="button"
                   >
                     <i
                       class="fas fa-broadcast-tower"
@@ -4087,15 +4223,16 @@ ReactWrapper {
         "lastEffect": null,
         "memoizedProps": Object {
           "artistInfo": Array [],
+          "commentText": "",
           "like": false,
           "repost": false,
           "share": false,
           "show": false,
           "songInfo": Array [],
-          "text": "",
         },
         "memoizedState": Object {
           "artistInfo": Array [],
+          "commentText": "",
           "like": false,
           "repost": false,
           "share": false,
@@ -4105,18 +4242,17 @@ ReactWrapper {
               "songId": "",
             },
           ],
-          "text": "",
         },
         "mode": 0,
         "nextEffect": null,
         "pendingProps": Object {
           "artistInfo": Array [],
+          "commentText": "",
           "like": false,
           "repost": false,
           "share": false,
           "show": false,
           "songInfo": Array [],
-          "text": "",
         },
         "ref": null,
         "return": FiberNode {
@@ -4142,12 +4278,12 @@ ReactWrapper {
             "context": null,
             "props": Object {
               "artistInfo": Array [],
+              "commentText": "",
               "like": false,
               "repost": false,
               "share": false,
               "show": false,
               "songInfo": Array [],
-              "text": "",
             },
           },
           "memoizedState": Object {
@@ -4155,12 +4291,12 @@ ReactWrapper {
             "mount": true,
             "props": Object {
               "artistInfo": Array [],
+              "commentText": "",
               "like": false,
               "repost": false,
               "share": false,
               "show": false,
               "songInfo": Array [],
-              "text": "",
             },
           },
           "mode": 0,
@@ -4170,12 +4306,12 @@ ReactWrapper {
             "context": null,
             "props": Object {
               "artistInfo": Array [],
+              "commentText": "",
               "like": false,
               "repost": false,
               "share": false,
               "show": false,
               "songInfo": Array [],
-              "text": "",
             },
           },
           "ref": null,
@@ -4242,6 +4378,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="Like"
+                        type="button"
                       >
                         <i
                           class="fas fa-heart"
@@ -4251,6 +4388,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="Repost"
+                        type="button"
                       >
                         <i
                           class="fas fa-retweet"
@@ -4260,6 +4398,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="Share"
+                        type="button"
                       >
                         <i
                           class="fas fa-share-square"
@@ -4269,6 +4408,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="More Options"
+                        type="button"
                       >
                         <i
                           class="fas fa-ellipsis-h"
@@ -4284,6 +4424,7 @@ ReactWrapper {
                           <button
                             class="com-modal-button"
                             title="Add to Next up"
+                            type="button"
                           >
                             <i
                               class="far fa-play-circle"
@@ -4297,11 +4438,13 @@ ReactWrapper {
                           <button
                             class="com-modal-button"
                             title="Add to Playlist"
+                            type="button"
                           >
                             <i
                               class="fab fa-soundcloud"
                             />
-                             Add to playlist
+                             
+                            Add to playlist
                           </button>
                         </div>
                         <div
@@ -4310,6 +4453,7 @@ ReactWrapper {
                           <button
                             class="com-modal-button"
                             title="Station"
+                            type="button"
                           >
                             <i
                               class="fas fa-broadcast-tower"
@@ -4410,12 +4554,12 @@ ReactWrapper {
                       props={
                         Object {
                           "artistInfo": Array [],
+                          "commentText": "",
                           "like": false,
                           "repost": false,
                           "share": false,
                           "show": false,
                           "songInfo": Array [],
-                          "text": "",
                         }
                       }
                     />,
@@ -4437,12 +4581,12 @@ ReactWrapper {
                       props={
                         Object {
                           "artistInfo": Array [],
+                          "commentText": "",
                           "like": false,
                           "repost": false,
                           "share": false,
                           "show": false,
                           "songInfo": Array [],
-                          "text": "",
                         }
                       }
                     />,
@@ -4469,12 +4613,12 @@ ReactWrapper {
                 props={
                   Object {
                     "artistInfo": Array [],
+                    "commentText": "",
                     "like": false,
                     "repost": false,
                     "share": false,
                     "show": false,
                     "songInfo": Array [],
-                    "text": "",
                   }
                 }
               />,
@@ -4515,6 +4659,7 @@ ReactWrapper {
                     <button
                       class="com-button com-false"
                       title="Like"
+                      type="button"
                     >
                       <i
                         class="fas fa-heart"
@@ -4524,6 +4669,7 @@ ReactWrapper {
                     <button
                       class="com-button com-false"
                       title="Repost"
+                      type="button"
                     >
                       <i
                         class="fas fa-retweet"
@@ -4533,6 +4679,7 @@ ReactWrapper {
                     <button
                       class="com-button com-false"
                       title="Share"
+                      type="button"
                     >
                       <i
                         class="fas fa-share-square"
@@ -4542,6 +4689,7 @@ ReactWrapper {
                     <button
                       class="com-button com-false"
                       title="More Options"
+                      type="button"
                     >
                       <i
                         class="fas fa-ellipsis-h"
@@ -4557,6 +4705,7 @@ ReactWrapper {
                         <button
                           class="com-modal-button"
                           title="Add to Next up"
+                          type="button"
                         >
                           <i
                             class="far fa-play-circle"
@@ -4570,11 +4719,13 @@ ReactWrapper {
                         <button
                           class="com-modal-button"
                           title="Add to Playlist"
+                          type="button"
                         >
                           <i
                             class="fab fa-soundcloud"
                           />
-                           Add to playlist
+                           
+                          Add to playlist
                         </button>
                       </div>
                       <div
@@ -4583,6 +4734,7 @@ ReactWrapper {
                         <button
                           class="com-modal-button"
                           title="Station"
+                          type="button"
                         >
                           <i
                             class="fas fa-broadcast-tower"
@@ -4674,12 +4826,12 @@ ReactWrapper {
                   props={
                     Object {
                       "artistInfo": Array [],
+                      "commentText": "",
                       "like": false,
                       "repost": false,
                       "share": false,
                       "show": false,
                       "songInfo": Array [],
-                      "text": "",
                     }
                   }
                 />,
@@ -4705,12 +4857,12 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "artistInfo": Array [],
+                "commentText": "",
                 "like": false,
                 "repost": false,
                 "share": false,
                 "show": false,
                 "songInfo": Array [],
-                "text": "",
               },
             },
             "refs": Object {},
@@ -4719,12 +4871,12 @@ ReactWrapper {
               "mount": true,
               "props": Object {
                 "artistInfo": Array [],
+                "commentText": "",
                 "like": false,
                 "repost": false,
                 "share": false,
                 "show": false,
                 "songInfo": Array [],
-                "text": "",
               },
             },
             "updater": Object {
@@ -4753,19 +4905,19 @@ ReactWrapper {
       "grabSongInfo": [Function],
       "handleChange": [Function],
       "handleSubmit": [Function],
-      "postSongTime": [Function],
       "props": Object {
         "artistInfo": Array [],
+        "commentText": "",
         "like": false,
         "repost": false,
         "share": false,
         "show": false,
         "songInfo": Array [],
-        "text": "",
       },
       "refs": Object {},
       "state": Object {
         "artistInfo": Array [],
+        "commentText": "",
         "like": false,
         "repost": false,
         "share": false,
@@ -4775,7 +4927,6 @@ ReactWrapper {
             "songId": "",
           },
         ],
-        "text": "",
       },
       "toggleLike": [Function],
       "toggleModal": [Function],
@@ -4792,12 +4943,12 @@ ReactWrapper {
     "nodeType": "class",
     "props": Object {
       "artistInfo": Array [],
+      "commentText": "",
       "like": false,
       "repost": false,
       "share": false,
       "show": false,
       "songInfo": Array [],
-      "text": "",
     },
     "ref": null,
     "rendered": Object {
@@ -4828,6 +4979,7 @@ ReactWrapper {
           <button
             class="com-button com-false"
             title="Like"
+            type="button"
           >
             <i
               class="fas fa-heart"
@@ -4837,6 +4989,7 @@ ReactWrapper {
           <button
             class="com-button com-false"
             title="Repost"
+            type="button"
           >
             <i
               class="fas fa-retweet"
@@ -4846,6 +4999,7 @@ ReactWrapper {
           <button
             class="com-button com-false"
             title="Share"
+            type="button"
           >
             <i
               class="fas fa-share-square"
@@ -4855,6 +5009,7 @@ ReactWrapper {
           <button
             class="com-button com-false"
             title="More Options"
+            type="button"
           >
             <i
               class="fas fa-ellipsis-h"
@@ -4870,6 +5025,7 @@ ReactWrapper {
               <button
                 class="com-modal-button"
                 title="Add to Next up"
+                type="button"
               >
                 <i
                   class="far fa-play-circle"
@@ -4883,11 +5039,13 @@ ReactWrapper {
               <button
                 class="com-modal-button"
                 title="Add to Playlist"
+                type="button"
               >
                 <i
                   class="fab fa-soundcloud"
                 />
-                 Add to playlist
+                 
+                Add to playlist
               </button>
             </div>
             <div
@@ -4896,6 +5054,7 @@ ReactWrapper {
               <button
                 class="com-modal-button"
                 title="Station"
+                type="button"
               >
                 <i
                   class="fas fa-broadcast-tower"
@@ -4986,6 +5145,7 @@ ReactWrapper {
               className="com-button com-false"
               onClick={[Function]}
               title="Like"
+              type="button"
             >
               <i
                 className="fas fa-heart"
@@ -4996,6 +5156,7 @@ ReactWrapper {
               className="com-button com-false"
               onClick={[Function]}
               title="Repost"
+              type="button"
             >
               <i
                 className="fas fa-retweet"
@@ -5006,6 +5167,7 @@ ReactWrapper {
               className="com-button com-false"
               onClick={[Function]}
               title="Share"
+              type="button"
             >
               <i
                 className="fas fa-share-square"
@@ -5016,6 +5178,7 @@ ReactWrapper {
               className="com-button com-false"
               onClick={[Function]}
               title="More Options"
+              type="button"
             >
               <i
                 className="fas fa-ellipsis-h"
@@ -5227,6 +5390,7 @@ ReactWrapper {
             <button
               class="com-button com-false"
               title="Like"
+              type="button"
             >
               <i
                 class="fas fa-heart"
@@ -5236,6 +5400,7 @@ ReactWrapper {
             <button
               class="com-button com-false"
               title="Repost"
+              type="button"
             >
               <i
                 class="fas fa-retweet"
@@ -5245,6 +5410,7 @@ ReactWrapper {
             <button
               class="com-button com-false"
               title="Share"
+              type="button"
             >
               <i
                 class="fas fa-share-square"
@@ -5254,6 +5420,7 @@ ReactWrapper {
             <button
               class="com-button com-false"
               title="More Options"
+              type="button"
             >
               <i
                 class="fas fa-ellipsis-h"
@@ -5269,6 +5436,7 @@ ReactWrapper {
                 <button
                   class="com-modal-button"
                   title="Add to Next up"
+                  type="button"
                 >
                   <i
                     class="far fa-play-circle"
@@ -5282,11 +5450,13 @@ ReactWrapper {
                 <button
                   class="com-modal-button"
                   title="Add to Playlist"
+                  type="button"
                 >
                   <i
                     class="fab fa-soundcloud"
                   />
-                   Add to playlist
+                   
+                  Add to playlist
                 </button>
               </div>
               <div
@@ -5295,6 +5465,7 @@ ReactWrapper {
                 <button
                   class="com-modal-button"
                   title="Station"
+                  type="button"
                 >
                   <i
                     class="fas fa-broadcast-tower"
@@ -5359,6 +5530,7 @@ ReactWrapper {
                 className="com-button com-false"
                 onClick={[Function]}
                 title="Like"
+                type="button"
               >
                 <i
                   className="fas fa-heart"
@@ -5369,6 +5541,7 @@ ReactWrapper {
                 className="com-button com-false"
                 onClick={[Function]}
                 title="Repost"
+                type="button"
               >
                 <i
                   className="fas fa-retweet"
@@ -5379,6 +5552,7 @@ ReactWrapper {
                 className="com-button com-false"
                 onClick={[Function]}
                 title="Share"
+                type="button"
               >
                 <i
                   className="fas fa-share-square"
@@ -5389,6 +5563,7 @@ ReactWrapper {
                 className="com-button com-false"
                 onClick={[Function]}
                 title="More Options"
+                type="button"
               >
                 <i
                   className="fas fa-ellipsis-h"
@@ -5456,6 +5631,7 @@ ReactWrapper {
               "instance": <button
                 class="com-button com-false"
                 title="Like"
+                type="button"
               >
                 <i
                   class="fas fa-heart"
@@ -5474,6 +5650,7 @@ ReactWrapper {
                 "className": "com-button com-false",
                 "onClick": [Function],
                 "title": "Like",
+                "type": "button",
               },
               "ref": null,
               "rendered": Array [
@@ -5500,6 +5677,7 @@ ReactWrapper {
               "instance": <button
                 class="com-button com-false"
                 title="Repost"
+                type="button"
               >
                 <i
                   class="fas fa-retweet"
@@ -5518,6 +5696,7 @@ ReactWrapper {
                 "className": "com-button com-false",
                 "onClick": [Function],
                 "title": "Repost",
+                "type": "button",
               },
               "ref": null,
               "rendered": Array [
@@ -5544,6 +5723,7 @@ ReactWrapper {
               "instance": <button
                 class="com-button com-false"
                 title="Share"
+                type="button"
               >
                 <i
                   class="fas fa-share-square"
@@ -5562,6 +5742,7 @@ ReactWrapper {
                 "className": "com-button com-false",
                 "onClick": [Function],
                 "title": "Share",
+                "type": "button",
               },
               "ref": null,
               "rendered": Array [
@@ -5588,6 +5769,7 @@ ReactWrapper {
               "instance": <button
                 class="com-button com-false"
                 title="More Options"
+                type="button"
               >
                 <i
                   class="fas fa-ellipsis-h"
@@ -5606,6 +5788,7 @@ ReactWrapper {
                 "className": "com-button com-false",
                 "onClick": [Function],
                 "title": "More Options",
+                "type": "button",
               },
               "ref": null,
               "rendered": Array [
@@ -5646,6 +5829,7 @@ ReactWrapper {
                     <button
                       class="com-modal-button"
                       title="Add to Next up"
+                      type="button"
                     >
                       <i
                         class="far fa-play-circle"
@@ -5659,11 +5843,13 @@ ReactWrapper {
                     <button
                       class="com-modal-button"
                       title="Add to Playlist"
+                      type="button"
                     >
                       <i
                         class="fab fa-soundcloud"
                       />
-                       Add to playlist
+                       
+                      Add to playlist
                     </button>
                   </div>
                   <div
@@ -5672,6 +5858,7 @@ ReactWrapper {
                     <button
                       class="com-modal-button"
                       title="Station"
+                      type="button"
                     >
                       <i
                         class="fas fa-broadcast-tower"
@@ -5690,6 +5877,7 @@ ReactWrapper {
                       <button
                         className="com-modal-button"
                         title="Add to Next up"
+                        type="button"
                       >
                         <i
                           className="far fa-play-circle"
@@ -5703,11 +5891,13 @@ ReactWrapper {
                       <button
                         className="com-modal-button"
                         title="Add to Playlist"
+                        type="button"
                       >
                         <i
                           className="fab fa-soundcloud"
                         />
-                         Add to playlist
+                         
+                        Add to playlist
                       </button>
                     </div>,
                     <div
@@ -5716,6 +5906,7 @@ ReactWrapper {
                       <button
                         className="com-modal-button"
                         title="Station"
+                        type="button"
                       >
                         <i
                           className="fas fa-broadcast-tower"
@@ -5735,6 +5926,7 @@ ReactWrapper {
                       <button
                         class="com-modal-button"
                         title="Add to Next up"
+                        type="button"
                       >
                         <i
                           class="far fa-play-circle"
@@ -5748,6 +5940,7 @@ ReactWrapper {
                       "children": <button
                         className="com-modal-button"
                         title="Add to Next up"
+                        type="button"
                       >
                         <i
                           className="far fa-play-circle"
@@ -5762,6 +5955,7 @@ ReactWrapper {
                         "instance": <button
                           class="com-modal-button"
                           title="Add to Next up"
+                          type="button"
                         >
                           <i
                             class="far fa-play-circle"
@@ -5779,6 +5973,7 @@ ReactWrapper {
                           ],
                           "className": "com-modal-button",
                           "title": "Add to Next up",
+                          "type": "button",
                         },
                         "ref": null,
                         "rendered": Array [
@@ -5811,11 +6006,13 @@ ReactWrapper {
                       <button
                         class="com-modal-button"
                         title="Add to Playlist"
+                        type="button"
                       >
                         <i
                           class="fab fa-soundcloud"
                         />
-                         Add to playlist
+                         
+                        Add to playlist
                       </button>
                     </div>,
                     "key": undefined,
@@ -5824,11 +6021,13 @@ ReactWrapper {
                       "children": <button
                         className="com-modal-button"
                         title="Add to Playlist"
+                        type="button"
                       >
                         <i
                           className="fab fa-soundcloud"
                         />
-                         Add to playlist
+                         
+                        Add to playlist
                       </button>,
                       "className": "com-modalSpan",
                     },
@@ -5838,11 +6037,13 @@ ReactWrapper {
                         "instance": <button
                           class="com-modal-button"
                           title="Add to Playlist"
+                          type="button"
                         >
                           <i
                             class="fab fa-soundcloud"
                           />
-                           Add to playlist
+                           
+                          Add to playlist
                         </button>,
                         "key": undefined,
                         "nodeType": "host",
@@ -5851,10 +6052,12 @@ ReactWrapper {
                             <i
                               className="fab fa-soundcloud"
                             />,
-                            " Add to playlist",
+                            " ",
+                            "Add to playlist",
                           ],
                           "className": "com-modal-button",
                           "title": "Add to Playlist",
+                          "type": "button",
                         },
                         "ref": null,
                         "rendered": Array [
@@ -5873,7 +6076,8 @@ ReactWrapper {
                             ],
                             "type": "i",
                           },
-                          " Add to playlist",
+                          " ",
+                          "Add to playlist",
                         ],
                         "type": "button",
                       },
@@ -5887,6 +6091,7 @@ ReactWrapper {
                       <button
                         class="com-modal-button"
                         title="Station"
+                        type="button"
                       >
                         <i
                           class="fas fa-broadcast-tower"
@@ -5900,6 +6105,7 @@ ReactWrapper {
                       "children": <button
                         className="com-modal-button"
                         title="Station"
+                        type="button"
                       >
                         <i
                           className="fas fa-broadcast-tower"
@@ -5914,6 +6120,7 @@ ReactWrapper {
                         "instance": <button
                           class="com-modal-button"
                           title="Station"
+                          type="button"
                         >
                           <i
                             class="fas fa-broadcast-tower"
@@ -5931,6 +6138,7 @@ ReactWrapper {
                           ],
                           "className": "com-modal-button",
                           "title": "Station",
+                          "type": "button",
                         },
                         "ref": null,
                         "rendered": Array [
@@ -6319,12 +6527,12 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "artistInfo": Array [],
+                "commentText": "",
                 "like": false,
                 "repost": false,
                 "share": false,
                 "show": false,
                 "songInfo": Array [],
-                "text": "",
               },
             },
             "memoizedState": Object {
@@ -6332,12 +6540,12 @@ ReactWrapper {
               "mount": true,
               "props": Object {
                 "artistInfo": Array [],
+                "commentText": "",
                 "like": false,
                 "repost": false,
                 "share": false,
                 "show": false,
                 "songInfo": Array [],
-                "text": "",
               },
             },
             "mode": 0,
@@ -6347,12 +6555,12 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "artistInfo": Array [],
+                "commentText": "",
                 "like": false,
                 "repost": false,
                 "share": false,
                 "show": false,
                 "songInfo": Array [],
-                "text": "",
               },
             },
             "ref": null,
@@ -6419,6 +6627,7 @@ ReactWrapper {
                         <button
                           class="com-button com-false"
                           title="Like"
+                          type="button"
                         >
                           <i
                             class="fas fa-heart"
@@ -6428,6 +6637,7 @@ ReactWrapper {
                         <button
                           class="com-button com-false"
                           title="Repost"
+                          type="button"
                         >
                           <i
                             class="fas fa-retweet"
@@ -6437,6 +6647,7 @@ ReactWrapper {
                         <button
                           class="com-button com-false"
                           title="Share"
+                          type="button"
                         >
                           <i
                             class="fas fa-share-square"
@@ -6446,6 +6657,7 @@ ReactWrapper {
                         <button
                           class="com-button com-false"
                           title="More Options"
+                          type="button"
                         >
                           <i
                             class="fas fa-ellipsis-h"
@@ -6461,6 +6673,7 @@ ReactWrapper {
                             <button
                               class="com-modal-button"
                               title="Add to Next up"
+                              type="button"
                             >
                               <i
                                 class="far fa-play-circle"
@@ -6474,11 +6687,13 @@ ReactWrapper {
                             <button
                               class="com-modal-button"
                               title="Add to Playlist"
+                              type="button"
                             >
                               <i
                                 class="fab fa-soundcloud"
                               />
-                               Add to playlist
+                               
+                              Add to playlist
                             </button>
                           </div>
                           <div
@@ -6487,6 +6702,7 @@ ReactWrapper {
                             <button
                               class="com-modal-button"
                               title="Station"
+                              type="button"
                             >
                               <i
                                 class="fas fa-broadcast-tower"
@@ -6587,12 +6803,12 @@ ReactWrapper {
                         props={
                           Object {
                             "artistInfo": Array [],
+                            "commentText": "",
                             "like": false,
                             "repost": false,
                             "share": false,
                             "show": false,
                             "songInfo": Array [],
-                            "text": "",
                           }
                         }
                       />,
@@ -6614,12 +6830,12 @@ ReactWrapper {
                         props={
                           Object {
                             "artistInfo": Array [],
+                            "commentText": "",
                             "like": false,
                             "repost": false,
                             "share": false,
                             "show": false,
                             "songInfo": Array [],
-                            "text": "",
                           }
                         }
                       />,
@@ -6646,12 +6862,12 @@ ReactWrapper {
                   props={
                     Object {
                       "artistInfo": Array [],
+                      "commentText": "",
                       "like": false,
                       "repost": false,
                       "share": false,
                       "show": false,
                       "songInfo": Array [],
-                      "text": "",
                     }
                   }
                 />,
@@ -6692,6 +6908,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="Like"
+                        type="button"
                       >
                         <i
                           class="fas fa-heart"
@@ -6701,6 +6918,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="Repost"
+                        type="button"
                       >
                         <i
                           class="fas fa-retweet"
@@ -6710,6 +6928,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="Share"
+                        type="button"
                       >
                         <i
                           class="fas fa-share-square"
@@ -6719,6 +6938,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="More Options"
+                        type="button"
                       >
                         <i
                           class="fas fa-ellipsis-h"
@@ -6734,6 +6954,7 @@ ReactWrapper {
                           <button
                             class="com-modal-button"
                             title="Add to Next up"
+                            type="button"
                           >
                             <i
                               class="far fa-play-circle"
@@ -6747,11 +6968,13 @@ ReactWrapper {
                           <button
                             class="com-modal-button"
                             title="Add to Playlist"
+                            type="button"
                           >
                             <i
                               class="fab fa-soundcloud"
                             />
-                             Add to playlist
+                             
+                            Add to playlist
                           </button>
                         </div>
                         <div
@@ -6760,6 +6983,7 @@ ReactWrapper {
                           <button
                             class="com-modal-button"
                             title="Station"
+                            type="button"
                           >
                             <i
                               class="fas fa-broadcast-tower"
@@ -6851,12 +7075,12 @@ ReactWrapper {
                     props={
                       Object {
                         "artistInfo": Array [],
+                        "commentText": "",
                         "like": false,
                         "repost": false,
                         "share": false,
                         "show": false,
                         "songInfo": Array [],
-                        "text": "",
                       }
                     }
                   />,
@@ -6882,12 +7106,12 @@ ReactWrapper {
                 "context": null,
                 "props": Object {
                   "artistInfo": Array [],
+                  "commentText": "",
                   "like": false,
                   "repost": false,
                   "share": false,
                   "show": false,
                   "songInfo": Array [],
-                  "text": "",
                 },
               },
               "refs": Object {},
@@ -6896,12 +7120,12 @@ ReactWrapper {
                 "mount": true,
                 "props": Object {
                   "artistInfo": Array [],
+                  "commentText": "",
                   "like": false,
                   "repost": false,
                   "share": false,
                   "show": false,
                   "songInfo": Array [],
-                  "text": "",
                 },
               },
               "updater": Object {
@@ -7323,6 +7547,7 @@ ReactWrapper {
                     "className": "com-button com-false",
                     "onClick": [Function],
                     "title": "Like",
+                    "type": "button",
                   },
                   "memoizedState": null,
                   "mode": 0,
@@ -7337,6 +7562,7 @@ ReactWrapper {
                     "className": "com-button com-false",
                     "onClick": [Function],
                     "title": "Like",
+                    "type": "button",
                   },
                   "ref": null,
                   "return": [Circular],
@@ -7439,6 +7665,7 @@ ReactWrapper {
                       "className": "com-button com-false",
                       "onClick": [Function],
                       "title": "Repost",
+                      "type": "button",
                     },
                     "memoizedState": null,
                     "mode": 0,
@@ -7453,6 +7680,7 @@ ReactWrapper {
                       "className": "com-button com-false",
                       "onClick": [Function],
                       "title": "Repost",
+                      "type": "button",
                     },
                     "ref": null,
                     "return": [Circular],
@@ -7555,6 +7783,7 @@ ReactWrapper {
                         "className": "com-button com-false",
                         "onClick": [Function],
                         "title": "Share",
+                        "type": "button",
                       },
                       "memoizedState": null,
                       "mode": 0,
@@ -7569,6 +7798,7 @@ ReactWrapper {
                         "className": "com-button com-false",
                         "onClick": [Function],
                         "title": "Share",
+                        "type": "button",
                       },
                       "ref": null,
                       "return": [Circular],
@@ -7671,6 +7901,7 @@ ReactWrapper {
                           "className": "com-button com-false",
                           "onClick": [Function],
                           "title": "More Options",
+                          "type": "button",
                         },
                         "memoizedState": null,
                         "mode": 0,
@@ -7685,6 +7916,7 @@ ReactWrapper {
                           "className": "com-button com-false",
                           "onClick": [Function],
                           "title": "More Options",
+                          "type": "button",
                         },
                         "ref": null,
                         "return": [Circular],
@@ -7810,6 +8042,7 @@ ReactWrapper {
                                   ],
                                   "className": "com-modal-button",
                                   "title": "Add to Next up",
+                                  "type": "button",
                                 },
                                 "memoizedState": null,
                                 "mode": 0,
@@ -7823,6 +8056,7 @@ ReactWrapper {
                                   ],
                                   "className": "com-modal-button",
                                   "title": "Add to Next up",
+                                  "type": "button",
                                 },
                                 "ref": null,
                                 "return": [Circular],
@@ -7831,6 +8065,7 @@ ReactWrapper {
                                 "stateNode": <button
                                   class="com-modal-button"
                                   title="Add to Next up"
+                                  type="button"
                                 >
                                   <i
                                     class="far fa-play-circle"
@@ -7855,6 +8090,7 @@ ReactWrapper {
                                 "children": <button
                                   className="com-modal-button"
                                   title="Add to Next up"
+                                  type="button"
                                 >
                                   <i
                                     className="far fa-play-circle"
@@ -7870,6 +8106,7 @@ ReactWrapper {
                                 "children": <button
                                   className="com-modal-button"
                                   title="Add to Next up"
+                                  type="button"
                                 >
                                   <i
                                     className="far fa-play-circle"
@@ -7945,16 +8182,48 @@ ReactWrapper {
                                       "index": 1,
                                       "key": null,
                                       "lastEffect": null,
-                                      "memoizedProps": " Add to playlist",
+                                      "memoizedProps": " ",
                                       "memoizedState": null,
                                       "mode": 0,
                                       "nextEffect": null,
-                                      "pendingProps": " Add to playlist",
+                                      "pendingProps": " ",
                                       "ref": null,
                                       "return": [Circular],
                                       "selfBaseDuration": 0,
-                                      "sibling": null,
-                                      "stateNode":  Add to playlist,
+                                      "sibling": FiberNode {
+                                        "_debugID": 84,
+                                        "_debugIsCurrentlyTiming": false,
+                                        "_debugOwner": null,
+                                        "_debugSource": null,
+                                        "actualDuration": 0,
+                                        "actualStartTime": -1,
+                                        "alternate": null,
+                                        "child": null,
+                                        "childExpirationTime": 0,
+                                        "effectTag": 0,
+                                        "elementType": null,
+                                        "expirationTime": 0,
+                                        "firstContextDependency": null,
+                                        "firstEffect": null,
+                                        "index": 2,
+                                        "key": null,
+                                        "lastEffect": null,
+                                        "memoizedProps": "Add to playlist",
+                                        "memoizedState": null,
+                                        "mode": 0,
+                                        "nextEffect": null,
+                                        "pendingProps": "Add to playlist",
+                                        "ref": null,
+                                        "return": [Circular],
+                                        "selfBaseDuration": 0,
+                                        "sibling": null,
+                                        "stateNode": Add to playlist,
+                                        "tag": 6,
+                                        "treeBaseDuration": 0,
+                                        "type": null,
+                                        "updateQueue": null,
+                                      },
+                                      "stateNode":  ,
                                       "tag": 6,
                                       "treeBaseDuration": 0,
                                       "type": null,
@@ -7982,10 +8251,12 @@ ReactWrapper {
                                       <i
                                         className="fab fa-soundcloud"
                                       />,
-                                      " Add to playlist",
+                                      " ",
+                                      "Add to playlist",
                                     ],
                                     "className": "com-modal-button",
                                     "title": "Add to Playlist",
+                                    "type": "button",
                                   },
                                   "memoizedState": null,
                                   "mode": 0,
@@ -7995,10 +8266,12 @@ ReactWrapper {
                                       <i
                                         className="fab fa-soundcloud"
                                       />,
-                                      " Add to playlist",
+                                      " ",
+                                      "Add to playlist",
                                     ],
                                     "className": "com-modal-button",
                                     "title": "Add to Playlist",
+                                    "type": "button",
                                   },
                                   "ref": null,
                                   "return": [Circular],
@@ -8007,11 +8280,13 @@ ReactWrapper {
                                   "stateNode": <button
                                     class="com-modal-button"
                                     title="Add to Playlist"
+                                    type="button"
                                   >
                                     <i
                                       class="fab fa-soundcloud"
                                     />
-                                     Add to playlist
+                                     
+                                    Add to playlist
                                   </button>,
                                   "tag": 5,
                                   "treeBaseDuration": 0,
@@ -8031,11 +8306,13 @@ ReactWrapper {
                                   "children": <button
                                     className="com-modal-button"
                                     title="Add to Playlist"
+                                    type="button"
                                   >
                                     <i
                                       className="fab fa-soundcloud"
                                     />
-                                     Add to playlist
+                                     
+                                    Add to playlist
                                   </button>,
                                   "className": "com-modalSpan",
                                 },
@@ -8046,11 +8323,13 @@ ReactWrapper {
                                   "children": <button
                                     className="com-modal-button"
                                     title="Add to Playlist"
+                                    type="button"
                                   >
                                     <i
                                       className="fab fa-soundcloud"
                                     />
-                                     Add to playlist
+                                     
+                                    Add to playlist
                                   </button>,
                                   "className": "com-modalSpan",
                                 },
@@ -8066,7 +8345,7 @@ ReactWrapper {
                                   "actualStartTime": -1,
                                   "alternate": null,
                                   "child": FiberNode {
-                                    "_debugID": 84,
+                                    "_debugID": 85,
                                     "_debugIsCurrentlyTiming": false,
                                     "_debugOwner": [Circular],
                                     "_debugSource": null,
@@ -8074,7 +8353,7 @@ ReactWrapper {
                                     "actualStartTime": -1,
                                     "alternate": null,
                                     "child": FiberNode {
-                                      "_debugID": 85,
+                                      "_debugID": 86,
                                       "_debugIsCurrentlyTiming": false,
                                       "_debugOwner": [Circular],
                                       "_debugSource": null,
@@ -8104,7 +8383,7 @@ ReactWrapper {
                                       "return": [Circular],
                                       "selfBaseDuration": 0,
                                       "sibling": FiberNode {
-                                        "_debugID": 86,
+                                        "_debugID": 87,
                                         "_debugIsCurrentlyTiming": false,
                                         "_debugOwner": null,
                                         "_debugSource": null,
@@ -8162,6 +8441,7 @@ ReactWrapper {
                                       ],
                                       "className": "com-modal-button",
                                       "title": "Station",
+                                      "type": "button",
                                     },
                                     "memoizedState": null,
                                     "mode": 0,
@@ -8175,6 +8455,7 @@ ReactWrapper {
                                       ],
                                       "className": "com-modal-button",
                                       "title": "Station",
+                                      "type": "button",
                                     },
                                     "ref": null,
                                     "return": [Circular],
@@ -8183,6 +8464,7 @@ ReactWrapper {
                                     "stateNode": <button
                                       class="com-modal-button"
                                       title="Station"
+                                      type="button"
                                     >
                                       <i
                                         class="fas fa-broadcast-tower"
@@ -8207,6 +8489,7 @@ ReactWrapper {
                                     "children": <button
                                       className="com-modal-button"
                                       title="Station"
+                                      type="button"
                                     >
                                       <i
                                         className="fas fa-broadcast-tower"
@@ -8222,6 +8505,7 @@ ReactWrapper {
                                     "children": <button
                                       className="com-modal-button"
                                       title="Station"
+                                      type="button"
                                     >
                                       <i
                                         className="fas fa-broadcast-tower"
@@ -8240,6 +8524,7 @@ ReactWrapper {
                                     <button
                                       class="com-modal-button"
                                       title="Station"
+                                      type="button"
                                     >
                                       <i
                                         class="fas fa-broadcast-tower"
@@ -8258,11 +8543,13 @@ ReactWrapper {
                                   <button
                                     class="com-modal-button"
                                     title="Add to Playlist"
+                                    type="button"
                                   >
                                     <i
                                       class="fab fa-soundcloud"
                                     />
-                                     Add to playlist
+                                     
+                                    Add to playlist
                                   </button>
                                 </div>,
                                 "tag": 5,
@@ -8276,6 +8563,7 @@ ReactWrapper {
                                 <button
                                   class="com-modal-button"
                                   title="Add to Next up"
+                                  type="button"
                                 >
                                   <i
                                     class="far fa-play-circle"
@@ -8305,6 +8593,7 @@ ReactWrapper {
                                   <button
                                     className="com-modal-button"
                                     title="Add to Next up"
+                                    type="button"
                                   >
                                     <i
                                       className="far fa-play-circle"
@@ -8318,11 +8607,13 @@ ReactWrapper {
                                   <button
                                     className="com-modal-button"
                                     title="Add to Playlist"
+                                    type="button"
                                   >
                                     <i
                                       className="fab fa-soundcloud"
                                     />
-                                     Add to playlist
+                                     
+                                    Add to playlist
                                   </button>
                                 </div>,
                                 <div
@@ -8331,6 +8622,7 @@ ReactWrapper {
                                   <button
                                     className="com-modal-button"
                                     title="Station"
+                                    type="button"
                                   >
                                     <i
                                       className="fas fa-broadcast-tower"
@@ -8352,6 +8644,7 @@ ReactWrapper {
                                   <button
                                     className="com-modal-button"
                                     title="Add to Next up"
+                                    type="button"
                                   >
                                     <i
                                       className="far fa-play-circle"
@@ -8365,11 +8658,13 @@ ReactWrapper {
                                   <button
                                     className="com-modal-button"
                                     title="Add to Playlist"
+                                    type="button"
                                   >
                                     <i
                                       className="fab fa-soundcloud"
                                     />
-                                     Add to playlist
+                                     
+                                    Add to playlist
                                   </button>
                                 </div>,
                                 <div
@@ -8378,6 +8673,7 @@ ReactWrapper {
                                   <button
                                     className="com-modal-button"
                                     title="Station"
+                                    type="button"
                                   >
                                     <i
                                       className="fas fa-broadcast-tower"
@@ -8401,6 +8697,7 @@ ReactWrapper {
                                 <button
                                   class="com-modal-button"
                                   title="Add to Next up"
+                                  type="button"
                                 >
                                   <i
                                     class="far fa-play-circle"
@@ -8414,11 +8711,13 @@ ReactWrapper {
                                 <button
                                   class="com-modal-button"
                                   title="Add to Playlist"
+                                  type="button"
                                 >
                                   <i
                                     class="fab fa-soundcloud"
                                   />
-                                   Add to playlist
+                                   
+                                  Add to playlist
                                 </button>
                               </div>
                               <div
@@ -8427,6 +8726,7 @@ ReactWrapper {
                                 <button
                                   class="com-modal-button"
                                   title="Station"
+                                  type="button"
                                 >
                                   <i
                                     class="fas fa-broadcast-tower"
@@ -8506,7 +8806,7 @@ ReactWrapper {
                               "actualStartTime": -1,
                               "alternate": null,
                               "child": FiberNode {
-                                "_debugID": 87,
+                                "_debugID": 88,
                                 "_debugIsCurrentlyTiming": false,
                                 "_debugOwner": [Circular],
                                 "_debugSource": null,
@@ -8514,7 +8814,7 @@ ReactWrapper {
                                 "actualStartTime": -1,
                                 "alternate": null,
                                 "child": FiberNode {
-                                  "_debugID": 88,
+                                  "_debugID": 89,
                                   "_debugIsCurrentlyTiming": false,
                                   "_debugOwner": [Circular],
                                   "_debugSource": null,
@@ -8522,7 +8822,7 @@ ReactWrapper {
                                   "actualStartTime": -1,
                                   "alternate": null,
                                   "child": FiberNode {
-                                    "_debugID": 91,
+                                    "_debugID": 92,
                                     "_debugIsCurrentlyTiming": false,
                                     "_debugOwner": [Circular],
                                     "_debugSource": null,
@@ -8530,7 +8830,7 @@ ReactWrapper {
                                     "actualStartTime": -1,
                                     "alternate": null,
                                     "child": FiberNode {
-                                      "_debugID": 92,
+                                      "_debugID": 93,
                                       "_debugIsCurrentlyTiming": false,
                                       "_debugOwner": [Circular],
                                       "_debugSource": null,
@@ -8560,7 +8860,7 @@ ReactWrapper {
                                       "return": [Circular],
                                       "selfBaseDuration": 0,
                                       "sibling": FiberNode {
-                                        "_debugID": 93,
+                                        "_debugID": 94,
                                         "_debugIsCurrentlyTiming": false,
                                         "_debugOwner": null,
                                         "_debugSource": null,
@@ -8679,7 +8979,7 @@ ReactWrapper {
                                   "return": [Circular],
                                   "selfBaseDuration": 0,
                                   "sibling": FiberNode {
-                                    "_debugID": 89,
+                                    "_debugID": 90,
                                     "_debugIsCurrentlyTiming": false,
                                     "_debugOwner": [Circular],
                                     "_debugSource": null,
@@ -8687,7 +8987,7 @@ ReactWrapper {
                                     "actualStartTime": -1,
                                     "alternate": null,
                                     "child": FiberNode {
-                                      "_debugID": 94,
+                                      "_debugID": 95,
                                       "_debugIsCurrentlyTiming": false,
                                       "_debugOwner": [Circular],
                                       "_debugSource": null,
@@ -8695,7 +8995,7 @@ ReactWrapper {
                                       "actualStartTime": -1,
                                       "alternate": null,
                                       "child": FiberNode {
-                                        "_debugID": 95,
+                                        "_debugID": 96,
                                         "_debugIsCurrentlyTiming": false,
                                         "_debugOwner": [Circular],
                                         "_debugSource": null,
@@ -8725,7 +9025,7 @@ ReactWrapper {
                                         "return": [Circular],
                                         "selfBaseDuration": 0,
                                         "sibling": FiberNode {
-                                          "_debugID": 96,
+                                          "_debugID": 97,
                                           "_debugIsCurrentlyTiming": false,
                                           "_debugOwner": null,
                                           "_debugSource": null,
@@ -8844,7 +9144,7 @@ ReactWrapper {
                                     "return": [Circular],
                                     "selfBaseDuration": 0,
                                     "sibling": FiberNode {
-                                      "_debugID": 90,
+                                      "_debugID": 91,
                                       "_debugIsCurrentlyTiming": false,
                                       "_debugOwner": [Circular],
                                       "_debugSource": null,
@@ -8852,7 +9152,7 @@ ReactWrapper {
                                       "actualStartTime": -1,
                                       "alternate": null,
                                       "child": FiberNode {
-                                        "_debugID": 97,
+                                        "_debugID": 98,
                                         "_debugIsCurrentlyTiming": false,
                                         "_debugOwner": [Circular],
                                         "_debugSource": null,
@@ -8860,7 +9160,7 @@ ReactWrapper {
                                         "actualStartTime": -1,
                                         "alternate": null,
                                         "child": FiberNode {
-                                          "_debugID": 98,
+                                          "_debugID": 99,
                                           "_debugIsCurrentlyTiming": false,
                                           "_debugOwner": [Circular],
                                           "_debugSource": null,
@@ -8890,7 +9190,7 @@ ReactWrapper {
                                           "return": [Circular],
                                           "selfBaseDuration": 0,
                                           "sibling": FiberNode {
-                                            "_debugID": 99,
+                                            "_debugID": 100,
                                             "_debugIsCurrentlyTiming": false,
                                             "_debugOwner": null,
                                             "_debugSource": null,
@@ -9350,6 +9650,7 @@ ReactWrapper {
                         "stateNode": <button
                           class="com-button com-false"
                           title="More Options"
+                          type="button"
                         >
                           <i
                             class="fas fa-ellipsis-h"
@@ -9364,6 +9665,7 @@ ReactWrapper {
                       "stateNode": <button
                         class="com-button com-false"
                         title="Share"
+                        type="button"
                       >
                         <i
                           class="fas fa-share-square"
@@ -9378,6 +9680,7 @@ ReactWrapper {
                     "stateNode": <button
                       class="com-button com-false"
                       title="Repost"
+                      type="button"
                     >
                       <i
                         class="fas fa-retweet"
@@ -9392,6 +9695,7 @@ ReactWrapper {
                   "stateNode": <button
                     class="com-button com-false"
                     title="Like"
+                    type="button"
                   >
                     <i
                       class="fas fa-heart"
@@ -9418,6 +9722,7 @@ ReactWrapper {
                       className="com-button com-false"
                       onClick={[Function]}
                       title="Like"
+                      type="button"
                     >
                       <i
                         className="fas fa-heart"
@@ -9428,6 +9733,7 @@ ReactWrapper {
                       className="com-button com-false"
                       onClick={[Function]}
                       title="Repost"
+                      type="button"
                     >
                       <i
                         className="fas fa-retweet"
@@ -9438,6 +9744,7 @@ ReactWrapper {
                       className="com-button com-false"
                       onClick={[Function]}
                       title="Share"
+                      type="button"
                     >
                       <i
                         className="fas fa-share-square"
@@ -9448,6 +9755,7 @@ ReactWrapper {
                       className="com-button com-false"
                       onClick={[Function]}
                       title="More Options"
+                      type="button"
                     >
                       <i
                         className="fas fa-ellipsis-h"
@@ -9518,6 +9826,7 @@ ReactWrapper {
                       className="com-button com-false"
                       onClick={[Function]}
                       title="Like"
+                      type="button"
                     >
                       <i
                         className="fas fa-heart"
@@ -9528,6 +9837,7 @@ ReactWrapper {
                       className="com-button com-false"
                       onClick={[Function]}
                       title="Repost"
+                      type="button"
                     >
                       <i
                         className="fas fa-retweet"
@@ -9538,6 +9848,7 @@ ReactWrapper {
                       className="com-button com-false"
                       onClick={[Function]}
                       title="Share"
+                      type="button"
                     >
                       <i
                         className="fas fa-share-square"
@@ -9548,6 +9859,7 @@ ReactWrapper {
                       className="com-button com-false"
                       onClick={[Function]}
                       title="More Options"
+                      type="button"
                     >
                       <i
                         className="fas fa-ellipsis-h"
@@ -9619,6 +9931,7 @@ ReactWrapper {
                   <button
                     class="com-button com-false"
                     title="Like"
+                    type="button"
                   >
                     <i
                       class="fas fa-heart"
@@ -9628,6 +9941,7 @@ ReactWrapper {
                   <button
                     class="com-button com-false"
                     title="Repost"
+                    type="button"
                   >
                     <i
                       class="fas fa-retweet"
@@ -9637,6 +9951,7 @@ ReactWrapper {
                   <button
                     class="com-button com-false"
                     title="Share"
+                    type="button"
                   >
                     <i
                       class="fas fa-share-square"
@@ -9646,6 +9961,7 @@ ReactWrapper {
                   <button
                     class="com-button com-false"
                     title="More Options"
+                    type="button"
                   >
                     <i
                       class="fas fa-ellipsis-h"
@@ -9661,6 +9977,7 @@ ReactWrapper {
                       <button
                         class="com-modal-button"
                         title="Add to Next up"
+                        type="button"
                       >
                         <i
                           class="far fa-play-circle"
@@ -9674,11 +9991,13 @@ ReactWrapper {
                       <button
                         class="com-modal-button"
                         title="Add to Playlist"
+                        type="button"
                       >
                         <i
                           class="fab fa-soundcloud"
                         />
-                         Add to playlist
+                         
+                        Add to playlist
                       </button>
                     </div>
                     <div
@@ -9687,6 +10006,7 @@ ReactWrapper {
                       <button
                         class="com-modal-button"
                         title="Station"
+                        type="button"
                       >
                         <i
                           class="fas fa-broadcast-tower"
@@ -9813,6 +10133,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="Like"
+                    type="button"
                   >
                     <i
                       className="fas fa-heart"
@@ -9823,6 +10144,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="Repost"
+                    type="button"
                   >
                     <i
                       className="fas fa-retweet"
@@ -9833,6 +10155,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="Share"
+                    type="button"
                   >
                     <i
                       className="fas fa-share-square"
@@ -9843,6 +10166,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="More Options"
+                    type="button"
                   >
                     <i
                       className="fas fa-ellipsis-h"
@@ -9936,6 +10260,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="Like"
+                    type="button"
                   >
                     <i
                       className="fas fa-heart"
@@ -9946,6 +10271,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="Repost"
+                    type="button"
                   >
                     <i
                       className="fas fa-retweet"
@@ -9956,6 +10282,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="Share"
+                    type="button"
                   >
                     <i
                       className="fas fa-share-square"
@@ -9966,6 +10293,7 @@ ReactWrapper {
                     className="com-button com-false"
                     onClick={[Function]}
                     title="More Options"
+                    type="button"
                   >
                     <i
                       className="fas fa-ellipsis-h"
@@ -10056,6 +10384,7 @@ ReactWrapper {
                 <button
                   class="com-button com-false"
                   title="Like"
+                  type="button"
                 >
                   <i
                     class="fas fa-heart"
@@ -10065,6 +10394,7 @@ ReactWrapper {
                 <button
                   class="com-button com-false"
                   title="Repost"
+                  type="button"
                 >
                   <i
                     class="fas fa-retweet"
@@ -10074,6 +10404,7 @@ ReactWrapper {
                 <button
                   class="com-button com-false"
                   title="Share"
+                  type="button"
                 >
                   <i
                     class="fas fa-share-square"
@@ -10083,6 +10414,7 @@ ReactWrapper {
                 <button
                   class="com-button com-false"
                   title="More Options"
+                  type="button"
                 >
                   <i
                     class="fas fa-ellipsis-h"
@@ -10098,6 +10430,7 @@ ReactWrapper {
                     <button
                       class="com-modal-button"
                       title="Add to Next up"
+                      type="button"
                     >
                       <i
                         class="far fa-play-circle"
@@ -10111,11 +10444,13 @@ ReactWrapper {
                     <button
                       class="com-modal-button"
                       title="Add to Playlist"
+                      type="button"
                     >
                       <i
                         class="fab fa-soundcloud"
                       />
-                       Add to playlist
+                       
+                      Add to playlist
                     </button>
                   </div>
                   <div
@@ -10124,6 +10459,7 @@ ReactWrapper {
                     <button
                       class="com-modal-button"
                       title="Station"
+                      type="button"
                     >
                       <i
                         class="fas fa-broadcast-tower"
@@ -10197,15 +10533,16 @@ ReactWrapper {
           "lastEffect": null,
           "memoizedProps": Object {
             "artistInfo": Array [],
+            "commentText": "",
             "like": false,
             "repost": false,
             "share": false,
             "show": false,
             "songInfo": Array [],
-            "text": "",
           },
           "memoizedState": Object {
             "artistInfo": Array [],
+            "commentText": "",
             "like": false,
             "repost": false,
             "share": false,
@@ -10215,18 +10552,17 @@ ReactWrapper {
                 "songId": "",
               },
             ],
-            "text": "",
           },
           "mode": 0,
           "nextEffect": null,
           "pendingProps": Object {
             "artistInfo": Array [],
+            "commentText": "",
             "like": false,
             "repost": false,
             "share": false,
             "show": false,
             "songInfo": Array [],
-            "text": "",
           },
           "ref": null,
           "return": FiberNode {
@@ -10252,12 +10588,12 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "artistInfo": Array [],
+                "commentText": "",
                 "like": false,
                 "repost": false,
                 "share": false,
                 "show": false,
                 "songInfo": Array [],
-                "text": "",
               },
             },
             "memoizedState": Object {
@@ -10265,12 +10601,12 @@ ReactWrapper {
               "mount": true,
               "props": Object {
                 "artistInfo": Array [],
+                "commentText": "",
                 "like": false,
                 "repost": false,
                 "share": false,
                 "show": false,
                 "songInfo": Array [],
-                "text": "",
               },
             },
             "mode": 0,
@@ -10280,12 +10616,12 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "artistInfo": Array [],
+                "commentText": "",
                 "like": false,
                 "repost": false,
                 "share": false,
                 "show": false,
                 "songInfo": Array [],
-                "text": "",
               },
             },
             "ref": null,
@@ -10352,6 +10688,7 @@ ReactWrapper {
                         <button
                           class="com-button com-false"
                           title="Like"
+                          type="button"
                         >
                           <i
                             class="fas fa-heart"
@@ -10361,6 +10698,7 @@ ReactWrapper {
                         <button
                           class="com-button com-false"
                           title="Repost"
+                          type="button"
                         >
                           <i
                             class="fas fa-retweet"
@@ -10370,6 +10708,7 @@ ReactWrapper {
                         <button
                           class="com-button com-false"
                           title="Share"
+                          type="button"
                         >
                           <i
                             class="fas fa-share-square"
@@ -10379,6 +10718,7 @@ ReactWrapper {
                         <button
                           class="com-button com-false"
                           title="More Options"
+                          type="button"
                         >
                           <i
                             class="fas fa-ellipsis-h"
@@ -10394,6 +10734,7 @@ ReactWrapper {
                             <button
                               class="com-modal-button"
                               title="Add to Next up"
+                              type="button"
                             >
                               <i
                                 class="far fa-play-circle"
@@ -10407,11 +10748,13 @@ ReactWrapper {
                             <button
                               class="com-modal-button"
                               title="Add to Playlist"
+                              type="button"
                             >
                               <i
                                 class="fab fa-soundcloud"
                               />
-                               Add to playlist
+                               
+                              Add to playlist
                             </button>
                           </div>
                           <div
@@ -10420,6 +10763,7 @@ ReactWrapper {
                             <button
                               class="com-modal-button"
                               title="Station"
+                              type="button"
                             >
                               <i
                                 class="fas fa-broadcast-tower"
@@ -10520,12 +10864,12 @@ ReactWrapper {
                         props={
                           Object {
                             "artistInfo": Array [],
+                            "commentText": "",
                             "like": false,
                             "repost": false,
                             "share": false,
                             "show": false,
                             "songInfo": Array [],
-                            "text": "",
                           }
                         }
                       />,
@@ -10547,12 +10891,12 @@ ReactWrapper {
                         props={
                           Object {
                             "artistInfo": Array [],
+                            "commentText": "",
                             "like": false,
                             "repost": false,
                             "share": false,
                             "show": false,
                             "songInfo": Array [],
-                            "text": "",
                           }
                         }
                       />,
@@ -10579,12 +10923,12 @@ ReactWrapper {
                   props={
                     Object {
                       "artistInfo": Array [],
+                      "commentText": "",
                       "like": false,
                       "repost": false,
                       "share": false,
                       "show": false,
                       "songInfo": Array [],
-                      "text": "",
                     }
                   }
                 />,
@@ -10625,6 +10969,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="Like"
+                        type="button"
                       >
                         <i
                           class="fas fa-heart"
@@ -10634,6 +10979,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="Repost"
+                        type="button"
                       >
                         <i
                           class="fas fa-retweet"
@@ -10643,6 +10989,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="Share"
+                        type="button"
                       >
                         <i
                           class="fas fa-share-square"
@@ -10652,6 +10999,7 @@ ReactWrapper {
                       <button
                         class="com-button com-false"
                         title="More Options"
+                        type="button"
                       >
                         <i
                           class="fas fa-ellipsis-h"
@@ -10667,6 +11015,7 @@ ReactWrapper {
                           <button
                             class="com-modal-button"
                             title="Add to Next up"
+                            type="button"
                           >
                             <i
                               class="far fa-play-circle"
@@ -10680,11 +11029,13 @@ ReactWrapper {
                           <button
                             class="com-modal-button"
                             title="Add to Playlist"
+                            type="button"
                           >
                             <i
                               class="fab fa-soundcloud"
                             />
-                             Add to playlist
+                             
+                            Add to playlist
                           </button>
                         </div>
                         <div
@@ -10693,6 +11044,7 @@ ReactWrapper {
                           <button
                             class="com-modal-button"
                             title="Station"
+                            type="button"
                           >
                             <i
                               class="fas fa-broadcast-tower"
@@ -10784,12 +11136,12 @@ ReactWrapper {
                     props={
                       Object {
                         "artistInfo": Array [],
+                        "commentText": "",
                         "like": false,
                         "repost": false,
                         "share": false,
                         "show": false,
                         "songInfo": Array [],
-                        "text": "",
                       }
                     }
                   />,
@@ -10815,12 +11167,12 @@ ReactWrapper {
                 "context": null,
                 "props": Object {
                   "artistInfo": Array [],
+                  "commentText": "",
                   "like": false,
                   "repost": false,
                   "share": false,
                   "show": false,
                   "songInfo": Array [],
-                  "text": "",
                 },
               },
               "refs": Object {},
@@ -10829,12 +11181,12 @@ ReactWrapper {
                 "mount": true,
                 "props": Object {
                   "artistInfo": Array [],
+                  "commentText": "",
                   "like": false,
                   "repost": false,
                   "share": false,
                   "show": false,
                   "songInfo": Array [],
-                  "text": "",
                 },
               },
               "updater": Object {
@@ -10863,19 +11215,19 @@ ReactWrapper {
         "grabSongInfo": [Function],
         "handleChange": [Function],
         "handleSubmit": [Function],
-        "postSongTime": [Function],
         "props": Object {
           "artistInfo": Array [],
+          "commentText": "",
           "like": false,
           "repost": false,
           "share": false,
           "show": false,
           "songInfo": Array [],
-          "text": "",
         },
         "refs": Object {},
         "state": Object {
           "artistInfo": Array [],
+          "commentText": "",
           "like": false,
           "repost": false,
           "share": false,
@@ -10885,7 +11237,6 @@ ReactWrapper {
               "songId": "",
             },
           ],
-          "text": "",
         },
         "toggleLike": [Function],
         "toggleModal": [Function],
@@ -10902,12 +11253,12 @@ ReactWrapper {
       "nodeType": "class",
       "props": Object {
         "artistInfo": Array [],
+        "commentText": "",
         "like": false,
         "repost": false,
         "share": false,
         "show": false,
         "songInfo": Array [],
-        "text": "",
       },
       "ref": null,
       "rendered": Object {
@@ -10938,6 +11289,7 @@ ReactWrapper {
             <button
               class="com-button com-false"
               title="Like"
+              type="button"
             >
               <i
                 class="fas fa-heart"
@@ -10947,6 +11299,7 @@ ReactWrapper {
             <button
               class="com-button com-false"
               title="Repost"
+              type="button"
             >
               <i
                 class="fas fa-retweet"
@@ -10956,6 +11309,7 @@ ReactWrapper {
             <button
               class="com-button com-false"
               title="Share"
+              type="button"
             >
               <i
                 class="fas fa-share-square"
@@ -10965,6 +11319,7 @@ ReactWrapper {
             <button
               class="com-button com-false"
               title="More Options"
+              type="button"
             >
               <i
                 class="fas fa-ellipsis-h"
@@ -10980,6 +11335,7 @@ ReactWrapper {
                 <button
                   class="com-modal-button"
                   title="Add to Next up"
+                  type="button"
                 >
                   <i
                     class="far fa-play-circle"
@@ -10993,11 +11349,13 @@ ReactWrapper {
                 <button
                   class="com-modal-button"
                   title="Add to Playlist"
+                  type="button"
                 >
                   <i
                     class="fab fa-soundcloud"
                   />
-                   Add to playlist
+                   
+                  Add to playlist
                 </button>
               </div>
               <div
@@ -11006,6 +11364,7 @@ ReactWrapper {
                 <button
                   class="com-modal-button"
                   title="Station"
+                  type="button"
                 >
                   <i
                     class="fas fa-broadcast-tower"
@@ -11096,6 +11455,7 @@ ReactWrapper {
                 className="com-button com-false"
                 onClick={[Function]}
                 title="Like"
+                type="button"
               >
                 <i
                   className="fas fa-heart"
@@ -11106,6 +11466,7 @@ ReactWrapper {
                 className="com-button com-false"
                 onClick={[Function]}
                 title="Repost"
+                type="button"
               >
                 <i
                   className="fas fa-retweet"
@@ -11116,6 +11477,7 @@ ReactWrapper {
                 className="com-button com-false"
                 onClick={[Function]}
                 title="Share"
+                type="button"
               >
                 <i
                   className="fas fa-share-square"
@@ -11126,6 +11488,7 @@ ReactWrapper {
                 className="com-button com-false"
                 onClick={[Function]}
                 title="More Options"
+                type="button"
               >
                 <i
                   className="fas fa-ellipsis-h"
@@ -11337,6 +11700,7 @@ ReactWrapper {
               <button
                 class="com-button com-false"
                 title="Like"
+                type="button"
               >
                 <i
                   class="fas fa-heart"
@@ -11346,6 +11710,7 @@ ReactWrapper {
               <button
                 class="com-button com-false"
                 title="Repost"
+                type="button"
               >
                 <i
                   class="fas fa-retweet"
@@ -11355,6 +11720,7 @@ ReactWrapper {
               <button
                 class="com-button com-false"
                 title="Share"
+                type="button"
               >
                 <i
                   class="fas fa-share-square"
@@ -11364,6 +11730,7 @@ ReactWrapper {
               <button
                 class="com-button com-false"
                 title="More Options"
+                type="button"
               >
                 <i
                   class="fas fa-ellipsis-h"
@@ -11379,6 +11746,7 @@ ReactWrapper {
                   <button
                     class="com-modal-button"
                     title="Add to Next up"
+                    type="button"
                   >
                     <i
                       class="far fa-play-circle"
@@ -11392,11 +11760,13 @@ ReactWrapper {
                   <button
                     class="com-modal-button"
                     title="Add to Playlist"
+                    type="button"
                   >
                     <i
                       class="fab fa-soundcloud"
                     />
-                     Add to playlist
+                     
+                    Add to playlist
                   </button>
                 </div>
                 <div
@@ -11405,6 +11775,7 @@ ReactWrapper {
                   <button
                     class="com-modal-button"
                     title="Station"
+                    type="button"
                   >
                     <i
                       class="fas fa-broadcast-tower"
@@ -11469,6 +11840,7 @@ ReactWrapper {
                   className="com-button com-false"
                   onClick={[Function]}
                   title="Like"
+                  type="button"
                 >
                   <i
                     className="fas fa-heart"
@@ -11479,6 +11851,7 @@ ReactWrapper {
                   className="com-button com-false"
                   onClick={[Function]}
                   title="Repost"
+                  type="button"
                 >
                   <i
                     className="fas fa-retweet"
@@ -11489,6 +11862,7 @@ ReactWrapper {
                   className="com-button com-false"
                   onClick={[Function]}
                   title="Share"
+                  type="button"
                 >
                   <i
                     className="fas fa-share-square"
@@ -11499,6 +11873,7 @@ ReactWrapper {
                   className="com-button com-false"
                   onClick={[Function]}
                   title="More Options"
+                  type="button"
                 >
                   <i
                     className="fas fa-ellipsis-h"
@@ -11566,6 +11941,7 @@ ReactWrapper {
                 "instance": <button
                   class="com-button com-false"
                   title="Like"
+                  type="button"
                 >
                   <i
                     class="fas fa-heart"
@@ -11584,6 +11960,7 @@ ReactWrapper {
                   "className": "com-button com-false",
                   "onClick": [Function],
                   "title": "Like",
+                  "type": "button",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -11610,6 +11987,7 @@ ReactWrapper {
                 "instance": <button
                   class="com-button com-false"
                   title="Repost"
+                  type="button"
                 >
                   <i
                     class="fas fa-retweet"
@@ -11628,6 +12006,7 @@ ReactWrapper {
                   "className": "com-button com-false",
                   "onClick": [Function],
                   "title": "Repost",
+                  "type": "button",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -11654,6 +12033,7 @@ ReactWrapper {
                 "instance": <button
                   class="com-button com-false"
                   title="Share"
+                  type="button"
                 >
                   <i
                     class="fas fa-share-square"
@@ -11672,6 +12052,7 @@ ReactWrapper {
                   "className": "com-button com-false",
                   "onClick": [Function],
                   "title": "Share",
+                  "type": "button",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -11698,6 +12079,7 @@ ReactWrapper {
                 "instance": <button
                   class="com-button com-false"
                   title="More Options"
+                  type="button"
                 >
                   <i
                     class="fas fa-ellipsis-h"
@@ -11716,6 +12098,7 @@ ReactWrapper {
                   "className": "com-button com-false",
                   "onClick": [Function],
                   "title": "More Options",
+                  "type": "button",
                 },
                 "ref": null,
                 "rendered": Array [
@@ -11756,6 +12139,7 @@ ReactWrapper {
                       <button
                         class="com-modal-button"
                         title="Add to Next up"
+                        type="button"
                       >
                         <i
                           class="far fa-play-circle"
@@ -11769,11 +12153,13 @@ ReactWrapper {
                       <button
                         class="com-modal-button"
                         title="Add to Playlist"
+                        type="button"
                       >
                         <i
                           class="fab fa-soundcloud"
                         />
-                         Add to playlist
+                         
+                        Add to playlist
                       </button>
                     </div>
                     <div
@@ -11782,6 +12168,7 @@ ReactWrapper {
                       <button
                         class="com-modal-button"
                         title="Station"
+                        type="button"
                       >
                         <i
                           class="fas fa-broadcast-tower"
@@ -11800,6 +12187,7 @@ ReactWrapper {
                         <button
                           className="com-modal-button"
                           title="Add to Next up"
+                          type="button"
                         >
                           <i
                             className="far fa-play-circle"
@@ -11813,11 +12201,13 @@ ReactWrapper {
                         <button
                           className="com-modal-button"
                           title="Add to Playlist"
+                          type="button"
                         >
                           <i
                             className="fab fa-soundcloud"
                           />
-                           Add to playlist
+                           
+                          Add to playlist
                         </button>
                       </div>,
                       <div
@@ -11826,6 +12216,7 @@ ReactWrapper {
                         <button
                           className="com-modal-button"
                           title="Station"
+                          type="button"
                         >
                           <i
                             className="fas fa-broadcast-tower"
@@ -11845,6 +12236,7 @@ ReactWrapper {
                         <button
                           class="com-modal-button"
                           title="Add to Next up"
+                          type="button"
                         >
                           <i
                             class="far fa-play-circle"
@@ -11858,6 +12250,7 @@ ReactWrapper {
                         "children": <button
                           className="com-modal-button"
                           title="Add to Next up"
+                          type="button"
                         >
                           <i
                             className="far fa-play-circle"
@@ -11872,6 +12265,7 @@ ReactWrapper {
                           "instance": <button
                             class="com-modal-button"
                             title="Add to Next up"
+                            type="button"
                           >
                             <i
                               class="far fa-play-circle"
@@ -11889,6 +12283,7 @@ ReactWrapper {
                             ],
                             "className": "com-modal-button",
                             "title": "Add to Next up",
+                            "type": "button",
                           },
                           "ref": null,
                           "rendered": Array [
@@ -11921,11 +12316,13 @@ ReactWrapper {
                         <button
                           class="com-modal-button"
                           title="Add to Playlist"
+                          type="button"
                         >
                           <i
                             class="fab fa-soundcloud"
                           />
-                           Add to playlist
+                           
+                          Add to playlist
                         </button>
                       </div>,
                       "key": undefined,
@@ -11934,11 +12331,13 @@ ReactWrapper {
                         "children": <button
                           className="com-modal-button"
                           title="Add to Playlist"
+                          type="button"
                         >
                           <i
                             className="fab fa-soundcloud"
                           />
-                           Add to playlist
+                           
+                          Add to playlist
                         </button>,
                         "className": "com-modalSpan",
                       },
@@ -11948,11 +12347,13 @@ ReactWrapper {
                           "instance": <button
                             class="com-modal-button"
                             title="Add to Playlist"
+                            type="button"
                           >
                             <i
                               class="fab fa-soundcloud"
                             />
-                             Add to playlist
+                             
+                            Add to playlist
                           </button>,
                           "key": undefined,
                           "nodeType": "host",
@@ -11961,10 +12362,12 @@ ReactWrapper {
                               <i
                                 className="fab fa-soundcloud"
                               />,
-                              " Add to playlist",
+                              " ",
+                              "Add to playlist",
                             ],
                             "className": "com-modal-button",
                             "title": "Add to Playlist",
+                            "type": "button",
                           },
                           "ref": null,
                           "rendered": Array [
@@ -11983,7 +12386,8 @@ ReactWrapper {
                               ],
                               "type": "i",
                             },
-                            " Add to playlist",
+                            " ",
+                            "Add to playlist",
                           ],
                           "type": "button",
                         },
@@ -11997,6 +12401,7 @@ ReactWrapper {
                         <button
                           class="com-modal-button"
                           title="Station"
+                          type="button"
                         >
                           <i
                             class="fas fa-broadcast-tower"
@@ -12010,6 +12415,7 @@ ReactWrapper {
                         "children": <button
                           className="com-modal-button"
                           title="Station"
+                          type="button"
                         >
                           <i
                             className="fas fa-broadcast-tower"
@@ -12024,6 +12430,7 @@ ReactWrapper {
                           "instance": <button
                             class="com-modal-button"
                             title="Station"
+                            type="button"
                           >
                             <i
                               class="fas fa-broadcast-tower"
@@ -12041,6 +12448,7 @@ ReactWrapper {
                             ],
                             "className": "com-modal-button",
                             "title": "Station",
+                            "type": "button",
                           },
                           "ref": null,
                           "rendered": Array [

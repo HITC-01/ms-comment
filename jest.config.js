@@ -10,6 +10,7 @@ module.exports = {
       ],
     collectCoverageFrom: [
       'client/components/**/*.{js,jsx}',
+      'client/helpers/**/*.{js}',
       '!**/node_modules/**',
     ],
   };

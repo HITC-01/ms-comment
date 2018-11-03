@@ -37,8 +37,12 @@ export default class Comment extends React.Component {
 
   componentDidMount() {
     const random = Math.floor(Math.random() * 150) + 1;
-    this.grabArtistInfo(random);
-    this.grabSongInfo(songId);
+    this.grabArtistInfo(random)
+      .then(() => {
+        this.grabSongInfo(songId);
+      }).catch((error) => {
+        console.log('Error', error);
+      });
   }
 
   toggleLike() {
@@ -66,7 +70,8 @@ export default class Comment extends React.Component {
   }
 
   grabArtistInfo(artistId) {
-    fetch(`/api/artist/${artistId}/`, { method: 'GET' })
+    const url = `http://localhost:3003/api/artist/${artistId}/`;
+    return fetch(url, { method: 'GET' })
       .then(stream => stream.json())
       .then((res) => {
         const artistProfile = res;
@@ -75,7 +80,8 @@ export default class Comment extends React.Component {
   }
 
   grabSongInfo() {
-    fetch(`/api/song/${songId}`, { method: 'GET' })
+    const url = `http://localhost:3003/api/song/${songId}/`;
+    fetch(url, { method: 'GET' })
       .then(stream => stream.json())
       .then((res) => {
         const songProfile = res;
