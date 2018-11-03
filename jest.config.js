@@ -9,7 +9,7 @@ module.exports = {
         'text',
       ],
     collectCoverageFrom: [
-      'specs/**/*.{js,jsx}',
+      'client/components/**/*.{js,jsx}',
       '!**/node_modules/**',
     ],
   };
