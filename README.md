@@ -19,6 +19,19 @@ How to seed the database?
 Run the following command: 'npm run db:setup'
 This will setup the database schema and seed the database with initial data.
 
+# Development
+
+## FROM WITHIN THE ROOT DIRECTORY:
+
+`npm start
+npm run dev:react
+npm run db:setup`
+
+# Installing Dependencies
+
+## FROM WITHIN THE ROOT DIRECTORY:
+
+`npm install`
 
 Related Projects:
 
