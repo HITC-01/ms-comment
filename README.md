@@ -23,12 +23,12 @@ This will setup the database schgit sema and seed the database with initial data
 
 ## FROM WITHIN THE ROOT DIRECTORY:
 
-`
+```
 * npm start
 * npm run dev:react
 * npm run db:setup
 
-`
+```
 
 # Installing Dependencies
 
