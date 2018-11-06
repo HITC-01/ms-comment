@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS comments;
+DROP DATABASE IF EXISTS soundcloud_ms;
 
-CREATE DATABASE comments;
-USE comments;
+CREATE DATABASE soundcloud_ms;
+USE soundcloud_ms;
 
 DROP TABLE IF EXISTS artists;
 
