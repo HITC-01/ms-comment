@@ -12,6 +12,12 @@ const PORT = process.env.PORT || 3003;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
 app.use('/song/:id', express.static(path.join(__dirname, '../public')));
 
 app.get('/api/sc/songs/:songId/', (req, res) => {
