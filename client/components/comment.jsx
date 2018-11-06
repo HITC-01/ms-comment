@@ -9,16 +9,18 @@ const parse = (pathname) => {
   const splitString = pathname.split('/');
   return splitString[2];
 };
+
 const songId = parse(window.location.pathname);
 
 export default class Comment extends React.Component {
   constructor(props) {
     super(props);
+    console.log('incoming', props.songId);
     this.state = {
       commentText: '',
       artistInfo: [],
       songInfo: [
-        { songId: '' },
+        { songId: props.songId },
       ],
       show: false,
       like: false,
@@ -39,7 +41,8 @@ export default class Comment extends React.Component {
     const random = Math.floor(Math.random() * 150) + 1;
     this.grabArtistInfo(random)
       .then(() => {
-        this.grabSongInfo(songId);
+        const { songInfo } = this.state;
+        this.grabSongInfo(songInfo.songId);
       }).catch((error) => {
         console.log('Error', error);
       });
@@ -80,7 +83,9 @@ export default class Comment extends React.Component {
   }
 
   grabSongInfo() {
-    const url = `http://localhost:3003/api/song/${songId}/`;
+    const { songInfo } = this.state;
+    console.log(songInfo[0].songId);
+    const url = `http://localhost:3003/api/song/${songInfo[0].songId}/`;
     fetch(url, { method: 'GET' })
       .then(stream => stream.json())
       .then((res) => {
@@ -187,6 +192,7 @@ More
 }
 
 Comment.defaultProps = {
+  songId: 1,
   commentText: '',
   artistInfo: [],
   songInfo: [],

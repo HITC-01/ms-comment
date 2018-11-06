@@ -1,16 +1,19 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require('cors');
 
 const app = express();
 const db = require('../database/index.js');
 
-const PORT = process.env.PORT || 3003;
+const port = process.env.PORT || 3003;
 
-
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/song/:id', express.static(path.join(__dirname, '../public')));
+app.use('/', express.static(path.join(__dirname, '../public')));
 
 app.get('/api/sc/songs/:songId/', (req, res) => {
   db.getAllComments(req.params.songId, (error, results) => {
@@ -52,6 +55,6 @@ app.post('/api/sc', (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is listening on Port: ${PORT}`);
+app.listen(port, () => {
+  console.log(`Server is listening on Port: ${port}`);
 });

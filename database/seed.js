@@ -1,7 +1,7 @@
+require('dotenv').config();
 const faker = require('faker');
 const Promise = require('bluebird');
 const db = require('./index.js');
-
 
 const generator = () => {
   const result = [];
@@ -81,7 +81,7 @@ gen.then((seeded) => {
       current.artistId,
       current.songId,
     ];
-    
+
     db.query(queryStringComment, postComment, (error) => {
       if (error) {
         console.log(error.message);

@@ -12,6 +12,7 @@ const songId = parse(window.location.pathname);
 export default class ViewComments extends React.Component {
   constructor(props) {
     super(props);
+    this.songId = props.songId;
     this.state = {
       commentList: [],
     };
@@ -24,7 +25,7 @@ export default class ViewComments extends React.Component {
   }
 
   fetchComments() {
-    $.ajax(`/api/sc/songs/${songId}/`, {
+    $.ajax(`/comments/api/sc/songs/${this.songId}/`, {
       success: (data) => {
         let { commentList } = this.state;
         commentList = data;
@@ -62,4 +63,5 @@ export default class ViewComments extends React.Component {
 
 ViewComments.defaultProps = {
   commentList: [],
+  songId: 1,
 };
