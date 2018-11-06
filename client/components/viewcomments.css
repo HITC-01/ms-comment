@@ -11,7 +11,7 @@ body {
     grid-row-gap: 10px;
 }
 
-.com-totalCommentsCount {
+.comTotalCommentsCount {
     color: #999;
     font-size: 14px;
     grid-row-start: 1;
@@ -24,21 +24,21 @@ body {
     padding-bottom: 5px;
 }
 
-.com-commentContainer {
+.comCommentContainer {
     display: inline-grid;
     border-radius: 10px;
     min-width: 90%;
     max-width: 90%;
 }
 
-.com-allComments {
+.comAllComments {
     grid-row-start: 2;
     grid-column-start: 2;
     grid-column-end: 4;
     margin-bottom: 15px;
 }
 
-.com-eachComment {
+.comEachComment {
     position: relative;
     background-color: whitesmoke;
     font-size: 12px;
@@ -46,7 +46,7 @@ body {
     min-height: 55px;
 }
 
-.com-commentsIcon {
+.comCommentsIcon {
     height: 21px;
     width: 21px;
     vertical-align: bottom;
@@ -55,16 +55,24 @@ body {
     padding-right: 5px;
 }
 
-.com-innerWrap {
+.comInnerWrap {
     padding-left: 50px;
     padding-right: 125px;
 }
-.com-artistPic {
+
+.comProfilePic {
+    display: block;
+    width: 40px;
+    height: 40px;
+    float: left;
+} 
+
+.comArtistPic {
     border-radius: 50px;
     width: 100%;
 }
 
-.com-artistName {
+.comArtistName {
     display: block;
     color:#999;
     font-size: 11px;
@@ -73,7 +81,7 @@ body {
     font-size: 12px;
 }
 
-.com-timeAgo {
+.comTimeAgo {
     position: absolute;
     right: 15px;
     top: 10px;
@@ -81,7 +89,7 @@ body {
     font-size: 11px;
 }
 
-.com-commentText {
+.comCommentText {
     display: inline-block;
     color: black;
     font-size: 13px;
@@ -102,25 +110,25 @@ li {
     text-align: center;
 }
 
-.com-options {
+.comOptions {
     position: absolute;
     top: 29px;
     left: 521px;
 }
 
-.com-modalReply {
+.comModalReply {
     display: inline;
     position: relative;
     padding-right: 3px;
     text-decoration: none;
 }
 
- .com-modalDelete {
+ .comModalDelete {
     display: inline;
     position: relative;
  }
 
- .com-modal-commentButton {
+ .comModalCommentButton {
     border: 0.5px solid #e5e5e5;
     list-style-type: none;
     text-decoration: none;
@@ -136,11 +144,11 @@ li {
     min-width: 65px;
  }
 
- .com-modal-commentButton:hover {
+ .comModalCommentButton:hover {
     border: 0.5px solid#999;
  }
 
- .com-bottom-border {
+ .comBottomBorder {
     position: relative;
     display: block;
     border-top: 2px solid whitesmoke;
@@ -153,7 +161,7 @@ li {
     left: 0px;
     top: -5px;
 }
-.com-bottom-border:before{
+.comBottomBorder:before{
     content: '';
     position: absolute;
     background: url(https://a-v2.sndcdn.com/assets/images/stopper-9d4f27a.png);
@@ -162,4 +170,12 @@ li {
     width: 100%;
     height: 14px;
     top: -9px;
+}
+
+.comDisplay {
+    display: block;
+}
+
+.comDisplayNone {
+    display: none;
 }

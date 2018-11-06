@@ -25,7 +25,7 @@ This will setup the database schgit sema and seed the database with initial data
 
 ```
 * npm start
-* npm run dev:react
+* npm run dev:reac
 * npm run db:setup
 
 ```

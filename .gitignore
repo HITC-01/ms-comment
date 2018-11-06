@@ -25,3 +25,10 @@ build/
 dist/
 public/app.js
 
+# Super Secret Files
+.env
+
+# VS Code configurations
+.vscode
+
+

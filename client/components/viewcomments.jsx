@@ -1,6 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import EachComment from './eachcomment.jsx';
+import commentCSS from './viewcomments.css';
 
 const parse = (pathname) => {
   const splitString = pathname.split('/');
@@ -36,9 +37,9 @@ export default class ViewComments extends React.Component {
   render() {
     const { commentList } = this.state;
     return (
-      <div className="container">
-        <div className="com-totalCommentsCount">
-          <span className="com-commentsIcon">
+      <div className={commentCSS.container}>
+        <div className={commentCSS.comTotalCommentsCount}>
+          <span className={commentCSS.comCommentsIcon}>
             <i className="fas fa-comment" />
           </span>
           <span>
@@ -47,14 +48,14 @@ export default class ViewComments extends React.Component {
             {(commentList.length !== 1 ? 'Comments' : 'Comment')}
           </span>
         </div>
-        <div className="com-allComments">
+        <div className={commentCSS.comAllComments}>
           {commentList.map(comment => (
-            <div key={comment.commentId} className="com-commentContainer">
+            <div key={comment.commentId} className={commentCSS.comCommentContainer}>
               <EachComment info={comment} />
             </div>
           ))}
         </div>
-        <div className="com-bottom-border" />
+        <div className={commentCSS.comBottomBorder} />
       </div>
     );
   }

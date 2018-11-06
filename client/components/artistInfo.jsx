@@ -1,9 +1,10 @@
 import React from 'react';
+import commentCSS from './viewcomments.css';
 
 const ArtistInfo = () => (
-  <div className="placeHolder"> 
-      <h1> Artist Info </h1>
+  <div className={commentCSS.placeHolder}>
+    <h1> Artist Info </h1>
   </div>
-);3
+);
 
 export default ArtistInfo;

@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS comments;
+DROP DATABASE IF EXISTS feccomments;
 
-CREATE DATABASE comments;
-USE comments;
+CREATE DATABASE feccomments;
+USE feccomments;
 
 DROP TABLE IF EXISTS artists;
 

@@ -3,6 +3,7 @@ import propTypes from 'prop-types';
 import Moment from 'moment';
 import Reply from './reply.jsx';
 import helpers from '../helpers/commentHelpers.js';
+import commentCSS from './viewcomments.css';
 
 export default class EachComment extends React.Component {
   constructor(props) {
@@ -23,20 +24,20 @@ export default class EachComment extends React.Component {
     const { info } = this.props;
     return (
       <li
-        className="com-eachComment"
+        className={commentCSS.comEachComment}
         key={info.commentId}
         onMouseEnter={this.toggleOptions}
         onMouseLeave={this.toggleOptions}
       >
         <Reply status={showOptions} />
-        <div className="com-timeAgo" title={`Posted On ${Moment(info.createdAt).format('MMMM do YYYY')}`}>
+        <div className={commentCSS.comTimeAgo} title={`Posted On ${Moment(info.createdAt).format('MMMM do YYYY')}`}>
           {Moment(info.createdAt).fromNow()}
         </div>
-        <div className="com-profilePic">
-          <img className="com-artistPic" src={info.imageURL} alt={`${info.name}`} />
+        <div className={commentCSS.comProfilePic}>
+          <img className={commentCSS.comArtistPic} src={info.imageURL} alt={`${info.name}`} />
         </div>
-        <div className="com-innerWrap">
-          <div className="com-artistName">
+        <div className={commentCSS.comInnerWrap}>
+          <div className={commentCSS.comArtistName}>
             {info.name}
             {' '}
             <span style={{ color: '#ccc' }}>at</span>
@@ -44,7 +45,7 @@ export default class EachComment extends React.Component {
             {helpers.convertTime(info.songtime)}
 :
           </div>
-          <div className="com-commentText">
+          <div className={commentCSS.comCommentText}>
             {info.text}
           </div>
         </div>
