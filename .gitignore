@@ -38,3 +38,7 @@ main.css.map
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+# VS Code configurations
+.vscode
+

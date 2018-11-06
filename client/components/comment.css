@@ -6,7 +6,7 @@
     grid-row-gap: 10px;
 }
 
-.com-commentInput {
+.comCommentInput {
     display: inline-block;
     width: 100%;
     grid-row-start: 1;
@@ -16,7 +16,7 @@
     background-color: #fff;
 }
 
-.com-createButtons {
+.comCreateButtons {
     display: inline-block;
     width: 100%;
     grid-row-start: 2;
@@ -28,19 +28,19 @@
     margin-left: 80px;
 }
 
-.com-profilePic {
+.comProfilePic {
     display: block;
     width: 40px;
     height: 40px;
     float: left;
 } 
 
-.com-textbox {
+.comTextbox {
     display: block;
     padding: 2px;
 }
 
-.com-border {
+.comBorder {
     display: block;
     border-bottom: 2px solid whitesmoke;
     width: 680px;
@@ -50,7 +50,7 @@
     grid-column: 2/4;
 }
 
-.com-miniStats:hover {
+.comMiniStats:hover {
     color: black;
     cursor: pointer;
 }
@@ -69,7 +69,7 @@ input[type="text"]:focus {
     border-color: #e5e5e5;
 }
 
-.com-button {
+.comButton {
     cursor: pointer;
     text-align: center;
     border-radius: 5px;
@@ -77,13 +77,19 @@ input[type="text"]:focus {
     min-width: 50px;
     margin-right: 5px;
 }
-.com-true {
+.comTrue {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 50px;
+    margin-right: 5px;
     border-color: #f50;
     background-color: #ffeee6;
     color: #f50;
 }
 
-.com-button:hover {
+.comButton:hover {
     border-color: #f50;
 }
 
@@ -115,20 +121,20 @@ i {
     border-radius: 10px;
 }
 
-.com-modal {
+.comModal {
     position: absolute;
     background: white;
     top: 91px;
     left:305px;
 }
-.com-display {
+.comDisplay {
     display: block;
 }
 
-.com-displayNone {
+.comDisplayNone {
     display: none;
 }
-.com-modal-button {
+.comModalButton {
     border: solid 1px grey;
     cursor: pointer;
     font-size: 12px;
@@ -137,10 +143,10 @@ i {
     text-align: left;
 }
 
-.com-modal-button:hover {
+.comModalButton:hover {
     background-color: #f2f2f2;
 }
-.com-modalSpan {
+.comModalSpan {
     margin: 0px;
     padding: 0px;
     margin-bottom: -2px;

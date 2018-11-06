@@ -1,7 +1,14 @@
+<<<<<<< HEAD:database/schema.sql
 DROP DATABASE IF EXISTS soundcloud_ms;
 
 CREATE DATABASE soundcloud_ms;
 USE soundcloud_ms;
+=======
+DROP DATABASE IF EXISTS feccomments;
+
+CREATE DATABASE feccomments;
+USE feccomments;
+>>>>>>> 05c0d6b44fb8e170147bb7a03a75e6e7cde85c0d:schema.sql
 
 DROP TABLE IF EXISTS artists;
 

@@ -1,23 +1,24 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import commentCSS from './viewcomments.css';
 
 const Reply = (props) => {
   const { status } = props;
   if (!status) {
     return (
-      <div className="com-displayNone" />
+      <div className={commentCSS.comDisplayNone} />
     );
   }
   return (
-    <div className="com-options">
-      <div className="com-modalReply">
-        <button className="com-modal-commentButton replyButton" title="Reply" type="button">
+    <div className={commentCSS.comOptions}>
+      <div className={commentCSS.comModalReply}>
+        <button className={`${commentCSS.comModalCommentButton} ${commentCSS.replyButton}`} title="Reply" type="button">
           <i className="fas fa-arrow-left" />
           Reply
         </button>
       </div>
-      <div className="com-modalDelete">
-        <button className="com-modal-commentButton" title="Delete this comment" type="button">
+      <div className={commentCSS.comModalDelete}>
+        <button className={commentCSS.comModalCommentButton} title="Delete this comment" type="button">
           <i className="fas fa-trash" />
         </button>
       </div>

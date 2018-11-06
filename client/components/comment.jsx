@@ -4,6 +4,7 @@ import Moment from 'moment';
 import Numeral from 'numeral';
 import MoreModal from './moreModal.jsx';
 import helpers from '../helpers/commentHelpers.js';
+import commentCSS from './comment.css';
 
 const parse = (pathname) => {
   const splitString = pathname.split('/');
@@ -122,61 +123,60 @@ export default class Comment extends React.Component {
     const likeStatus = like ? 'Liked' : 'Like';
     const repostStatus = repost ? 'Reposted' : 'Repost';
     const shareStatus = share ? 'Shared' : 'Share';
-    const modalStatus = show ? 'com-display' : 'com-displayNone';
     return (
       <div>
-        <form className="wrapper" autoComplete="off" onSubmit={this.handleSubmit}>
-          <div className="com-commentInput">
+        <form className={commentCSS.wrapper} autoComplete="off" onSubmit={this.handleSubmit}>
+          <div className={commentCSS.comCommentInput}>
             {artistInfo.map(profile => (
-              <span className="com-profilePic" key="profile.artistId" title={`${profile.name}`}>
-                <img id="profilePic" src={profile.imageURL} width="40" height="40" alt={`${profile.name}`} />
+              <span className={commentCSS.comProfilePic} key="profile.artistId" title={`${profile.name}`}>
+                <img id={commentCSS.profilePic} src={profile.imageURL} width="40" height="40" alt={`${profile.name}`} />
               </span>
             ))}
-            <span className="com-textbox" title="Write a comment">
+            <span className={commentCSS.comTextbox} title="Write a comment">
               <input id="text" type="text" placeholder="Write a comment" value={commentText} onChange={this.handleChange} />
             </span>
           </div>
         </form>
-        <div className="com-createButtons">
-          <button className={`com-button com-${like}`} title="Like" onClick={this.toggleLike} type="button">
+        <div className={commentCSS.comCreateButtons}>
+          <button className={!like ? commentCSS.comButton : commentCSS.comTrue} title="Like" onClick={this.toggleLike} type="button">
             <i className="fas fa-heart" />
             {likeStatus}
 
           </button>
-          <button className={`com-button com-${repost}`} title="Repost" onClick={this.toggleRepost} type="button">
+          <button className={!repost ? commentCSS.comButton : commentCSS.comTrue} title="Repost" onClick={this.toggleRepost} type="button">
             <i className="fas fa-retweet" />
             {repostStatus}
 
           </button>
-          <button className={`com-button com-${share}`} title="Share" onClick={this.toggleShare} type="button">
+          <button className={!share ? commentCSS.comButton : commentCSS.comTrue} title="Share" onClick={this.toggleShare} type="button">
             <i className="fas fa-share-square" />
             {shareStatus}
 
           </button>
-          <button className={`com-button com-${show}`} title="More Options" onClick={this.toggleModal} type="button">
+          <button className={!show ? commentCSS.comButton : commentCSS.comTrue} title="More Options" onClick={this.toggleModal} type="button">
             <i className="fas fa-ellipsis-h" />
 More
           </button>
-          <MoreModal status={modalStatus} />
-          <a id="buyIn" href="#" title="Click to buy or stream">
+          <MoreModal status={show} />
+          <a id={commentCSS.buyIn} href="#" title="Click to buy or stream">
     Stream/Download
           </a>
 
           {songInfo.map(songProfile => (
             <ul key="songProfile.id" className="soundStats">
-              <li className="miniStats-Static" title={`${songProfile.plays} plays`}>
+              <li className={commentCSS.comMiniStats} title={`${songProfile.plays} plays`}>
                 <span>
                   <i className="fas fa-play" />
                   {Numeral(songProfile.plays).format('0.0a')}
                 </span>
               </li>
-              <li className="com-miniStats" title={`${songProfile.likes} likes`}>
+              <li className={commentCSS.comMiniStats} title={`${songProfile.likes} likes`}>
                 <span>
                   <i className="fas fa-heart" />
                   {Numeral(songProfile.likes).format('0.0a')}
                 </span>
               </li>
-              <li className="com-miniStats" title={`${songProfile.reposts} reposts`}>
+              <li className={commentCSS.comMiniStats} title={`${songProfile.reposts} reposts`}>
                 <span>
                   <i className="fas fa-share-square" />
                   {Numeral(songProfile.reposts).format('0.00a')}
@@ -184,7 +184,7 @@ More
               </li>
             </ul>
           ))}
-          <div className="com-border" />
+          <div className={commentCSS.comBorder} />
         </div>
       </div>
     );
