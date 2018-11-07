@@ -18,10 +18,7 @@
     "axios": "^0.18.0",
     "bluebird": "^3.5.2",
     "body-parser": "^1.18.3",
-<<<<<<< HEAD
     "cors": "^2.8.5",
-=======
->>>>>>> 05c0d6b44fb8e170147bb7a03a75e6e7cde85c0d
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
     "express-http-proxy": "^1.4.0",
