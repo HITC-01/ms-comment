@@ -13,11 +13,14 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use((req, res, next) => {
+  console.log(`INCOMING ${req.method} from ${req.originalUrl}, ${req.path}`);
+  next();
+});
 
-app.use('/song/:id', express.static(path.join(__dirname, '../public')));
 app.use('/', express.static(path.join(__dirname, '../public')));
 
-app.get('/api/sc/songs/:songId/', (req, res) => {
+app.get('/songs/:songId/', (req, res) => {
   db.getAllComments(req.params.songId, (error, results) => {
     if (error) {
       res.status(500).send(error);
@@ -27,7 +30,7 @@ app.get('/api/sc/songs/:songId/', (req, res) => {
   });
 });
 
-app.get('/api/artist/:artistId', (req, res) => {
+app.get('/artist/:artistId', (req, res) => {
   db.getArtist(req.params.artistId, (error, results) => {
     if (error) {
       res.status(500).send(error);
@@ -37,7 +40,7 @@ app.get('/api/artist/:artistId', (req, res) => {
   });
 });
 
-app.get('/api/song/:songId', (req, res) => {
+app.get('/song/:songId', (req, res) => {
   db.getSong(req.params.songId, (error, results) => {
     if (error) {
       res.status(500).send(error);
@@ -47,7 +50,7 @@ app.get('/api/song/:songId', (req, res) => {
   });
 });
 
-app.post('/api/sc', (req, res) => {
+app.post('/sc', (req, res) => {
   db.createComment(req.body, (error) => {
     if (error) {
       res.status(500).send(error);

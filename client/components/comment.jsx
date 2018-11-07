@@ -16,7 +16,6 @@ const songId = parse(window.location.pathname);
 export default class Comment extends React.Component {
   constructor(props) {
     super(props);
-    console.log('incoming', props.songId);
     this.state = {
       commentText: '',
       artistInfo: [],
@@ -39,12 +38,13 @@ export default class Comment extends React.Component {
   }
 
   componentDidMount() {
-    const random = Math.floor(Math.random() * 150) + 1;
+    const random = Math.floor(Math.random() * 50) + 1;
     this.grabArtistInfo(random)
       .then(() => {
         const { songInfo } = this.state;
-        this.grabSongInfo(songInfo.songId);
-      }).catch((error) => {
+        return this.grabSongInfo(songInfo.songId);
+      })
+      .catch((error) => {
         console.log('Error', error);
       });
   }
@@ -74,7 +74,7 @@ export default class Comment extends React.Component {
   }
 
   grabArtistInfo(artistId) {
-    const url = `http://localhost:3003/api/artist/${artistId}/`;
+    const url = `/comment/artist/${artistId}/`;
     return fetch(url, { method: 'GET' })
       .then(stream => stream.json())
       .then((res) => {
@@ -85,9 +85,8 @@ export default class Comment extends React.Component {
 
   grabSongInfo() {
     const { songInfo } = this.state;
-    console.log(songInfo[0].songId);
-    const url = `http://localhost:3003/api/song/${songInfo[0].songId}/`;
-    fetch(url, { method: 'GET' })
+    const url = `/comment/song/${songInfo[0].songId}`;
+    return fetch(url, { method: 'GET' })
       .then(stream => stream.json())
       .then((res) => {
         const songProfile = res;
@@ -100,7 +99,7 @@ export default class Comment extends React.Component {
     const now = new Date();
     const { commentText, songInfo, artistInfo } = this.state;
 
-    $.ajax('/api/sc/', {
+    $.ajax('/comment/sc', {
       method: 'POST',
       contentType: 'application/json',
       data: JSON.stringify({

@@ -21,12 +21,12 @@ export default class ViewComments extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchComments(songId);
-    this.interval = setInterval(() => this.fetchComments(songId), 1000);
+    this.fetchComments(this.songId);
+    // this.interval = setInterval(() => this.fetchComments(this.songId), 1000);
   }
 
   fetchComments() {
-    $.ajax(`/comments/api/sc/songs/${this.songId}/`, {
+    $.ajax(`/comment/songs/${this.songId}`, {
       success: (data) => {
         let { commentList } = this.state;
         commentList = data;
