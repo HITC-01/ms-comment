@@ -8,6 +8,7 @@
     "node": ">=6.13.0"
   },
   "scripts": {
+    "postinstall": "cp example.env .env && echo 'Add variables into .env file!'",
     "start": "nodemon server/index.js",
     "dev:react": "webpack -d --watch",
     "db:setup": " mysql -u root < schema.sql && node database/seed.js",

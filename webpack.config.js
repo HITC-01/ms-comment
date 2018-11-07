@@ -33,6 +33,6 @@ module.exports = {
     },
     output: {
         path: __dirname + '/public',
-        filename: 'app.js',
+        filename: 'sc-comment.js',
     }
 };

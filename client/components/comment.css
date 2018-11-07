@@ -126,6 +126,7 @@ i {
     background: white;
     top: 91px;
     left:305px;
+    z-index: 5;
 }
 .comDisplay {
     display: block;
