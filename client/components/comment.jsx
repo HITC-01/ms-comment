@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import Moment from 'moment';
 import Numeral from 'numeral';
 import MoreModal from './moreModal.jsx';
@@ -10,8 +9,6 @@ const parse = (pathname) => {
   const splitString = pathname.split('/');
   return splitString[2];
 };
-
-const songId = parse(window.location.pathname);
 
 export default class Comment extends React.Component {
   constructor(props) {
@@ -74,7 +71,7 @@ export default class Comment extends React.Component {
   }
 
   grabArtistInfo(artistId) {
-    const url = `/comment/artist/${artistId}/`;
+    const url = `/comment/artist/${artistId}`;
     return fetch(url, { method: 'GET' })
       .then(stream => stream.json())
       .then((res) => {
@@ -99,20 +96,22 @@ export default class Comment extends React.Component {
     const now = new Date();
     const { commentText, songInfo, artistInfo } = this.state;
 
-    $.ajax('/comment/sc', {
+    fetch('/comment/sc', {
       method: 'POST',
-      contentType: 'application/json',
-      data: JSON.stringify({
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+      },
+      body: JSON.stringify({
         text: commentText,
         createdAt: Moment(now).format('YYYY-MM-DD HH:mm:ss'),
         songtime: helpers.postSongTime(songInfo[0].songlength),
         artist_Id: artistInfo[0].artistId,
         song_Id: songInfo[0].songId,
       }),
-      success: () => {
+    })
+      .then(() => {
         this.setState({ commentText: '' });
-      },
-    });
+      });
   }
 
   render() {
