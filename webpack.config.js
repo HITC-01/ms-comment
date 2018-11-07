@@ -31,6 +31,6 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './public/'),
-    filename: 'bundle.js',
+    filename: 'sc-related.js',
   },
 };
