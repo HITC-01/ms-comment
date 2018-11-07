@@ -1,7 +1,6 @@
 .wrapper {
     display: grid;
-    width: 920px;
-    grid-template-columns: 50px 40px auto 50px 40px;
+    grid-template-columns: 10px 10px auto 50px 40px;
     grid-template-rows: 40px auto;
     grid-row-gap: 10px;
 }
@@ -25,7 +24,6 @@
     grid-column-end: 4;
     padding-left: 10px;
     margin-bottom: 5px;
-    margin-left: 80px;
 }
 
 .comProfilePic {
@@ -33,7 +31,7 @@
     width: 40px;
     height: 40px;
     float: left;
-} 
+}
 
 .comTextbox {
     display: block;
@@ -43,7 +41,6 @@
 .comBorder {
     display: block;
     border-bottom: 2px solid whitesmoke;
-    width: 680px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 5px;
@@ -122,8 +119,9 @@ i {
 }
 
 .comModal {
-    position: absolute;
+    position: relative;
     background: white;
+    display: inline;
     top: 91px;
     left:305px;
     z-index: 5;

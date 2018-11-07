@@ -22,7 +22,7 @@ export default class ViewComments extends React.Component {
 
   componentDidMount() {
     this.fetchComments(this.songId);
-    // this.interval = setInterval(() => this.fetchComments(this.songId), 1000);
+    this.interval = setInterval(() => this.fetchComments(this.songId), 1000);
   }
 
   fetchComments() {
