@@ -11,7 +11,7 @@
     "postinstall": "cp example.env .env && echo 'Add variables into .env file!'",
     "start": "nodemon server/index.js",
     "dev:react": "webpack -d --watch",
-    "db:setup": " mysql -u root < schema.sql && node database/seed.js",
+    "seed": " mysql -u root < schema.sql && node database/seed.js",
     "test": "./node_modules/jest-cli/bin/jest.js commentComponent.test.js viewcommentsComponent.test.js eachcommentComponent.test.js moremodalComponent.test.js replyComponent.test.js helpers.test.js",
     "grunt": "grunt --verbose s3"
   },
