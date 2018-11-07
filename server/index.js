@@ -18,9 +18,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/song/:id', express.static(path.join(__dirname, '../public')));
+app.use('/songs/:id', express.static(path.join(__dirname, '../public')));
 
-app.get('/api/sc/songs/:songId/', (req, res) => {
+app.get('/comments/:songId/', (req, res) => {
   db.getAllComments(req.params.songId, (error, results) => {
     if (error) {
       res.status(500).send(error);
@@ -30,7 +30,7 @@ app.get('/api/sc/songs/:songId/', (req, res) => {
   });
 });
 
-app.get('/api/artist/:artistId', (req, res) => {
+app.get('/artist/:artistId', (req, res) => {
   db.getArtist(req.params.artistId, (error, results) => {
     if (error) {
       res.status(500).send(error);
@@ -40,7 +40,7 @@ app.get('/api/artist/:artistId', (req, res) => {
   });
 });
 
-app.get('/api/song/:songId', (req, res) => {
+app.get('/song/:songId', (req, res) => {
   db.getSong(req.params.songId, (error, results) => {
     if (error) {
       res.status(500).send(error);

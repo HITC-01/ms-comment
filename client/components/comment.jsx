@@ -71,7 +71,7 @@ export default class Comment extends React.Component {
   }
 
   grabArtistInfo(artistId) {
-    const url = `http://localhost:3003/api/artist/${artistId}/`;
+    const url = `/artist/${artistId}/`;
     return fetch(url, { method: 'GET' })
       .then(stream => stream.json())
       .then((res) => {
@@ -81,7 +81,7 @@ export default class Comment extends React.Component {
   }
 
   grabSongInfo() {
-    const url = `http://localhost:3003/api/song/${songId}/`;
+    const url = `/song/${songId}/`;
     fetch(url, { method: 'GET' })
       .then(stream => stream.json())
       .then((res) => {

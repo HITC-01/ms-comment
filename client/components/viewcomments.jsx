@@ -25,7 +25,7 @@ export default class ViewComments extends React.Component {
   }
 
   fetchComments() {
-    $.ajax(`/api/sc/songs/${songId}/`, {
+    $.ajax(`/comments/${songId}/`, {
       success: (data) => {
         let { commentList } = this.state;
         commentList = data;
