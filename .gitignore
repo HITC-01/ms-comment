@@ -29,6 +29,7 @@ __snapshots__
 build/
 dist/
 bundle.js
+public/sc-comment.js
 
 # super secret files
 .env

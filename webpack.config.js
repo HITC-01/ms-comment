@@ -31,6 +31,6 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './public/'),
-    filename: 'sc-related.js',
+    filename: 'sc-comment.js',
   },
 };
