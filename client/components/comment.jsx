@@ -71,7 +71,7 @@ export default class Comment extends React.Component {
   }
 
   grabArtistInfo(artistId) {
-    const url = `/artist/${artistId}/`;
+    const url = `/comments/artist/${artistId}/`;
     return fetch(url, { method: 'GET' })
       .then(stream => stream.json())
       .then((res) => {
@@ -81,7 +81,7 @@ export default class Comment extends React.Component {
   }
 
   grabSongInfo() {
-    const url = `/song/${songId}/`;
+    const url = `/comments/song/${songId}/`;
     fetch(url, { method: 'GET' })
       .then(stream => stream.json())
       .then((res) => {
@@ -95,7 +95,7 @@ export default class Comment extends React.Component {
     const now = new Date();
     const { commentText, songInfo, artistInfo } = this.state;
 
-    $.ajax('/api/sc/', {
+    $.ajax('/comments/api/sc/', {
       method: 'POST',
       contentType: 'application/json',
       data: JSON.stringify({

@@ -30,7 +30,7 @@ app.get('/comments/:songId/', (req, res) => {
   });
 });
 
-app.get('/artist/:artistId', (req, res) => {
+app.get('/comments/artist/:artistId', (req, res) => {
   db.getArtist(req.params.artistId, (error, results) => {
     if (error) {
       res.status(500).send(error);
@@ -40,7 +40,7 @@ app.get('/artist/:artistId', (req, res) => {
   });
 });
 
-app.get('/song/:songId', (req, res) => {
+app.get('/comments/song/:songId', (req, res) => {
   db.getSong(req.params.songId, (error, results) => {
     if (error) {
       res.status(500).send(error);
@@ -50,7 +50,7 @@ app.get('/song/:songId', (req, res) => {
   });
 });
 
-app.post('/api/sc', (req, res) => {
+app.post('/comments/api/sc', (req, res) => {
   db.createComment(req.body, (error) => {
     if (error) {
       res.status(500).send(error);
