@@ -122,8 +122,8 @@ i {
     position: relative;
     background: white;
     display: inline;
-    top: 91px;
-    left:305px;
+    top: 0px;
+    left: 0px;
     z-index: 5;
 }
 .comDisplay {

@@ -13,7 +13,7 @@ const songId = parse(window.location.pathname);
 export default class ViewComments extends React.Component {
   constructor(props) {
     super(props);
-    this.songId = props.songId;
+    this.songId = songId;
     this.state = {
       commentList: [],
     };
@@ -22,7 +22,7 @@ export default class ViewComments extends React.Component {
 
   componentDidMount() {
     this.fetchComments(this.songId);
-    this.interval = setInterval(() => this.fetchComments(this.songId), 1000);
+    // this.interval = setInterval(() => this.fetchComments(this.songId), 1000);
   }
 
   fetchComments() {
