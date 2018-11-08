@@ -21,7 +21,7 @@ module.exports = (grunt) => {
         upload: [
           {
             src: 'public/sc-comment.js',
-            dest: 'sc-comment.js',
+            dest: '/bundle/sc-comment.js',
           },
           {
             src: 'client/components/comment.css',
