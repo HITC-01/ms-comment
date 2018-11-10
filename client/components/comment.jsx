@@ -1,7 +1,6 @@
 import React from 'react';
 import Moment from 'moment';
 import Numeral from 'numeral';
-import $ from 'jquery';
 import MoreModal from './moreModal.jsx';
 import helpers from '../helpers/commentHelpers.js';
 import commentCSS from './comment.css';
@@ -94,21 +93,25 @@ export default class Comment extends React.Component {
     event.preventDefault();
     const now = new Date();
     const { commentText, songInfo, artistInfo } = this.state;
+    const url = '/comments/api/sc';
+    const data = {
+      text: commentText,
+      createdAt: Moment(now).format('YYYY-MM-DD HH:mm:ss'),
+      songtime: helpers.postSongTime(songInfo[0].songlength),
+      artist_Id: artistInfo[0].artistId,
+      song_Id: songInfo[0].songId,
+    };
 
-    $.ajax('/comments/api/sc/', {
+    fetch(url, {
       method: 'POST',
-      contentType: 'application/json',
-      data: JSON.stringify({
-        text: commentText,
-        createdAt: Moment(now).format('YYYY-MM-DD HH:mm:ss'),
-        songtime: helpers.postSongTime(songInfo[0].songlength),
-        artist_Id: artistInfo[0].artistId,
-        song_Id: songInfo[0].songId,
-      }),
-      success: () => {
-        this.setState({ commentText: '' });
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
       },
-    });
+    }).then(res => res.text())
+      .then(() => {
+        this.setState({ commentText: '' });
+      });
   }
 
   render() {
