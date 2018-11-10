@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import EachComment from './eachcomment.jsx';
 import commentCSS from './viewcomments.css';
+import Axios from 'axios';
 
 const parse = (pathname) => {
   const splitString = pathname.split('/');
@@ -24,15 +25,25 @@ export default class ViewComments extends React.Component {
     this.interval = setInterval(() => this.fetchComments(songId), 1000);
   }
 
-  fetchComments() {
-    $.ajax(`/comments/${songId}/`, {
-      success: (data) => {
+  async fetchComments() {
+    const url = `/comments/${songId}/`;
+    Axios.get(url)
+      .then((res) => {
         let { commentList } = this.state;
-        commentList = data;
+        commentList = res.data;
         this.setState({ commentList });
-      },
-    });
+      });
   }
+
+  // fetchComments() {
+  //   $.ajax(`/comments/${songId}/`, {
+  //     success: (data) => {
+  //       let { commentList } = this.state;
+  //       commentList = data;
+  //       this.setState({ commentList });
+  //     },
+  //   });
+  // }
 
   render() {
     const { commentList } = this.state;

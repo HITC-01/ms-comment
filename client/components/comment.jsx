@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import Moment from 'moment';
 import Numeral from 'numeral';
+import Axios from 'axios';
 import MoreModal from './moreModal.jsx';
 import helpers from '../helpers/commentHelpers.js';
 import commentCSS from './comment.css';
@@ -70,22 +71,31 @@ export default class Comment extends React.Component {
     this.setState({ commentText: event.target.value });
   }
 
-  grabArtistInfo(artistId) {
+  // grabArtistInfo(artistId) {
+  //   const url = `/comments/artist/${artistId}/`;
+  //   return fetch(url, { method: 'GET' })
+  //     .then(stream => stream.json())
+  //     .then((res) => {
+  //       const artistProfile = res;
+  //       this.setState({ artistInfo: artistProfile });
+  //     });
+  // }
+
+  async grabArtistInfo(artistId) {
     const url = `/comments/artist/${artistId}/`;
-    return fetch(url, { method: 'GET' })
-      .then(stream => stream.json())
+    Axios.get(url)
       .then((res) => {
-        const artistProfile = res;
+        const artistProfile = res.data;
         this.setState({ artistInfo: artistProfile });
       });
   }
 
-  grabSongInfo() {
+
+  async grabSongInfo() {
     const url = `/comments/song/${songId}/`;
-    fetch(url, { method: 'GET' })
-      .then(stream => stream.json())
+    Axios.get(url)
       .then((res) => {
-        const songProfile = res;
+        const songProfile = res.data;
         this.setState({ songInfo: songProfile });
       });
   }
@@ -149,11 +159,11 @@ export default class Comment extends React.Component {
 
           </button>
           <span className={commentCSS.moreModalLinks}>
-          <button className={!show ? commentCSS.comButton : commentCSS.comTrue} title="More Options" onClick={this.toggleModal} type="button">
+            <button className={!show ? commentCSS.comButton : commentCSS.comTrue} title="More Options" onClick={this.toggleModal} type="button">
             <i className="fas fa-ellipsis-h" />
 More
           </button>
-          <MoreModal status={show} />
+            <MoreModal status={show} />
           </span>
           <a id={commentCSS.buyIn} className={commentCSS.streamText} href="#" title="Click to buy or stream">
     Stream/Download
