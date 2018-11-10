@@ -1,8 +1,8 @@
 import React from 'react';
-import $ from 'jquery';
+import Axios from 'axios';
 import EachComment from './eachcomment.jsx';
 import commentCSS from './viewcomments.css';
-import Axios from 'axios';
+
 
 const parse = (pathname) => {
   const splitString = pathname.split('/');

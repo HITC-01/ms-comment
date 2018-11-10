@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import Moment from 'moment';
 import Numeral from 'numeral';
 import Axios from 'axios';
@@ -80,7 +79,6 @@ export default class Comment extends React.Component {
       });
   }
 
-
   async grabSongInfo() {
     const url = `/comments/song/${songId}/`;
     Axios.get(url)
@@ -94,21 +92,26 @@ export default class Comment extends React.Component {
     event.preventDefault();
     const now = new Date();
     const { commentText, songInfo, artistInfo } = this.state;
-
-    $.ajax('/comments/api/sc/', {
-      method: 'POST',
-      contentType: 'application/json',
-      data: JSON.stringify({
-        text: commentText,
-        createdAt: Moment(now).format('YYYY-MM-DD HH:mm:ss'),
-        songtime: helpers.postSongTime(songInfo[0].songlength),
-        artist_Id: artistInfo[0].artistId,
-        song_Id: songInfo[0].songId,
-      }),
-      success: () => {
-        this.setState({ commentText: '' });
-      },
+    const url = '/comments/api/sc/';
+    const data = JSON.stringify({
+      text: commentText,
+      createdAt: Moment(now).format('YYYY-MM-DD HH:mm:ss'),
+      songtime: helpers.postSongTime(songInfo[0].songlength),
+      artist_Id: artistInfo[0].artistId,
+      song_Id: songInfo[0].songId,
     });
+
+    Axios.post(url, { data }, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(() => {
+        this.setState({ commentText: '' });
+      })
+      .catch((error) => {
+        console.log('Data not posted', error);
+      });
   }
 
   render() {
