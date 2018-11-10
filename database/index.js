@@ -1,13 +1,13 @@
 const mysql = require('mysql');
 
-const connection = mysql.createPool({
+const connection = mysql.createConnection({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
 });
 
-connection.getConnection((err) => {
+connection.connect((err) => {
   if (err) {
     throw err;
   }
