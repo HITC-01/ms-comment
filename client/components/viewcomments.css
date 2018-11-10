@@ -92,6 +92,7 @@
     display: inline-block;
     color: black;
     font-size: 11px;
+    word-break: break-all;
 }
 
 .li {
