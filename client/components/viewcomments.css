@@ -18,7 +18,7 @@
     grid-column-end: 5;
     border-bottom: 2px solid whitesmoke;
     height: 20px;
-    width: 59%;
+    width: 100%;
     padding-bottom: 5px;
 }
 
@@ -26,7 +26,7 @@
     display: inline-grid;
     border-radius: 10px;
     min-width: 60%;
-    max-width: 60%;
+    max-width: initial;
 }
 
 .comAllComments {
@@ -141,7 +141,7 @@
     position: relative;
     display: block;
     border-top: 2px solid whitesmoke;
-    width: 59%;
+    width: 100%;
     padding-bottom: 5px;
     padding-left: 5px;
     grid-row: 3/4;

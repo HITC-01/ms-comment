@@ -40,12 +40,13 @@
 .comTextbox {
     display: block;
     padding: 2px;
+    padding-right: 0;
 }
 
 .comBorder {
     display: block;
     border-bottom: 2px solid whitesmoke;
-    width: 63%;
+    width: 68%;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 5px;
@@ -58,7 +59,7 @@
 }
 
 .textBoxCreateComment {
-    width: 60%;
+    width: 63%;
     height: 20px;
     cursor: pointer;
     border: 7px solid #f2f2f2;
@@ -100,7 +101,7 @@
     display: inline;
     overflow-x: hidden;
     white-space: nowrap;
-    padding-left: 125px;
+    padding-left: 0;
 }
 
 .limain {
@@ -183,4 +184,5 @@ i {
 .streamText {
     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
     font-size: 16px;
+    margin-left: 0;
 }
