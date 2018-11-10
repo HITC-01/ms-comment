@@ -1,7 +1,7 @@
 import React from 'react';
 import Moment from 'moment';
 import Numeral from 'numeral';
-import Axios from 'axios';
+import $ from 'jquery';
 import MoreModal from './moreModal.jsx';
 import helpers from '../helpers/commentHelpers.js';
 import commentCSS from './comment.css';
@@ -70,20 +70,22 @@ export default class Comment extends React.Component {
     this.setState({ commentText: event.target.value });
   }
 
-  async grabArtistInfo(artistId) {
+  grabArtistInfo(artistId) {
     const url = `/comments/artist/${artistId}/`;
-    Axios.get(url)
+    return fetch(url, { method: 'GET' })
+      .then(stream => stream.json())
       .then((res) => {
-        const artistProfile = res.data;
+        const artistProfile = res;
         this.setState({ artistInfo: artistProfile });
       });
   }
 
-  async grabSongInfo() {
+  grabSongInfo() {
     const url = `/comments/song/${songId}/`;
-    Axios.get(url)
+    fetch(url, { method: 'GET' })
+      .then(stream => stream.json())
       .then((res) => {
-        const songProfile = res.data;
+        const songProfile = res;
         this.setState({ songInfo: songProfile });
       });
   }
@@ -92,26 +94,21 @@ export default class Comment extends React.Component {
     event.preventDefault();
     const now = new Date();
     const { commentText, songInfo, artistInfo } = this.state;
-    const url = '/comments/api/sc/';
-    const data = JSON.stringify({
-      text: commentText,
-      createdAt: Moment(now).format('YYYY-MM-DD HH:mm:ss'),
-      songtime: helpers.postSongTime(songInfo[0].songlength),
-      artist_Id: artistInfo[0].artistId,
-      song_Id: songInfo[0].songId,
-    });
 
-    Axios.post(url, { data }, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then(() => {
+    $.ajax('/comments/api/sc/', {
+      method: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify({
+        text: commentText,
+        createdAt: Moment(now).format('YYYY-MM-DD HH:mm:ss'),
+        songtime: helpers.postSongTime(songInfo[0].songlength),
+        artist_Id: artistInfo[0].artistId,
+        song_Id: songInfo[0].songId,
+      }),
+      success: () => {
         this.setState({ commentText: '' });
-      })
-      .catch((error) => {
-        console.log('Data not posted', error);
-      });
+      },
+    });
   }
 
   render() {
@@ -153,9 +150,9 @@ export default class Comment extends React.Component {
           </button>
           <span className={commentCSS.moreModalLinks}>
             <button className={!show ? commentCSS.comButton : commentCSS.comTrue} title="More Options" onClick={this.toggleModal} type="button">
-            <i className="fas fa-ellipsis-h" />
+              <i className="fas fa-ellipsis-h" />
 More
-          </button>
+            </button>
             <MoreModal status={show} />
           </span>
           <a id={commentCSS.buyIn} className={commentCSS.streamText} href="#" title="Click to buy or stream">

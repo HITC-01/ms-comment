@@ -1,5 +1,4 @@
 import React from 'react';
-import Axios from 'axios';
 import EachComment from './eachcomment.jsx';
 import commentCSS from './viewcomments.css';
 
@@ -25,12 +24,13 @@ export default class ViewComments extends React.Component {
     this.interval = setInterval(() => this.fetchComments(songId), 1000);
   }
 
-  async fetchComments() {
+  fetchComments() {
     const url = `/comments/${songId}/`;
-    Axios.get(url)
+    fetch(url, { method: 'GET' })
+      .then(stream => stream.json())
       .then((res) => {
         let { commentList } = this.state;
-        commentList = res.data;
+        commentList = res;
         this.setState({ commentList });
       });
   }
