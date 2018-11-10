@@ -71,16 +71,6 @@ export default class Comment extends React.Component {
     this.setState({ commentText: event.target.value });
   }
 
-  // grabArtistInfo(artistId) {
-  //   const url = `/comments/artist/${artistId}/`;
-  //   return fetch(url, { method: 'GET' })
-  //     .then(stream => stream.json())
-  //     .then((res) => {
-  //       const artistProfile = res;
-  //       this.setState({ artistInfo: artistProfile });
-  //     });
-  // }
-
   async grabArtistInfo(artistId) {
     const url = `/comments/artist/${artistId}/`;
     Axios.get(url)

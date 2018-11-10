@@ -35,16 +35,6 @@ export default class ViewComments extends React.Component {
       });
   }
 
-  // fetchComments() {
-  //   $.ajax(`/comments/${songId}/`, {
-  //     success: (data) => {
-  //       let { commentList } = this.state;
-  //       commentList = data;
-  //       this.setState({ commentList });
-  //     },
-  //   });
-  // }
-
   render() {
     const { commentList } = this.state;
     return (
