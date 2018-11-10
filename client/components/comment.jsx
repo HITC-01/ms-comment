@@ -1,7 +1,7 @@
 import React from 'react';
-import $ from 'jquery';
 import Moment from 'moment';
 import Numeral from 'numeral';
+import Axios from 'axios';
 import MoreModal from './moreModal.jsx';
 import helpers from '../helpers/commentHelpers.js';
 import commentCSS from './comment.css';
@@ -70,22 +70,20 @@ export default class Comment extends React.Component {
     this.setState({ commentText: event.target.value });
   }
 
-  grabArtistInfo(artistId) {
+  async grabArtistInfo(artistId) {
     const url = `/comments/artist/${artistId}/`;
-    return fetch(url, { method: 'GET' })
-      .then(stream => stream.json())
+    Axios.get(url)
       .then((res) => {
-        const artistProfile = res;
+        const artistProfile = res.data;
         this.setState({ artistInfo: artistProfile });
       });
   }
 
-  grabSongInfo() {
+  async grabSongInfo() {
     const url = `/comments/song/${songId}/`;
-    fetch(url, { method: 'GET' })
-      .then(stream => stream.json())
+    Axios.get(url)
       .then((res) => {
-        const songProfile = res;
+        const songProfile = res.data;
         this.setState({ songInfo: songProfile });
       });
   }
@@ -94,21 +92,26 @@ export default class Comment extends React.Component {
     event.preventDefault();
     const now = new Date();
     const { commentText, songInfo, artistInfo } = this.state;
-
-    $.ajax('/comments/api/sc/', {
-      method: 'POST',
-      contentType: 'application/json',
-      data: JSON.stringify({
-        text: commentText,
-        createdAt: Moment(now).format('YYYY-MM-DD HH:mm:ss'),
-        songtime: helpers.postSongTime(songInfo[0].songlength),
-        artist_Id: artistInfo[0].artistId,
-        song_Id: songInfo[0].songId,
-      }),
-      success: () => {
-        this.setState({ commentText: '' });
-      },
+    const url = '/comments/api/sc/';
+    const data = JSON.stringify({
+      text: commentText,
+      createdAt: Moment(now).format('YYYY-MM-DD HH:mm:ss'),
+      songtime: helpers.postSongTime(songInfo[0].songlength),
+      artist_Id: artistInfo[0].artistId,
+      song_Id: songInfo[0].songId,
     });
+
+    Axios.post(url, { data }, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(() => {
+        this.setState({ commentText: '' });
+      })
+      .catch((error) => {
+        console.log('Data not posted', error);
+      });
   }
 
   render() {
@@ -149,11 +152,11 @@ export default class Comment extends React.Component {
 
           </button>
           <span className={commentCSS.moreModalLinks}>
-          <button className={!show ? commentCSS.comButton : commentCSS.comTrue} title="More Options" onClick={this.toggleModal} type="button">
+            <button className={!show ? commentCSS.comButton : commentCSS.comTrue} title="More Options" onClick={this.toggleModal} type="button">
             <i className="fas fa-ellipsis-h" />
 More
           </button>
-          <MoreModal status={show} />
+            <MoreModal status={show} />
           </span>
           <a id={commentCSS.buyIn} className={commentCSS.streamText} href="#" title="Click to buy or stream">
     Stream/Download
