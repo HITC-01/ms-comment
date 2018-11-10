@@ -24,7 +24,7 @@ export default class EachComment extends React.Component {
     const { info } = this.props;
     return (
       <li
-        className={commentCSS.comEachComment}
+        className={`${commentCSS.comEachComment} ${commentCSS.li}`}
         key={info.commentId}
         onMouseEnter={this.toggleOptions}
         onMouseLeave={this.toggleOptions}

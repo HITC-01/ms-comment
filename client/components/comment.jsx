@@ -128,7 +128,7 @@ export default class Comment extends React.Component {
               </span>
             ))}
             <span className={commentCSS.comTextbox} title="Write a comment">
-              <input id="text" type="text" placeholder="Write a comment" value={commentText} onChange={this.handleChange} />
+              <input id="text" type="text" className={commentCSS.textBoxCreateComment} placeholder="Write a comment" value={commentText} onChange={this.handleChange} />
             </span>
           </div>
         </form>
@@ -148,30 +148,32 @@ export default class Comment extends React.Component {
             {shareStatus}
 
           </button>
+          <span className={commentCSS.moreModalLinks}>
           <button className={!show ? commentCSS.comButton : commentCSS.comTrue} title="More Options" onClick={this.toggleModal} type="button">
             <i className="fas fa-ellipsis-h" />
 More
           </button>
           <MoreModal status={show} />
-          <a id={commentCSS.buyIn} href="#" title="Click to buy or stream">
+          </span>
+          <a id={commentCSS.buyIn} className={commentCSS.streamText} href="#" title="Click to buy or stream">
     Stream/Download
           </a>
 
           {songInfo.map(songProfile => (
-            <ul key="songProfile.id" className="soundStats">
-              <li className={commentCSS.comMiniStats} title={`${songProfile.plays} plays`}>
+            <ul key="songProfile.id" className={`${commentCSS.ulmain}`}>
+              <li className={`${commentCSS.comMiniStats} ${commentCSS.limain}`} title={`${songProfile.plays} plays`}>
                 <span>
                   <i className="fas fa-play" />
                   {Numeral(songProfile.plays).format('0.0a')}
                 </span>
               </li>
-              <li className={commentCSS.comMiniStats} title={`${songProfile.likes} likes`}>
+              <li className={`${commentCSS.comMiniStats} ${commentCSS.limain}`} title={`${songProfile.likes} likes`}>
                 <span>
                   <i className="fas fa-heart" />
                   {Numeral(songProfile.likes).format('0.0a')}
                 </span>
               </li>
-              <li className={commentCSS.comMiniStats} title={`${songProfile.reposts} reposts`}>
+              <li className={`${commentCSS.comMiniStats} ${commentCSS.limain}`} title={`${songProfile.reposts} reposts`}>
                 <span>
                   <i className="fas fa-share-square" />
                   {Numeral(songProfile.reposts).format('0.00a')}

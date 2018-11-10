@@ -1,14 +1,12 @@
-body {
-    font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
-    color: #333;
-}
 
 .container {
     display: grid;
-    width: 920px;
-    grid-template-columns: 120px 50px auto 50px 40px;
+    width: 100%;
+    grid-template-columns: 0px 50px auto 0px 0px;
     grid-template-rows: 25px auto;
     grid-row-gap: 10px;
+    font: 10px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    color: #333;
 }
 
 .comTotalCommentsCount {
@@ -20,15 +18,15 @@ body {
     grid-column-end: 5;
     border-bottom: 2px solid whitesmoke;
     height: 20px;
-    width: 83%;
+    width: 59%;
     padding-bottom: 5px;
 }
 
 .comCommentContainer {
     display: inline-grid;
     border-radius: 10px;
-    min-width: 90%;
-    max-width: 90%;
+    min-width: 60%;
+    max-width: 60%;
 }
 
 .comAllComments {
@@ -41,7 +39,7 @@ body {
 .comEachComment {
     position: relative;
     background-color: whitesmoke;
-    font-size: 12px;
+    font-size: 10px;
     margin: 5px;
     min-height: 55px;
 }
@@ -58,6 +56,7 @@ body {
 .comInnerWrap {
     padding-left: 50px;
     padding-right: 125px;
+    padding-bottom: 10px
 }
 
 .comProfilePic {
@@ -92,28 +91,18 @@ body {
 .comCommentText {
     display: inline-block;
     color: black;
-    font-size: 13px;
+    font-size: 11px;
 }
 
-li {
+.li {
     list-style-type: none;
     border-radius: 10px;
 }
 
-/* Will go away upon implementing Proxy */
-
-.placeHolder {
-    border: 2px solid;
-    margin: 10px;
-    font-size: 36px;
-    width: 80%;
-    text-align: center;
-}
-
 .comOptions {
     position: absolute;
-    top: 29px;
-    left: 521px;
+    top: 28px;
+    right: 3px;
 }
 
 .comModalReply {
@@ -152,7 +141,7 @@ li {
     position: relative;
     display: block;
     border-top: 2px solid whitesmoke;
-    width: 89%;
+    width: 59%;
     padding-bottom: 5px;
     padding-left: 5px;
     grid-row: 3/4;
