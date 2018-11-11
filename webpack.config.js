@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const CompressionPlugin = require('compression-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -16,7 +17,14 @@ module.exports = {
                 resolve: {
                     extensions: ['.js', '.jsx'],
                 },
-               
+                plugins: [
+                    new webpack.DefinePlugin({ //<--key to reduce React's size
+                      'process.env': {
+                        'NODE_ENV': JSON.stringify('production')
+                      }
+                    }),
+                    new CompressionPlugin()
+                ],
             },
             {
                 test: /\.css$/,
