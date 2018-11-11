@@ -5,6 +5,14 @@ const path = require('path');
 module.exports = {
     context: __dirname + '/client',
     entry: './index.js',
+    plugins: [
+        new webpack.DefinePlugin({
+          'process.env': {
+            'NODE_ENV': JSON.stringify('production')
+          }
+        }),
+        new CompressionPlugin(),
+    ],
     module: {
         rules: [
             {
@@ -17,24 +25,16 @@ module.exports = {
                 resolve: {
                     extensions: ['.js', '.jsx'],
                 },
-                plugins: [
-                    new webpack.DefinePlugin({ //<--key to reduce React's size
-                      'process.env': {
-                        'NODE_ENV': JSON.stringify('production')
-                      }
-                    }),
-                    new CompressionPlugin()
-                ],
             },
             {
                 test: /\.css$/,
-                loader: 'style-loader'
+                loader: 'style-loader',
               }, {
                 test: /\.css$/,
                 loader: 'css-loader',
                 query: {
                   modules: true,
-                  localIdentName: '[name]__[local]___[hash:base64:5]'
+                  localIdentName: '[name]__[local]___[hash:base64:5]',
                 }
               }
         ],
