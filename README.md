@@ -17,7 +17,8 @@ Run the following command: 'npm start'
 How to seed the database?
 
 Run the following command: 'npm run db:setup'
-This will setup the database schgit sema and seed the database with initial data.
+This will setup the database schema and seed the database with initial data.
+You have to create a .env file and pass all the required credentials to authenticate the database.
 
 # Development
 
